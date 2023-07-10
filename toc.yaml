@@ -1,0 +1,80 @@
+---
+toc:
+  properties:
+    subcollection: powervs-vpc
+    industry: ITServiceManagement
+    use-case: Technology
+    compliance: SAPCertified
+    audience: solution
+    content-type: deployment
+    href: /docs/powervs-vpc
+    path: powervs-vpc
+    deployable: true
+    description: Deploy Power Virtual Server workspace and connects it with VPC services with a deployable architecture.
+    label: Power Systems Virtual Server with VPC landing zone
+
+  entries:
+  - navgroup:
+      id: overview
+      topics:
+      - topic: overview.md
+        navtitle: Overview
+      - topic: release-notes.md
+        navtitle: Release notes
+
+  - navgroup:
+      id: architecture
+      topics:
+      - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/extension/deploy-arch-ibm-pvs-inf-extension.md
+      - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/full-stack/deploy-arch-ibm-pvs-inf-full-stack.md
+
+  - navgroup:
+      id: plan
+      topics:
+      - dependencies.md
+      - vpc-presets.md
+      - topic: prereqs.md
+        navtitle: Before you begin deploying
+
+  - navgroup:
+      id: deploy
+      topics:
+      - topic: deploy.md
+        navtitle: Deploying the architecture
+      - mgmt-monitoring.md
+      - access.md
+
+  - navgroup:
+      id: reference
+      topics:
+      - topic: responsibilities.md
+        navtitle: Responsibilities
+
+  - navgroup:
+      id: help
+      topics:
+      - topic: support.md
+        navtitle: Getting help and support
+      - topic: faqs.md
+        navtitle: FAQs
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - topicgroup:
+              label: Troubleshooting deployment
+              topics:
+              - troubleshoot-deploy.md
+          - topicgroup:
+              label: Troubleshooting Schematics
+              topics:
+              - include: ../schematics/troubleshooting/apply_500_errors.md
+                navtitle: Why am I getting 5xx errors in Schematics?
+              - include: ../schematics/troubleshooting/apply_nullresource.md
+                navtitle: How can I find the root cause of Schematics apply failures?
+          - topicgroup:
+              label: Troubleshooting projects
+              topics:
+              - include: ../secure-enterprise/ts-needs-attention.md
+                navtitle: How do I address a failed validation?
+              - include: ../secure-enterprise/ts-deploy.md
+                navtitle: How do I address a failed deployment?
