@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-22"
+lastupdated: "2023-08-23"
 
 keywords:
 
@@ -21,15 +21,7 @@ Automated Power Virtual Server with VPC landing zone provisioning that is descri
 
 In the following sections, the deployable architecture variants are described. 
 
-## Power Virtual Server with VPC landing zone PowerVS workspace variation
-{: #wrkspace-variant}
-
-New deployment of the Power Virtual Server with VPC landing zone creates VPC services and a Power Virtual Server workspace and interconnects them.
-
-A proxy service for public internet access from the PowerVS workspace is configured. You can optionally configure some management components on VPC (such as an NFS server, NTP forwarder, and DNS forwarder).
-
-For more information on how to deploy, see [Deploying the Power Virtual Server with VPC landing zone - 'PowerVS workspace' Variation](https://test.cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-deploy).
-## Power Virtual Server with VPC landing zone quickstart variation
+## Quickstart variation
 {: #qkstart-variant}
 
 You can now deploy a Power Virtual Server (PowerVS) with VPC landing zone to creates VPC services, a Power Virtual Server workspace and interconnect them. 
@@ -40,7 +32,16 @@ A proxy service for public internet access from the PowerVS workspace is also co
 
 For more information on how to deploy, see [Deploying the Power Virtual Server with VPC landing zone - 'PowerVS quickstart' variation](https://test.cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-quickstart-deploy).
 
-## Power Virtual Server with VPC landing zone extension variation
+## PowerVS workspace variation
+{: #wrkspace-variant}
+
+New deployment of the Power Virtual Server with VPC landing zone creates VPC services and a Power Virtual Server workspace and interconnects them.
+
+A proxy service for public internet access from the PowerVS workspace is configured. You can optionally configure some management components on VPC (such as an NFS server, NTP forwarder, and DNS forwarder).
+
+For more information on how to deploy, see [Deploying the Power Virtual Server with VPC landing zone - 'PowerVS workspace' Variation](https://test.cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-deploy).
+
+## Extension variation
 {: #extnsn-variant}
 
 This extension variation has a prerequisite. You must deploy either the PowerVS workspace variant or the PowerVS quickstart variant.
