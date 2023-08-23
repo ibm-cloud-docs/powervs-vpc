@@ -25,8 +25,9 @@ toc:
   - navgroup:
       id: architecture
       topics:
-      - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/extension/deploy-arch-ibm-pvs-inf-extension.md
+      - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/full-stack/deploy-arch-ibm-pvs-inf-quickstart.md
       - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/full-stack/deploy-arch-ibm-pvs-inf-full-stack.md
+      - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/extension/deploy-arch-ibm-pvs-inf-extension.md
 
   - navgroup:
       id: plan
@@ -40,7 +41,9 @@ toc:
       id: deploy
       topics:
       - topic: deploy.md
-        navtitle: Deploying the architecture
+        navtitle: Deploying the PowerVS Workspace architecture
+      - topic: quicksart-deploy.md
+        navtitle: Deploying the PowerVS quickstart architecture
       - mgmt-monitoring.md
       - access.md
 

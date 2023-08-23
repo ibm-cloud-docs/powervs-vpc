@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-10"
+lastupdated: "2023-08-22"
 
 keywords:
 
@@ -18,8 +18,8 @@ subcollection: powervs-vpc
 This solution is verified and supported with only the following configurations (presets) for a VPC landing zone. These presets must be selected or inserted when deploying the VPC landing zone either separately or as part of a new Power infrastructure with VPC landing zone deployment.
 {: shortdesc}
 
-- [RHEL secure landing zone preset](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/examples/ibm-catalog/presets/slz-for-powervs/rhel-vpc-pvs.preset.json){: external}. This preset creates a secure landing zone that is composed of three VPCs (edge, management, and workload) and of three VSIs with RHEL as operating system (bastion host, proxy server, management VSI)
-- [SLES secure landing zone preset](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/examples/ibm-catalog/presets/slz-for-powervs/sles-vpc-pvs.preset.json){: external}. This preset creates a secure landing zone that is composed of three VPCs (edge, management, and workload) and of three VSIs with SLES as operating system (bastion host, proxy server, management VSI)
+- [RHEL secure landing zone preset](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/presets/slz-for-powervs/rhel-vpc-pvs.preset.json.tftpl){: external}. This preset creates a secure landing zone that is composed of three VPCs (edge, management, and workload) and of three VSIs with RHEL as operating system (bastion host, proxy server, management VSI)
+- [SLES secure landing zone preset](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/presets/slz-for-powervs/sles-vpc-pvs.preset.json.tftpl){: external}. This preset creates a secure landing zone that is composed of three VPCs (edge, management, and workload) and of three VSIs with SLES as operating system (bastion host, proxy server, management VSI)
 
 For more information regarding components that are defined in presets and the deployable architecture calling these presets, see [reference architecture for initial infrastructure deployment](/docs/deployable-reference-architectures?topic=deployable-reference-architectures-deploy-arch-ibm-pvs-inf-full-stack).
 

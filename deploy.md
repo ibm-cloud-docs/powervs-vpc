@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-10"
+lastupdated: "2023-03-24"
 
 keywords:
 
@@ -22,7 +22,7 @@ To deploy the Power Virtual Server with VPC landing zone through the IBM Cloud c
 1. Select **Create a new architecture** for a new deployment or **Extend VSI on VPC landing zone** to extend existing deployment with new PowerVS workspace
 1. Select the **PowerVS Workspace** variation. 
 1. Click **Review deployment options**.
-    - Select **Add to project** to add this deployment to an IBM Cloud project and combine it with other deployments. IBM Cloud projects includes several additional pipeline steps before deployment, including deployment validation, cost calculation, compliance verification and approval process.
+    - Select **Add to project** to add this deployment to an IBM Cloud project and combine it with other deployments. IBM Cloud projects include several additional pipeline steps before deployment, including deployment validation, cost calculation, compliance verification and approval process.
     - Select **Create from the CLI** to get the CLI command. With that command you can trigger the deployment from the CLI.
     - Select **Work with code** to embed the code into other terraform deployments.
     - Select **Deploy with IBM Cloud Schematics** to trigger deployment process directly.
@@ -40,7 +40,7 @@ The deployment typically can take up to 60 minutes but might take longer dependi
 After you provision an instance, verify the success of the deployment by:
 
 - Checking the log files in {{site.data.keyword.bplong_notm}}. There shouldn't be any errors.
-- Trying out the access to the bastion host by using a SSH key. Access should be possible. 
+- Trying out the access to the bastion host by using an SSH key. Access should be possible. 
 - Logging to all created VPC and PowerVS instances. Access should be possible.
 
 ## Next steps

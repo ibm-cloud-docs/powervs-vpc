@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-10"
+lastupdated: "2023-08-23"
 
 keywords:
 
@@ -109,8 +109,8 @@ The defaults must be changed if you specify more than one deployment landscape c
 {: #powervs-automation-input-parameters}
 
 Ensure that you are familiar with the required input for the deployment execution. 
-- [description for input parameters - create new architecture](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/examples/ibm-catalog/deployable-architectures/full-stack/README.md){: external}
-- [description for input parameters - extend existing architecture](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/examples/ibm-catalog/deployable-architectures/extension/README.md){: external}
+- [description for input parameters - create new architecture](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/full-stack/README.md){: external}
+- [description for input parameters - extend existing architecture](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/extension/README.md){: external}
 
 ## Additional background information
 {: #power-automation-prereqs-additional}

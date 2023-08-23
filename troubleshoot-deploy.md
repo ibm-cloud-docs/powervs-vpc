@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-10"
+lastupdated: "2023-08-23"
 
 keywords:
 
@@ -29,7 +29,7 @@ If the deployment process does not finish successfully, we recommend first looki
 {: tsResolve}
 
 - Ensure that all pre-requisites are applied according to the [planning guide](/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning)
-- Verify that correct input parameters are provided as described in the [readme file](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-sap/blob/main/examples/ibm-catalog/deployable-architectures/sap-ready-to-go/README.md){: external}
+- Verify that correct input parameters are provided as described in the [readme file](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/full-stack/README.md){: external}
 
 
 If you still cannot solve your issue, open a case in the {{site.data.keyword.cloud_notm}} support center.

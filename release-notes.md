@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-10"
+lastupdated: "2023-04-26"
 
 keywords: 
 
@@ -20,8 +20,14 @@ content-type: release-note
 Use these release notes to learn about the latest updates to the Power Virtual Server with VPC landing zone. The entries grouped by date.
 {: shortdesc}
 
-## 10 July 2023
-{: #powervs-vpc-july0710}
+## 22 August 2023
+{: #powervs-vpc-aug23}
+{: release-note}
+
+Introducing the new quickstart variant of Power Virtual Server with VPC landing zone deployable architecture. See [Power Virtual Server with VPC landing zone quickstart variation](https://test.cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-overview##qkstart-variant) for more information.
+
+## 30 April 2023
+{: #powervs-vpc-apr0430}
 {: release-note}
 
 Introducing Power Virtual Server with VPC landing zone
