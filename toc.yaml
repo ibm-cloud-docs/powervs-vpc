@@ -25,7 +25,7 @@ toc:
   - navgroup:
       id: architecture
       topics:
-      - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/full-stack/deploy-arch-ibm-pvs-inf-quickstart.md
+      - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/quickstart/deploy-arch-ibm-pvs-inf-quickstart.md
       - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/full-stack/deploy-arch-ibm-pvs-inf-full-stack.md
       - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/extension/deploy-arch-ibm-pvs-inf-extension.md
 
