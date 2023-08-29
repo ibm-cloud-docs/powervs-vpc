@@ -26,7 +26,41 @@ In the following sections, the deployable architecture variants are described.
 
 You can now deploy a Power Virtual Server (PowerVS) with VPC landing zone to creates VPC services, a Power Virtual Server workspace and interconnect them. 
 
-It also deploys a virtual server instance with chosen T-shirt size or custom configuration. You can run AIX, IBM i, and Linux images on your virtual server instances.
+You can run AIX, IBM i, and Linux images on your virtual server instances. Select the required T-shirt size and a virtual server instance with chosen T-shirt size or custom configuration is deployed. The T-shirt sizes and the configuration parameters mapping is shown in the table below:
+
+|  | XS | S | M | L |
+|---------------------- | ------------------------- | ------------------------- | -------------------------  | ------------------------- |
+| Cores | 1 | 4 | 8 | 15 |
+| Memory | 32 | 128 | 256 | 512 |
+| Stprage Tier-1 (GB) | 100 | 500 | 1000 | 2000 |
+{: class="simple-tab-table"}
+{: tab-group="t-shirt size"}
+{: caption="Table 1. T-shirt size and configuration mapping" caption-side="top"}
+{: #resize_core_memory-1}
+{: tab-title="AIX"}
+
+|  | XS | S | M | L |
+|---------------------- | ------------------------- | ------------------------- | -------------------------  | ------------------------- |
+| Cores | 0.25 | 1 | 2 | 4 |
+| Memory | 8 | 32 | 64 | 132 |
+| Stprage Tier-1 (GB) | 100 | 500 | 1000 | 2000 |
+{: class="simple-tab-table"}
+{: tab-group="t-shirt size"}
+{: caption="Table 1. T-shirt size and configuration mapping" caption-side="top"}
+{: #resize_core_memory-1}
+{: tab-title="IBM i"}
+
+|  | US1 \n Test/Dev | Bh1 \n OLAP | UMH \n OLTP |
+|---------------------- | ------------------------- | ------------------------- | -------------------------  |
+| Cores | 4 | 16 | 16 |
+| Memory | 128 | 1600 | 768 |
+| Stprage Tier-1 (GB) | 500 | 3170 | 2490 |
+{: class="simple-tab-table"}
+{: tab-group="t-shirt size"}
+{: caption="Table 1. T-shirt size and configuration mapping" caption-side="top"}
+{: #resize_core_memory-1}
+{: tab-title="SAP HANA (Red Hat)"}
+
 
 A proxy service for public internet access from the PowerVS workspace is also configured. You can optionally configure some management components on VPC such as an NFS server, NTP forwarder, and DNS forwarder.
 
