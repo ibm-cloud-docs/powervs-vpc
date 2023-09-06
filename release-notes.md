@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-26"
+lastupdated: "2023-09-06"
 
 keywords: 
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to the Power Virtual Server with VPC landing zone. The entries grouped by date.
 {: shortdesc}
+
+## 06 September 2023
+{: #powervs-vpc-sep23}
+{: release-note}
+
+New product version `V2.0.0` introduced. The new product version supports the following:
+- IBM i 7.5
+- DAL10 datacenter which is [PER enabled](/docs/power-iaas?topic=power-iaas-per).
 
 ## 22 August 2023
 {: #powervs-vpc-aug23}
