@@ -54,7 +54,7 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 |---------------------- | ------------------------- | ------------------------- | -------------------------  |
 | Cores | 4 | 16 | 16 |
 | Memory | 128 | 1600 | 768 |
-| St0rage Tier-1 (GB) | 500 | 3170 | 2490 |
+| Storage Tier-1 (GB) | 500 | 3170 | 2490 |
 {: class="simple-tab-table"}
 {: tab-group="t-shirt size"}
 {: caption="Table 1. T-shirt size and configuration mapping" caption-side="top"}
