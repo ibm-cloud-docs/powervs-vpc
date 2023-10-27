@@ -26,7 +26,7 @@ Use these release notes to learn about the latest updates to the Power Virtual S
 
 New product version `V2.0.0` introduced. The new product version supports the following:
 - IBM i 7.5
-- DAL10 datacenter which is [PER enabled](/docs/power-iaas?topic=power-iaas-per).
+- `DAL10` data center which is [PER enabled](/docs/power-iaas?topic=power-iaas-per).
 
 ## 22 August 2023
 {: #powervs-vpc-aug23}
