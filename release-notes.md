@@ -36,12 +36,12 @@ New product version `V3.0.0` introduced. The new product version supports the fo
 - Faster parallel deployments of landing zone and {{site.data.keyword.powerSys_notm}} infrastructure.
 - **Fix**: DNS settings on landing zone vsi (upgraded to 1.1.4 version ansible collection ibm.power_linux_sap collection).
 
-Breaking Change:
-- Please backup the data on 10.20.10.4 private-svs-1 vsi under the /nfs directory before upgrading to this.
-DAs will be affected with recreating the 1TB storage disk as the new landing zone version will recreate the disk in correct resource group. :warning: There will be down time :warning: if upgrading the fullstack stack solution. All the ansible roles will be triggered again, acl rules will be updated and the nfs disk will be back.
-- When upgrading there will be downtime for about 20 mins, reboots of intel vsi will be made.
-- Not recommend to upgrade Quickstart Version as it recreates a VM, VPC subnets,  as this solution is purely for demo purposes and PoCs.
-{: warning}
+  Breaking Change:
+  - Please backup the data on 10.20.10.4 private-svs-1 vsi under the /nfs directory before upgrading to this.
+  DAs will be affected with recreating the 1TB storage disk as the new landing zone version will recreate the disk in correct resource group. :warning: There will be down time :warning: if upgrading the fullstack stack solution. All the ansible roles will be triggered again, acl rules will be updated and the nfs disk will be back.
+  - When upgrading there will be downtime for about 20 mins, reboots of intel vsi will be made.
+  - Not recommend to upgrade Quickstart Version as it recreates a VM, VPC subnets,  as this solution is purely for demo purposes and PoCs.
+  {: warning}
 
 ## 06 September 2023
 {: #powervs-vpc-sep23}
