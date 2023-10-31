@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-10-27"
+lastupdated: "2023-10-31"
 
 keywords: 
 
@@ -25,7 +25,7 @@ Use these release notes to learn about the latest updates to the Power Virtual S
 {: release-note}
 
 Version 3.0.0 of the available
-:   Version 3.0.0 of the Power Virtual Server with VPC landing zone deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+:   Version 3.0.0 of the Power Virtual Server with [VPC landing zone deployable architecture](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Support all private Power Virtual Server CIDRs in ACL rule.
     - Import any number of Power Virtual Server images, and in parallel.
     - The `clean_default_sg_acl` input is included in the landing zone preset to clean the default sg rule for new deployments.
