@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-10-31"
+lastupdated: "2023-11-03"
 
 keywords: 
 
@@ -14,10 +14,10 @@ content-type: release-note
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Release notes for the Power Virtual Server with VPC landing zone deployable architecture
+# Release notes for the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture
 {: #powervs-vpc-relnotes}
 
-Use these release notes to learn about the latest updates to the Power Virtual Server with VPC landing zone. The entries grouped by date.
+Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries grouped by date.
 {: shortdesc}
 
 ## 27 October 2023
@@ -25,9 +25,9 @@ Use these release notes to learn about the latest updates to the Power Virtual S
 {: release-note}
 
 Version 3.0.0 of the available
-:   Version 3.0.0 of the Power Virtual Server with [VPC landing zone deployable architecture](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
-    - Support all private Power Virtual Server CIDRs in ACL rule.
-    - Import any number of Power Virtual Server images, and in parallel.
+:   Version 3.0.0 of the {{site.data.keyword.powerSys_notm}} with [VPC landing zone deployable architecture](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+    - Support all private {{site.data.keyword.powerSys_notm}} CIDRs in ACL rule.
+    - Import any number of {{site.data.keyword.powerSys_notm}} images, and in parallel.
     - The `clean_default_sg_acl` input is included in the landing zone preset to clean the default sg rule for new deployments.
     - Upgrade to `ibm-sles-15-4-amd64-sap-applications-6` & `ibm-redhat-8-6-amd64-sap-applications-4` on intel VSI landing zone for new deployments. This does not affect the previous DA version.
 
@@ -41,22 +41,27 @@ Version 3.0.0 of the available
    - If you deployed the QuickStart variation, you might want to create another deployable architecture rather than upgrade. The VM and VPC subnets are re-created, which might affect demos and PoCs.
 
 ## 06 September 2023
-{: #powervs-vpc-sep23}
+{: #powervs-vpc-sep06}
 {: release-note}
 
-New product version `V2.0.0` introduced. The new product version supports the following:
-- IBM i 7.5
-- `DAL10` data center which is [PER enabled](/docs/power-iaas?topic=power-iaas-per).
+Version 2.0.0 available
+:   Version 2.0.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global) deployable architecture{: external} is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+    - Support RHEL 8.6 and SLES 15.4 images
+    - Support `DAL10` data center which is [PER enabled](/docs/power-iaas?topic=power-iaas-per).
 
-## 22 August 2023
+## 23 August 2023
 {: #powervs-vpc-aug23}
 {: release-note}
 
-Introducing the new quickstart variant of Power Virtual Server with VPC landing zone deployable architecture. See [Power Virtual Server with VPC landing zone quickstart variation](https://test.cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-overview##qkstart-variant) for more information.
+Version 1.2.0 available
+:   Version 1.2.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global) deployable architecture{: external} is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+    - Introducing the new quickstart variant of {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture. See [{{site.data.keyword.powerSys_notm}} with VPC landing zone quickstart variation](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-overview##qkstart-variant) for more information.
 
-## 30 April 2023
-{: #powervs-vpc-apr0430}
+## 06 July 2023
+{: #powervs-vpc-jul06}
 {: release-note}
 
-Introducing Power Virtual Server with VPC landing zone
-:   The Power Virtual Server with VPC landing zone deployable architecture is released. You can use the deployable architecture to create an isolated PowerVS landscape connected with VPC landing zone.
+Version 1.1.0 available
+:   Version 1.1.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global) deployable architecture{: external} is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+    - Introducing {{site.data.keyword.powerSys_notm}} with VPC landing zone
+    - The {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture is released. You can use the deployable architecture to create an isolated PowerVS landscape connected with VPC landing zone.
