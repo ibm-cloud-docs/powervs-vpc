@@ -37,5 +37,5 @@ The Power Virtual Server with VPC landing zone deployable architecture creates s
 After the configuration, you can connect to the landscape by using following SSH command:
 
 ```sh
-ssh -A -o ServerAliveInterval=60 -o ServerAliveCountMax=600 -o ProxyCommand=\"ssh -W %h:%p root@\<access_host_floating_ip\>\" root@\<vpc_instance_ip\>
+ssh -A -o ServerAliveInterval=60 -o ServerAliveCountMax=600 -o ProxyCommand=\"ssh -W %h:%p root@\<access_host_or_ip\>\" root@\<vpc_instance_ip\>
 ```
