@@ -25,7 +25,7 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 {: release-note}
 
 Version 3.0.0 of the available
-:   Version 3.0.0 of the {{site.data.keyword.powerSys_notm}} with [VPC landing zone deployable architecture](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+:   Version 3.0.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Support all private {{site.data.keyword.powerSys_notm}} CIDRs in ACL rule.
     - Import any number of {{site.data.keyword.powerSys_notm}} images, and in parallel.
     - The `clean_default_sg_acl` input is included in the landing zone preset to clean the default sg rule for new deployments.
@@ -45,7 +45,7 @@ Version 3.0.0 of the available
 {: release-note}
 
 Version 2.0.0 available
-:   Version 2.0.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global) deployable architecture{: external} is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+:   Version 2.0.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Support RHEL 8.6 and SLES 15.4 images
     - Support `DAL10` data center which is [PER enabled](/docs/power-iaas?topic=power-iaas-per).
 
@@ -54,7 +54,7 @@ Version 2.0.0 available
 {: release-note}
 
 Version 1.2.0 available
-:   Version 1.2.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global) deployable architecture{: external} is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+:   Version 1.2.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Introducing the new quickstart variant of {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture. See [{{site.data.keyword.powerSys_notm}} with VPC landing zone quickstart variation](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-overview##qkstart-variant) for more information.
 
 ## 06 July 2023
@@ -62,6 +62,6 @@ Version 1.2.0 available
 {: release-note}
 
 Version 1.1.0 available
-:   Version 1.1.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global) deployable architecture{: external} is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+:   Version 1.1.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Introducing {{site.data.keyword.powerSys_notm}} with VPC landing zone
     - The {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture is released. You can use the deployable architecture to create an isolated PowerVS landscape connected with VPC landing zone.
