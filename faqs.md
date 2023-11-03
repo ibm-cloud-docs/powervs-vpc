@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-26"
+lastupdated: "2023-11-03"
 
 keywords:
 
@@ -16,10 +16,10 @@ content-type: faq
 {{site.data.keyword.attribute-definition-list}}
 
 
-# FAQs for Power Systems Virtual Server with VPC landing zone deployable architectures
+# FAQs for {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architectures
 {: #powervs-automation-faqs}
 
-FAQs for the Power Systems Virtual Server for SAP HANA deployable architecture. To find all FAQs for {{site.data.keyword.cloud}}, see our [FAQ library](/docs/faqs).
+FAQs for the {{site.data.keyword.powerSys_notm}} for SAP HANA deployable architecture. To find all FAQs for {{site.data.keyword.cloud}}, see our [FAQ library](/docs/faqs).
 {: shortdesc}
 
 ## What does it mean for a deployable architecture to be SAP-certified?

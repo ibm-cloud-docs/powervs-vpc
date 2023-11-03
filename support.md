@@ -12,10 +12,10 @@ subcollection: powervs-vpc
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Getting help and support for Power Systems Virtual Server with VPC landing zone
+# Getting help and support for {{site.data.keyword.powerSysFull}} with VPC landing zone
 {: #powervs-automation-solution-support}
 
-If you experience an issue or have questions when deploying Power Systems Virtual Server with VPC landing zone, you can use the following resources before you open a support case.
+If you experience an issue or have questions when deploying {{site.data.keyword.powerSys_notm}} with VPC landing zone, you can use the following resources before you open a support case.
 {: shortdesc}
 
 - Review the [FAQs](/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-faqs) in the deployment guide.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-23"
+lastupdated: "2023-11-03"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: powervs-vpc
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Before you begin deploying the Power Virtual Server with VPC landing zone deployable architecture
+# Before you begin deploying the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture
 {: #powervs-automation-planning}
 
 Before you begin the deployment, ensure that the prerequisites for the deployable architecture are met.
@@ -21,7 +21,7 @@ Before you begin the deployment, ensure that the prerequisites for the deployabl
 ## Confirm your {{site.data.keyword.cloud_notm}} settings
 {: #vpc-cloud-prereqs}
 
-Complete the following steps before you deploy the Power Virtual Server with VPC landing zone deployable architecture.
+Complete the following steps before you deploy the {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture.
 
 1.  Confirm or set up an {{site.data.keyword.cloud_notm}} account:
 
@@ -115,7 +115,7 @@ Ensure that you are familiar with the required input for the deployment executio
 ## Additional background information
 {: #power-automation-prereqs-additional}
 
-- [IBM Power Systems Virtual Servers service documentation](https://cloud.ibm.com/docs/power-iaas)
+- [{{site.data.keyword.powerSys_notm}} service documentation](https://cloud.ibm.com/docs/power-iaas)
 - [Deployable architecture code](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-sap){: external}
 - Main dependencies:
    - [https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure){: external}
