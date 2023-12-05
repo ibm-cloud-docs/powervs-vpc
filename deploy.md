@@ -19,7 +19,7 @@ To deploy the Power Virtual Server with VPC landing zone through the IBM Cloud c
 
 1. Go to the IBM Cloud catalog and search for 'Power Virtual Server with VPC landing zone'. Click the tile.
 1. Select the latest version.
-1. Select **Create a new architecture** for a new deployment or **Extend VSI on VPC landing zone** to extend existing deployment with new PowerVS workspace
+1. Select **Create a new architecture** for a new deployment or **Extend Power Virtual Server with VPC landing zone** to extend existing deployment with new PowerVS workspace
 1. Select the **PowerVS Workspace** variation. 
 1. Click **Review deployment options**.
     - Select **Add to project** to add this deployment to an IBM Cloud project and combine it with other deployments. IBM Cloud projects include several additional pipeline steps before deployment, including deployment validation, cost calculation, compliance verification and approval process.
