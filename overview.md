@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-08-25"
+lastupdated: "2023-12-05"
 
 keywords:
 
@@ -50,11 +50,11 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 {: #resize_core_memory-1}
 {: tab-title="IBM i"}
 
-|  | US1 \n Test/Dev | Bh1 \n OLAP | UMH \n OLTP |
-|---------------------- | ------------------------- | ------------------------- | -------------------------  |
-| Cores | 4 | 16 | 16 |
-| Memory | 128 | 1600 | 768 |
-| Storage Tier-1 (GB) | 500 | 3170 | 2490 |
+|  | US1 \n Test/Dev |
+|---------------------- |
+| Cores | 4 |
+| Memory | 128 |
+| Storage Tier-1 (GB) | 750 |
 {: class="simple-tab-table"}
 {: tab-group="t-shirt size"}
 {: caption="Table 1. T-shirt size and configuration mapping" caption-side="top"}
@@ -82,6 +82,11 @@ This extension variation has a prerequisite. You must deploy either the PowerVS 
 {: important}
 
 The Power Virtual Server with VPC landing zone as variation 'Extend Power Virtual Server with VPC landing zone' creates an additional Power Virtual Server workspace and connects it with already created Power Virtual Server with VPC landing zone. It builds on existing Power Virtual Server with VPC landing zone deployed as a variation 'Create a new architecture'.
+
+## PowerVS Import Workspace variation
+{: #import-variant}
+
+This solution takes pre-existing VPC and PowerVS infrastructure resource details as inputs and creates a schematics workspace. The created schematics workspace's id can be used as pre-requisite workspace to install the deployable architecture 'Power Virtual Server for SAP HANA' which will create and configure the PowerVS instances for SAP on top of the existing infrastructure.
 
 ## Other PowerVS related deployable architectures
 {: #powervs-automation-solution-components}
