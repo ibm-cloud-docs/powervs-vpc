@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-11-22"
+lastupdated: "2023-12-05"
 
 keywords: 
 
@@ -19,6 +19,15 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries grouped by date.
 {: shortdesc}
+
+## 05 December 2023
+{: #powervs-vpc-dec05}
+{: release-note}
+
+Version 3.2.0 of the available
+:   Version 3.2.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+    - Introducing the new `PowerVS Import workspace` variant of {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture. See [{{site.data.keyword.powerSys_notm}} with VPC landing zone Import Workspace Variation](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-overview##import-variant) for more information.
+    - Support `MAD02` data center which is [PER enabled](/docs/power-iaas?topic=power-iaas-per).
 
 ## 22 November 2023
 {: #powervs-vpc-nov22}
