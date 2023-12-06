@@ -39,11 +39,6 @@ This PowerVS Workspace variation has a prerequisite. You must deploy the 'Create
 The {{site.data.keyword.powerSys_notm}} with VPC landing zone as variation 'Extend {{site.data.keyword.powerSys_notm}} with VPC landing zone' creates an additional {{site.data.keyword.powerSys_notm}} workspace and connects it with already created {{site.data.keyword.powerSys_notm}} with VPC landing zone. It builds on existing {{site.data.keyword.powerSys_notm}} with VPC landing zone deployed as a variation 'Create a new architecture'.
 This is typically used for High Availability scenarios in same regions.
 
-## Create a new architecture - PowerVS Import workspace variation
-{: #import-variant}
-
-This solution takes pre-existing VPC and PowerVS infrastructure resource details as inputs and creates a schematics workspace. The created schematics workspace's id can be used as pre-requisite workspace to install the deployable architecture [{{site.data.keyword.powerSys_notm}} for SAP HANA](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) which will create and configure the PowerVS instances for SAP on top of the existing infrastructure.
-
 ## Create a new architecture - PowerVS Quickstart variation
 {: #qkstart-variant}
 
