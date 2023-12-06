@@ -20,7 +20,7 @@ If you experience an issue or have questions when deploying {{site.data.keyword.
 
 - Review the [FAQs](/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-faqs) in the deployment guide.
 - Review the [troubleshooting documentation](/docs/powervs-vpc?topic=powervs-vpc-troubleshoot-deploy) to troubleshoot and resolve common issues.
-- ![GitHub icon](../icons/logo-github-16.svg "GitHub icon") Review the [GitHub issues](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastrucutre/issues){: external} to see whether other users experienced the same problem.
+- ![GitHub icon](../icons/logo-github-16.svg "GitHub icon") Review the [GitHub issues](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/issues){: external} to see whether other users experienced the same problem.
 - ![Slack icon](../icons/logo-slack-16.svg "Slack icon") Ask product experts and the community questions on the [sap-on-power-deployable-architectures](https://ibm-cloudplatform.slack.com/archives/C04RJB1UX53) Slack channel.
 
 If you still can't resolve the problem, you can open a support case. For more information, see [Creating support cases](/docs/get-support?topic=get-support-open-case). And, if you're looking to provide feedback, see [Submitting feedback](/docs/overview?topic=overview-feedback).
