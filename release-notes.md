@@ -33,7 +33,7 @@ Version 4.0.0 of the available
 [Breaking change]{: tag-red}
 : Version 4.0.0 includes backward-incompatible changes. Review the following information before you upgrade.
     - When upgrading to this version floating IPs are going to be deleted and recreated upon apply. This is due to a bug where the floating IPs were being created incorrectly in the Default resource group. Upon re-creation, the floating IPs will be created in the same resource group as the VSI.
-    - Please plan accordingly before upgrading as this change will cause disruption for PowerVS workspace and Quickstart variation.
+    - Please plan accordingly before upgrading incase this change will cause disruption for whatever is using the floating IPs.
 
 ## 05 December 2023
 {: #powervs-vpc-dec05}
