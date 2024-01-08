@@ -27,7 +27,7 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 Version 4.0.1 of the available
 :   Version 4.0.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade TF IBM provider version to `1.61.0`
-    - Change default PowerVS images for AIX and IBMi for all variations
+    - Change default PowerVS images for AIX and IBM i for all variations
     - Quickstart flavour now has a tshirt size `Custom (Configure in optional parameters)` in the dropdown. This is used when `custom_profile` needs to be used for custom deployments.
 
 [Breaking change]{: tag-red}
