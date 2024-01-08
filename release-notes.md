@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-12-05"
+  years: 2024
+lastupdated: "2024-01-08"
 
 keywords: 
 
@@ -19,6 +19,22 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries grouped by date.
 {: shortdesc}
+
+## 08 January 2024
+{: #powervs-vpc-jan08}
+{: release-note}
+
+Version 4.0.1 of the available
+:   Version 4.0.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+    - Upgrade TF IBM provider version to `1.61.0`
+    - Change default PowerVS images for AIX and IBMi for all variations
+    - Quickstart flavour now has a tshirt size `Custom (Configure in optional parameters)` in the dropdown. This is used when `custom_profile` needs to be used for custom deployments.
+
+[Breaking change]{: tag-red}
+: Version 4.0.1 includes backward-incompatible changes. Review the following information before you upgrade.
+    - When upgrading to this version floating IPs are going to be deleted and recreated upon apply. This is due to a bug where the floating IPs were being created incorrectly in the Default resource group. Upon re-creation, the floating IPs will be created in the same resource group as the VSI.
+    - Please plan accordingly before upgrading incase this change will cause disruption for whatever is using the floating IPs.
+    - 3 sleep resources will be deleted because of changes in the VPC landing zone module version 
 
 ## 05 December 2023
 {: #powervs-vpc-dec05}
