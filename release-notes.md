@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-01-08"
+lastupdated: "2024-01-10"
 
 keywords: 
 
@@ -27,8 +27,8 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 Version 4.1.0 of the available
 :   Version 4.1.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Enable support for `WDC07`, `MAD02`, `MAD04` and `SAO04` PER datacenters for {{site.data.keyword.powerSys_notm}} Workspace Variation only.
-    - Enable support for `WDC07`, `MAD02`, `MAD04` and `SAO04` PER datacenters for {{site.data.keyword.powerSys_notm}} Workspace Variation only.
     - Enable support for `WDC07`and `SAO04`  PER datacenters for {{site.data.keyword.powerSys_notm}} Quickstart Variation.
+    - Upgrade Frankfurt 2 `eu-de-2` DC to PER. New deployments in Frankfurt 2 region will make use of PER.
     - Fixes outputs of workspace when DNS, NTP and NFS services are set to false.
 
 ## 08 January 2024
