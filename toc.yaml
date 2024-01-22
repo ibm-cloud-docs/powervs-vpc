@@ -45,6 +45,8 @@ toc:
             navtitle: Deploying the PowerVS Workspace architecture
           - topic: quicksart-deploy.md
             navtitle: Deploying the PowerVS quickstart architecture
+          - topic: import-workspace-deploy.md
+            navtitle: Deploying the Import PowerVS Workspace architecture
           - mgmt-monitoring.md
           - access.md
 
