@@ -45,9 +45,4 @@ After you provision an instance, verify the success of the deployment by:
 ## Next steps
 {: #powervs-automation-next}
 
-You can connect to the landscape by using following SSH command:
-
-```sh
-ssh -A -o ServerAliveInterval=60 -o ServerAliveCountMax=600 -o ProxyCommand=\"ssh -W %h:%p root@\<access_host_floating_ip\>\" root@\<vpc_instance_ip\>
-```
-
+Deploy the deployable architecture ['Power Virtual Server for SAP HANA'](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) on top of this solution.
