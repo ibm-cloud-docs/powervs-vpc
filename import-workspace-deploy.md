@@ -15,7 +15,7 @@ subcollection: powervs-vpc
 # Deploying the Power Virtual Server with VPC landing zone - 'Import PowerVS Workspace' Variation
 {: #powervs-import-workspace-deploy}
 
-To deploy an IBMCloud Schematics Workspace that imports an existing VPC and Power Virtual Server Workspace resources through the IBM Cloud console:
+To deploy an IBMCloud Schematics Workspace that imports existing VPC and Power Virtual Server Workspace resources through the IBM Cloud console:
 
 1. Go to the IBM Cloud catalog and search for 'Power Virtual Server with VPC landing zone'. Click the tile.
 1. Select the latest version.
