@@ -28,6 +28,12 @@ Version 4.4.0 of the available
 : Version 4.4.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade Dallas 12 `dal12` DC to PER. New deployments in Dallas 12 region will make use of PER.
 
+[Warning]{: tag-red}
+: Version 4.4.0 includes backward-incompatible changes for Dalla 12 `dal12` DC only. 
+    - Do not upgrade to this version if previous deployments were made in Dallas 12 `dal12` {{site.data.keyword.powerSys_notm}} zone as doing so will corrupt the landscape because of switch from Cloud connections to PER.
+    - Use this for new deployments in Dallas 12 `dal12` {{site.data.keyword.powerSys_notm}} zone.
+    - Deployments done in other {{site.data.keyword.powerSys_notm}} zone can be upgraded with any issue.
+
 ## 22 January 2024
 {: #powervs-vpc-jan22}
 {: release-note}
