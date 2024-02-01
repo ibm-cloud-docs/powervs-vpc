@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-01-11"
+lastupdated: "2024-02-01"
 
 keywords: 
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries grouped by date.
 {: shortdesc}
+
+## 1 February 2024
+{: #powervs-vpc-feb1}
+{: release-note}
+
+Version 4.4.0 of the available
+: Version 4.4.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+    - Upgrade Dallas 12 `dal12` DC to PER. New deployments in Dallas 12 region will make use of PER.
 
 ## 22 January 2024
 {: #powervs-vpc-jan22}
