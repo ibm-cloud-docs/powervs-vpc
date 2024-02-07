@@ -15,28 +15,28 @@ toc:
     label: Power Systems Virtual Server with VPC landing zone
 
   entries:
-  - navgroup:
-      id: overview
-      topics:
-      - topic: overview.md
-        navtitle: Overview
-      - topic: release-notes.md
-        navtitle: Release notes
+    - navgroup:
+        id: overview
+        topics:
+          - topic: overview.md
+            navtitle: Overview
+          - topic: release-notes.md
+            navtitle: Release notes
 
-  - navgroup:
-      id: architecture
-      topics:
-      - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/quickstart/deploy-arch-ibm-pvs-inf-quickstart.md
-      - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/full-stack/deploy-arch-ibm-pvs-inf-full-stack.md
-      - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/extension/deploy-arch-ibm-pvs-inf-extension.md
-      - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/import-workspace/deploy-arch-ibm-pvs-inf-import-workspace.md
+    - navgroup:
+        id: architecture
+        topics:
+          - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/quickstart/deploy-arch-ibm-pvs-inf-quickstart.md
+          - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/full-stack/deploy-arch-ibm-pvs-inf-full-stack.md
+          - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/extension/deploy-arch-ibm-pvs-inf-extension.md
+          - include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/import-workspace/deploy-arch-ibm-pvs-inf-import-workspace.md
 
-  - navgroup:
-      id: plan
-      topics:
-      - topic: dependencies.md
-        navtitle: Deployment dependencies 
-      - topic: vpc-presets.md
-        navtitle: Test
-      - topic: prereqs.md
-        navtitle: Before you begin deploying
+    - navgroup:
+        id: plan
+        topics:
+          - topic: dependencies.md
+            navtitle: Deployment dependencies
+          - topic: vpc-presets.md
+            navtitle: New
+          - topic: prereqs.md
+            navtitle: Before you begin deploying
