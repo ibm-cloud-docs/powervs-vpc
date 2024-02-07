@@ -99,25 +99,26 @@ The defaults must be changed if you specify more than one deployment landscape c
 
 | Service | Private network | IP address ranges |
 | --- | --- | --- |
-| Management VPC | VPC management network for virtual server instances  | 172.10.1.0/24 |
-| Workload VPC | VPC workload network for virtual server instances | 172.11.2.0/24 |
-| Edge VPC | VPC edge network for virtual server instances | 172.11.1.0/24 |
-| Power VS workspace | Power VS management network  \n PowerVS backup network  \n  \n Separate network for each SAP system on Power VS | 10.10.10.0/24 \n 10.10.11.0/24 \n 10.10.20.0/24 |
+| Management VPC | VPC management network for virtual server instances  | 10.10.10.0/24 |
+| Workload VPC | VPC workload network for virtual server instances | 10.20.10.0/"4 |
+| Edge VPC | VPC edge network for virtual server instances | 10.30.10.0/24 |
+| Power VS workspace | Power VS management network  \n PowerVS backup network  | 10.51.0.0/24 \n 10.52.0.0/24 |
 {: caption="Table 1. Private networks IP address ranges" caption-side="bottom"}
 
 ## Learn about deployment input parameters
 {: #powervs-automation-input-parameters}
 
 Ensure that you are familiar with the required input for the deployment execution. 
-- [description for input parameters - create new architecture](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/full-stack/README.md){: external}
-- [description for input parameters - extend existing architecture](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/extension/README.md){: external}
+- [Description for 'Fullstack' input parameters - create new architecture](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/full-stack/README.md){: external}
+- [Description for 'Extension' input parameters - extend existing architecture](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/extension/README.md){: external}
+- [Description for 'Quickstart' input parameters - create new architecture](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/quickstart/README.md){: external}
 
 ## Additional background information
 {: #power-automation-prereqs-additional}
 
 - [{{site.data.keyword.powerSys_notm}} service documentation](https://cloud.ibm.com/docs/power-iaas)
-- [Deployable architecture code](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-sap){: external}
+- [Deployable architecture code](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure){: external}
 - Main dependencies:
-   - [https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure){: external}
+   - [https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone){: external}
    - [https://galaxy.ansible.com/ibm/power_linux_sap](https://galaxy.ansible.com/ibm/power_linux_sap){: external}
-   - [https://galaxy.ansible.com/community/sap_install](https://galaxy.ansible.com/community/sap_install){: external}
+   
