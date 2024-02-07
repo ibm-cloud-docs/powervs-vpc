@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-02-01"
+lastupdated: "2024-02-07"
 
 keywords: 
 
@@ -20,6 +20,20 @@ content-type: release-note
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries grouped by date.
 {: shortdesc}
 
+## 7 February 2024
+{: #powervs-vpc-feb7}
+{: release-note}
+
+Version 4.5.0 of the available
+: Version 4.5.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+    - Upgrade Sao Paulo 01 `sao01` DC to PER. New deployments in Sao Paulo 01 region will make use of PER.
+
+[Warning]{: tag-red}
+: Version 4.5.0 includes backward-incompatible changes for Sao Paulo 01 `sao01` DC only. 
+    - Do not upgrade to this version if previous deployments were made in Sao Paulo 01 `sao01` {{site.data.keyword.powerSys_notm}} zone as doing so will corrupt the landscape because of switch from Cloud connections to PER.
+    - Use this for new deployments in Sao Paulo 01 `sao01` {{site.data.keyword.powerSys_notm}} zone.
+    - Deployments done in other {{site.data.keyword.powerSys_notm}} zone can be upgraded with any issue.
+
 ## 1 February 2024
 {: #powervs-vpc-feb1}
 {: release-note}
@@ -29,7 +43,7 @@ Version 4.4.0 of the available
     - Upgrade Dallas 12 `dal12` DC to PER. New deployments in Dallas 12 region will make use of PER.
 
 [Warning]{: tag-red}
-: Version 4.4.0 includes backward-incompatible changes for Dalla 12 `dal12` DC only. 
+: Version 4.4.0 includes backward-incompatible changes for Dallas 12 `dal12` DC only. 
     - Do not upgrade to this version if previous deployments were made in Dallas 12 `dal12` {{site.data.keyword.powerSys_notm}} zone as doing so will corrupt the landscape because of switch from Cloud connections to PER.
     - Use this for new deployments in Dallas 12 `dal12` {{site.data.keyword.powerSys_notm}} zone.
     - Deployments done in other {{site.data.keyword.powerSys_notm}} zone can be upgraded with any issue.
