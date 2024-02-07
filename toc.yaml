@@ -43,8 +43,8 @@ toc:
         topics:
           - topic: deploy.md
             navtitle: Deploying the PowerVS Workspace architecture
-          - topic: quicktsart-deploy.md
-            navtitle: Deploying the PowerVS quickstart architecture
+          - topic: quicktstart-deploy.md
+            navtitle: Deploying the PowerVS Quickstart architecture
           - topic: import-workspace-deploy.md
             navtitle: Deploying the Import PowerVS Workspace architecture
           - mgmt-monitoring.md
