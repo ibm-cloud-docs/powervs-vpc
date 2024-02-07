@@ -2,13 +2,14 @@
 toc:
   properties:
     subcollection: powervs-vpc
-    industry: ITServiceManagement
-    use-case: Technology
-    compliance: SAPCertified
     audience: solution
     content-type: deployment
+    use-case: Technology
+    category: solution_docs
+    compliance: SAPCertified
     href: /docs/powervs-vpc
     path: powervs-vpc
+    industry: ITServiceManagement
     deployable: true
     description: Deploy Power Virtual Server workspace and connects it with VPC services with a deployable architecture.
     label: Power Systems Virtual Server with VPC landing zone
@@ -33,8 +34,10 @@ toc:
     - navgroup:
         id: plan
         topics:
-          - dependencies.md
-          - vpc-presets.md
+          - topic: dependencies.md
+            navtitle: Deployment dependencies
+          - topic: vpc-presets.md
+            navtitle: VPC landing zone configurations
           - topic: prereqs.md
             navtitle: Before you begin deploying
 
@@ -43,19 +46,20 @@ toc:
         topics:
           - topic: deploy.md
             navtitle: Deploying the PowerVS Workspace architecture
-          - topic: quicktstart-deploy.md
+          - topic: quickstart-deploy.md
             navtitle: Deploying the PowerVS Quickstart architecture
           - topic: import-workspace-deploy.md
             navtitle: Deploying the Import PowerVS Workspace architecture
-          - mgmt-monitoring.md
-          - access.md
+          - topic: mgmt-monitoring.md
+            navtitle: Managing and monitoring the deployment
+          - topic: access.md
+            navtitle: Accessing the environment
 
     - navgroup:
         id: reference
         topics:
           - topic: responsibilities.md
             navtitle: Responsibilities
-
     - navgroup:
         id: help
         topics:
