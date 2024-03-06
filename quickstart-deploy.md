@@ -38,7 +38,7 @@ To deploy the Power Virtual Server with VPC landing zone through the IBM Cloud&r
 
 Edit the configuration by entering the **Required input variables**. **Optional input variables** are for advanced configuration and for deeper customization of the provisioned elements. You should know exactly what is the change goal and result by modifying the optional input variables. 
 - Input parameters are described in the following readme files:
-  - [Quickstart readme file](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/quickstart/README.md#inputs){: external} for a new architecture deployment.
+  1. [Quickstart readme file](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/quickstart/README.md#inputs){: external} for a new architecture deployment.
 - Secure input parameters might be entered directly or might be referenced from an existing {{site.data.keyword.secrets-manager_full_notm}}. For more information, see [Storing arbitrary secrets](/docs/secrets-manager?topic=secrets-manager-arbitrary-secrets).
 
 The deployment typically can take up to 20 minutes but might take longer depending on the performance of {{site.data.keyword.cloud_notm}} components.
@@ -66,3 +66,4 @@ You can connect to the landscape by using following SSH command:
   ```sh
     ssh root@\<access_host_floating_ip\>
     ```
+    

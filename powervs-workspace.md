@@ -12,14 +12,14 @@ subcollection: powervs-vpc
 
 {{site.data.keyword.attribute-definition-list}}
 
-## Prerequisites
+# Prerequisites
 {: #powervs-workspace-prerequisites}
 
 1. [Confirm your {{site.data.keyword.cloud_notm}} settings](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#vpc-cloud-prereqs)
 2. [Set the IAM permissions](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#powervs-automation-IAM-prereqs)
 3. [Create an SSH key Pair](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#powervs-automation-ssh-key)
 
-## Deploying the Power Virtual Server with VPC landing zone - 'PowerVS Workspace' Variation
+# Deploying the Power Virtual Server with VPC landing zone - 'PowerVS Workspace' Variation
 {: #powervs-automation-deploy}
 
 To deploy the Power Virtual Server with VPC landing zone through the IBM Cloud console:
@@ -41,7 +41,7 @@ Edit the configuration by entering the **Required input variables**. **Optional 
 The deployment typically can take up to 60 minutes but might take longer depending on the performance of {{site.data.keyword.cloud_notm}} components.
 {: note}
 
-## Validating the deployment
+# Validating the deployment
 {: #validate-deployment}
 
 After you provision an instance, verify the success of the deployment by:
@@ -50,7 +50,7 @@ After you provision an instance, verify the success of the deployment by:
 - Trying out the access to the bastion host by using an SSH key. Access should be possible. 
 - Logging to all created VPC and PowerVS instances. Access should be possible.
 
-## Next steps
+# Next steps
 {: #powervs-automation-next}
 
 You can connect to the landscape by using following SSH command:
