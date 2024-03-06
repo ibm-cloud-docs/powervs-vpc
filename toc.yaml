@@ -18,10 +18,10 @@ toc:
     - navgroup:
         id: overview
         topics:
-          - topic: overview.md
-            navtitle: Overview
-          - topic: release-notes.md
-            navtitle: Release notes
+          - navtitle: Overview
+            topic: overview.md
+          - navtitle: Release notes
+            topic: release-notes.md
 
     - navgroup:
         id: architecture
@@ -34,12 +34,12 @@ toc:
     - navgroup:
         id: plan
         topics:
-          - topic: dependencies.md
-            navtitle: Deployment dependencies
-          - topic: vpc-presets.md
-            navtitle: VPC landing zone configurations
-          - topic: prereqs.md
-            navtitle: Before you begin deploying
+          - navtitle: Deployment dependencies
+            topic: dependencies.md
+          - navtitle: VPC landing zone configurations
+            topic: vpc-presets.md
+          - navtitle: Before you begin deploying
+            topic: prereqs.md
 
     - navgroup:
         id: deploy
