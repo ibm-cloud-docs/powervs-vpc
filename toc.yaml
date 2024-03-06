@@ -44,7 +44,7 @@ toc:
     - navgroup:
         id: deploy
         topics:
-          - topic: deploy.md
+          - topic: powervs-workspace.md
             navtitle: Deploying the PowerVS Workspace architecture
           - topic: quickstart-deploy.md
             navtitle: Deploying the PowerVS Quickstart architecture
