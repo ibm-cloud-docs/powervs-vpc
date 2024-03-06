@@ -13,6 +13,7 @@ subcollection: powervs-vpc
 {{site.data.keyword.attribute-definition-list}}
 
 # Prerequisites
+{: #powervs-Prerequisites}
 1. [Confirm your {{site.data.keyword.cloud_notm}} settings](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#vpc-cloud-prereqs)
 2. [Set the IAM permissions](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#powervs-automation-IAM-prereqs)
 3. [Create an SSH key Pair](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#powervs-automation-ssh-key)
