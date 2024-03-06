@@ -83,7 +83,7 @@ Make sure that you have an SSH key that you can use for authentication. This key
 
 SSH Key can be generated using any methods. When generating a key pair, make sure the passphrase is empty(must not be password encrypted).
 
-### Linux OS:
+### Linux OS
 On the command line type the command `ssh-keygen`. It will place the id_rsa and id_rsa.pub files under `/root/.ssh/id_rsa`.
 
 ```sh
@@ -110,7 +110,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-### Windows OS:
+### Windows OS
 You can install [MobaXterm](https://mobaxterm.mobatek.net/download.html) application and start a local terminal.
 On the command line type the command `ssh-keygen`. It will place the id_rsa and id_rsa.pub files under `/home/mobaxterm/.ssh/`
 
