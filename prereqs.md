@@ -142,12 +142,12 @@ These public and private keys can now be used in the input variables for the Dep
 
 Paste the content of `id_rsa.pub` key directly in the field for input variable `ssh_public_key`.
 For `ssh_private_key` input variable, you need a [here-doc](https://developer.hashicorp.com/terraform/language/expressions/strings#heredoc-strings) string format.
+Replace value with your private ssh key value. You can use a text editor. Then copy the entire content and paste it in the field for `ssh_private_key` input variable.
+
 ```sh
 <<-EOF
 -----BEGIN RSA PRIVATE KEY-----
 value
-
-
 -----BEGIN RSA PRIVATE KEY-----
 EOF
 
