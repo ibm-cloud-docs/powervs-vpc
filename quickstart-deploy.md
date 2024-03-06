@@ -20,7 +20,7 @@ subcollection: powervs-vpc
 
 For more information about prerequisites [learn here](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning)
 
-## Deploying the Power Virtual Server with VPC landing zone - 'PowerVS quickstart' variation
+# Deploying the Power Virtual Server with VPC landing zone - 'PowerVS quickstart' variation
 {: #powervs-quickstart-deploy}
 
 To deploy the Power Virtual Server with VPC landing zone through the IBM Cloud&reg; console:
