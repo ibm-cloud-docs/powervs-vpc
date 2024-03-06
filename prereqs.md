@@ -41,9 +41,6 @@ Complete the following steps before you deploy the {{site.data.keyword.powerSys_
 Set up account access ({{site.data.keyword.iamshort}} (IAM)):
 - Create an {{site.data.keyword.cloud_notm}} [API key](/docs/account?topic=account-userapikey#create_user_key). The user who owns this key must have the Administrator role.
 
-    Service ID API keys are not supported for the Red Hat OpenShift Container Platform on VPC landing zone deployable architecture.
-    {: tip}
-
 - For compliance with {{site.data.keyword.framework-fs_notm}}, users in your account are required to use [multi-factor authentication (MFA)](/docs/account?topic=account-account-getting-started#account-gs-mfa).
 - [Set up access groups](/docs/account?topic=account-accoungetting-started#account-gs-accessgroups).
 
@@ -79,10 +76,82 @@ You need the following access to create a project and create project tooling res
 
 For more information, see [Assigning users access to projects](/docs/secure-enterprise?topic=secure-enterprise-access-project).
 
-## Create an SSH key
+## Create an SSH key Pair
 {: #powervs-automation-ssh-key}
 
 Make sure that you have an SSH key that you can use for authentication. This key is used to log in to all virtual server instances that you create. For more information about creating SSH keys, see [SSH keys](/docs/vpc?topic=vpc-ssh-keys).
+
+SSH Key can be generated using any methods. When generating a key pair, make sure the passphrase is empty(must not be password encrypted).
+
+### Linux OS:
+On the command line type the command `ssh-keygen`. It will place the id_rsa and id_rsa.pub files under `/root/.ssh/id_rsa`.
+
+```sh
+ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /root/.ssh/id_rsa
+Your public key has been saved in /root/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:TUdZn9O6tnwK2lc4m917Cs1KvbyXs2n46yrlE2I1t/I root@ans-jump-box-001
+The key's randomart image is:
++---[RSA 3072]----+
+|            .o.  |
+|           ..  .o|
+|          . .  oo|
+|         o . o o.|
+|        S . . +..|
+|           o Boo.|
+|          . B @*o|
+|           = @+EB|
+|          . +o#&*|
++----[SHA256]-----+
+```
+
+### Windows OS:
+You can install [MobaXterm](https://mobaxterm.mobatek.net/download.html) application and start a local terminal.
+On the command line type the command `ssh-keygen`. It will place the id_rsa and id_rsa.pub files under `/home/mobaxterm/.ssh/`
+
+```sh
+ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/mobaxterm/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/mobaxterm/.ssh/id_rsa
+Your public key has been saved in /home/mobaxterm/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:TUdZn9O6tnwK2lc4m917Cs1KvbyXs2n46yrlE2I1t/I
+The key's randomart image is:
++---[RSA 3072]----+
+|            .o.  |
+|           ..  .o|
+|          . .  oo|
+|         o . o o.|
+|        S . . +..|
+|           o Boo.|
+|          . B @*o|
+|           = @+EB|
+|          . +o#&*|
++----[SHA256]-----+
+```
+
+These public and private keys can now be used in the input variables for the Deployable architectures.
+
+Paste the content of `id_rsa.pub` key directly in the field for input variable `ssh_public_key`.
+For `ssh_private_key` input variable, you need a [here-doc](https://developer.hashicorp.com/terraform/language/expressions/strings#heredoc-strings) string format.
+```sh
+<<-EOF
+-----BEGIN RSA PRIVATE KEY-----
+value
+
+
+-----BEGIN RSA PRIVATE KEY-----
+EOF
+
+```
 
 ## Choose an operating system
 {: #powervs-automation-select-os}

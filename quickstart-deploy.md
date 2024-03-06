@@ -12,6 +12,13 @@ subcollection: powervs-vpc
 
 {{site.data.keyword.attribute-definition-list}}
 
+# Prerequisites
+1. [Confirm your {{site.data.keyword.cloud_notm}} settings](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#vpc-cloud-prereqs)
+2. [Set the IAM permissions](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#powervs-automation-IAM-prereqs)
+3. [Create an SSH key Pair](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#powervs-automation-ssh-key)
+
+For more information about prerequisites [learn here](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning)
+
 # Deploying the Power Virtual Server with VPC landing zone - 'PowerVS quickstart' variation
 {: #powervs-quickstart-deploy}
 
