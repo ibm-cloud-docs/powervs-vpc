@@ -12,19 +12,16 @@ subcollection: powervs-vpc
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Prerequisites
-{: #powervs-Prerequisites}
+# Deploying the Power Virtual Server with VPC landing zone - 'PowerVS quickstart' variation
+{: #deploy-powervs-quickstart}
+
+Following prerequisites must be met before deploying the solution:
 
 1. [Confirm your {{site.data.keyword.cloud_notm}} settings](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#vpc-cloud-prereqs)
 2. [Set the IAM permissions](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#powervs-automation-IAM-prereqs)
 3. [Create an SSH key Pair](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#powervs-automation-ssh-key)
 
-For more information about prerequisites [learn here](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning)
-
-# Deploying the Power Virtual Server with VPC landing zone - 'PowerVS quickstart' variation
-{: #powervs-quickstart-deploy}
-
-To deploy the Power Virtual Server with VPC landing zone through the IBM Cloud&reg; console:
+To deploy the Power Virtual Server with VPC landing zone through the IBM Cloud console:
 
 1. Go to the [IBM Cloud catalog](https://cloud.ibm.com){: external} and search for 'Power Virtual Server with VPC landing zone'. Click the tile.
 2. Select the latest product version.
@@ -45,7 +42,7 @@ The deployment typically can take up to 20 minutes but might take longer dependi
 {: note}
 
 ## Validating the deployment
-{: #validate-deployment}
+{: #validate-powervs-quickstart}
 
 After you provision an instance, verify the success of the deployment by:
 
@@ -54,7 +51,7 @@ After you provision an instance, verify the success of the deployment by:
 - Logging to all created VPC and PowerVS instances. Access should be possible.
 
 ## Next steps
-{: #powervs-automation-next}
+{: #next-steps-powervs-quickstart}
 
 You can connect to the landscape by using following SSH command:
 
