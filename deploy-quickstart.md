@@ -15,7 +15,6 @@ subcollection: powervs-vpc
 # Deploying the Power Virtual Server with VPC landing zone - 'PowerVS quickstart' variation
 {: #deploy-powervs-quickstart}
 
-
 You can deploy a deployable architecture from the {{site.data.keyword.cloud_notm}} catalog. You can choose one of several deployment options, including with {{site.data.keyword.cloud_notm}} projects. [Learn about IaC deployments with projects](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects).
 
 ## Deploying with {{site.data.keyword.cloud_notm}} projects

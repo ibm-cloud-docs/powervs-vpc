@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-01-22"
+lastupdated: "2024-03-08"
 
 keywords:
 
@@ -15,24 +15,48 @@ subcollection: powervs-vpc
 # Deploying the Power Virtual Server with VPC landing zone - 'Import PowerVS Workspace' Variation
 {: #deploy-powervs-import-workspace}
 
-To deploy an IBMCloud Schematics Workspace that imports existing VPC and Power Virtual Server Workspace resources through the IBM Cloud console:
+You can deploy a deployable architecture from the {{site.data.keyword.cloud_notm}} catalog. You can choose one of several deployment options, including with {{site.data.keyword.cloud_notm}} projects. [Learn about IaC deployments with projects](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects).
 
-1. Go to the IBM Cloud catalog and search for 'Power Virtual Server with VPC landing zone'. Click the tile.
-1. Select the latest version.
-1. Select **Create a new architecture** for a new deployment.
-1. Select the **Import PowerVS Workspace** variation. 
-1. Click **Review deployment options**.
-    - Select **Add to project** to add this deployment to an IBM Cloud project and combine it with other deployments. IBM Cloud projects include several additional pipeline steps before deployment, including deployment validation, cost calculation, compliance verification and approval process.
-    - Select **Create from the CLI** to get the CLI command. With that command you can trigger the deployment from the CLI.
-    - Select **Work with code** to embed the code into other terraform deployments.
-    - Select **Deploy with IBM Cloud Schematics** to trigger deployment process directly.
+## Deploying with {{site.data.keyword.cloud_notm}} projects
+{: #deploy-powervs-quickstart-projects}
 
-Edit the configuration by entering the **Required input variables**. **Optional input variables** are for advanced configuration and for deeper customization of the provisioned elements. You should know exactly what is the change goal and result by modifying the optional input variables. 
-- Input parameters are described in the [readme file](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/import-workspace/README.md){: external} for importing existing VPC and PowerVS workspace resources.
-- Secure input parameters might be entered directly or might be referenced from an existing {{site.data.keyword.secrets-manager_full_notm}}. For more information, see [Storing arbitrary secrets](/docs/secrets-manager?topic=secrets-manager-arbitrary-secrets).
+To deploy a **Import PowerVS Workspace** variation of Power Virtual Server with VPC landing zone deployable architecture through the {{site.data.keyword.cloud_notm}} catalog, follow these steps:
 
-The deployment typically can take up to 10 minutes depending on the performance of {{site.data.keyword.cloud_notm}} components.
-{: note}
+1.  Make sure that you comply with the prerequisites in the [planning](/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning) topic:
+    - [Confirm your {{site.data.keyword.cloud_notm}} settings](/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#vpc-cloud-prereqs)
+    - [Set the IAM permissions](/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#powervs-automation-IAM-prereqs)
+
+1. Go to the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external} and search for the architecture that you're interested in deploying:
+    - Power Virtual Server with VPC landing zone
+1.  Click the tile for the deployable architecture to open the details.
+1.  Select the latest product version in the Architecture section.
+1.  Select the variation **Import PowerVS Workspace**
+1.  Click **Review deployment options**.
+1.  Select the **Add to project** deployment type in Deployment options, and then click **Add to project**.
+    1.  Name your project, enter a description, and specify a configuration name. Click **Create**.
+1.  Edit and validate the configuration:
+    1.  Select your authentication method. You can use an existing secret in {{site.data.keyword.secrets-manager_short}} or add your API key directly. For more information, see [Using an API key or secret to authorize projects](/docs/secure-enterprise?topic=secure-enterprise-authorize-project).
+    1.  Enter values for other required fields from the Required tab.
+    1.  Optional: Specify other values from the Optional tab.
+    1.  Save the configuration.
+    1.  Click **Validate**. Validation takes a few minutes
+{{site.data.keyword.cloud_notm}} projects runs a Code Risk Analyzer scan that includes a [supported set of {{site.data.keyword.compliance_short}} rules](/docs/code-risk-analyzer-cli-plugin?topic=code-risk-analyzer-cli-plugin-cra-cli-plugin#terraform-scc-goals). Controls that are part of the deployable architecture and that are also supported by {{site.data.keyword.cloud_notm}} projects are checked. Any extra controls that are not included in the list of supported {{site.data.keyword.compliance_short}} rules are not checked when you validate the configuration.
+
+        If the validation fails because of the Code Risk Analyzer scan, you can [troubleshoot the failure](/docs/secure-infrastructure-vpc?topic=secure-infrastructure-vpc-ts-na-failures).
+1.  Deploy the configuration:
+
+    After you validate your configuration, you can deploy it to your target account.
+
+    1.  Review the input values and make any necessary changes.
+    1.  Click **Deploy**.
+
+        The deployment typically can take up to 10 minutes but might take longer depending on the performance of {{site.data.keyword.cloud_notm}} components.You are notified when the deployment is successful.
+        {: note}
+
+1.  Review the outputs from the deployable architecture.
+
+During the validation and deployment process, monitor the [needs attention items](/docs/secure-enterprise?topic=secure-enterprise-needs-attention-projects). The widget reflects any issue that occurs in your configurations.
+{: remember}
 
 ## Validating the deployment
 {: #validate-powervs-import-workspace}
