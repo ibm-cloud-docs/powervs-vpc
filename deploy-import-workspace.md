@@ -13,7 +13,7 @@ subcollection: powervs-vpc
 {{site.data.keyword.attribute-definition-list}}
 
 # Deploying the Power Virtual Server with VPC landing zone - 'Import PowerVS Workspace' Variation
-{: #powervs-import-workspace-deploy}
+{: #deploy-powervs-import-workspace}
 
 To deploy an IBMCloud Schematics Workspace that imports existing VPC and Power Virtual Server Workspace resources through the IBM Cloud console:
 
@@ -35,7 +35,7 @@ The deployment typically can take up to 10 minutes depending on the performance 
 {: note}
 
 ## Validating the deployment
-{: #validate-deployment}
+{: #validate-powervs-import-workspace}
 
 After you provision an instance, verify the success of the deployment by:
 
@@ -43,6 +43,6 @@ After you provision an instance, verify the success of the deployment by:
 - Checking if all required VPC and PowerVS resource details are mentioned in the terraform output.
 
 ## Next steps
-{: #powervs-automation-next}
+{: #next-steps-powervs-import-workspace}
 
 Deploy the deployable architecture ['Power Virtual Server for SAP HANA'](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) on top of this solution.
