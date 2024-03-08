@@ -45,15 +45,15 @@ toc:
         id: deploy
         topics:
           - navtitle: Deploying the PowerVS Quickstart architecture
-            topic: quickstart-deploy.md
+            topic: deploy-quickstart.md
           - navtitle: Deploying the PowerVS Workspace architecture
-            topic: powervs-workspace.md
+            topic: deploy-powervs-workspace.md
           - navtitle: Deploying the Import PowerVS Workspace architecture
-            topic: import-workspace-deploy.md
+            topic: deploy-import-workspace.md
           - navtitle: Managing and monitoring the deployment
-            topic: mgmt-monitoring.md
+            topic: deploy-mgmt-monitoring.md
           - navtitle: Accessing the environment
-            topic: access.md
+            topic: deploy-access.md
 
     - navgroup:
         id: reference
@@ -79,14 +79,14 @@ toc:
                 - topicgroup:
                     label: Troubleshooting Schematics
                     topics:
-                      - include: ../schematics/troubleshooting/apply_500_errors.md
-                        navtitle: Why am I getting 5xx errors in Schematics?
-                      - include: ../schematics/troubleshooting/apply_nullresource.md
-                        navtitle: How can I find the root cause of Schematics apply failures?
+                      - navtitle: Why am I getting 5xx errors in Schematics?
+                        include: ../schematics/troubleshooting/apply_500_errors.md
+                      - navtitle: How can I find the root cause of Schematics apply failures?
+                        include: ../schematics/troubleshooting/apply_nullresource.md
                 - topicgroup:
                     label: Troubleshooting projects
                     topics:
-                      - include: ../secure-enterprise/ts-needs-attention.md
-                        navtitle: How do I address a failed validation?
-                      - include: ../secure-enterprise/ts-deploy.md
-                        navtitle: How do I address a failed deployment?
+                      - navtitle: How do I address a failed validation?
+                        include: ../secure-enterprise/ts-needs-attention.md
+                      - navtitle: How do I address a failed deployment?
+                        include: ../secure-enterprise/ts-deploy.md

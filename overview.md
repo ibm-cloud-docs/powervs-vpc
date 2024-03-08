@@ -22,16 +22,16 @@ Automated {{site.data.keyword.powerSys_notm}} with VPC landing zone provisioning
 In the following sections, the deployable architecture variants are described. 
 
 ## Create a new architecture - PowerVS workspace variation
-{: #wrkspace-variant}
+{: #overview-powervs-workspace-variant}
 
 The {{site.data.keyword.powerSys_notm}} with VPC landing zone as variation 'Create a new architecture' deploys VPC services and a {{site.data.keyword.powerSys_notm}} workspace and interconnects them.
 
 A proxy service for public internet access from the PowerVS workspace is configured. You can optionally configure some management components on VPC (such as an NFS server, NTP forwarder, and DNS forwarder).
 
-For more information on how to deploy, see [Deploying the {{site.data.keyword.powerSys_notm}} with VPC landing zone - 'PowerVS workspace' Variation](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-deploy).
+For more information on how to deploy, see [Deploying the {{site.data.keyword.powerSys_notm}} with VPC landing zone - 'PowerVS workspace' Variation](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-deploy-powervs-workspace).
 
 ## Extend {{site.data.keyword.powerSys_notm}} with VPC landing zone - PowerVS Workspace variation
-{: #extnsn-variant}
+{: #overview-powervs-workspace-extension-variant}
 
 This PowerVS Workspace variation has a prerequisite. You must deploy the 'Create a new architecture PowerVS workspace' variant.
 {: important}
@@ -40,12 +40,12 @@ The {{site.data.keyword.powerSys_notm}} with VPC landing zone as variation 'Exte
 This is typically used for High Availability scenarios in same regions.
 
 ## Create a new architecture - Import PowerVS Workspace variation
-{: #iw-variant}
+{: #overview-powervs-workspace-import-variant}
 
 Create an IBM Cloud schematics workspace for your pre-existing VPC and PowerVS infrastructure resources using the new {{site.data.keyword.powerSys_notm}} (PowerVS) with VPC landing zone variation - 'Import PowerVS Workspace'. This variation helps to install the deployable architecture ['Power Virtual Server for SAP HANA'](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) on top of a pre-existing Power Virtual Server(PowerVS) landscape. 'Power Virtual Server for SAP HANA' automations requires a schematics workspace id for installation. The 'import-workspace' solution creates a schematics workspace by taking pre-existing VPC and PowerVS infrastructure resource details as inputs. The ID of this schematics workspace will be the pre-requisite workspace id required by 'Power Virtual Server for SAP HANA' to create and configure the PowerVS instances for SAP on top of the existing infrastructure.
 
 ## Create a new architecture - PowerVS Quickstart variation
-{: #qkstart-variant}
+{: #overview-powervs-quickstart-variant}
 
 You can now deploy a {{site.data.keyword.powerSys_notm}} (PowerVS) with VPC landing zone which creates VPC services, a {{site.data.keyword.powerSys_notm}} workspace and interconnect them. 
 
@@ -87,13 +87,12 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 
 A proxy service for public internet access from the PowerVS workspace is also configured. You can optionally configure some management components on VPC such as an NFS server, NTP forwarder, and DNS forwarder.
 
-For more information on how to deploy, see [Deploying the {{site.data.keyword.powerSys_notm}} with VPC landing zone - 'PowerVS quickstart' variation](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-powervs-quickstart-deploy).
+For more information on how to deploy, see [Deploying the {{site.data.keyword.powerSys_notm}} with VPC landing zone - 'PowerVS quickstart' variation](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-deploy-powervs-quickstart).
 
 ## Other PowerVS related deployable architectures
-{: #powervs-automation-solution-components}
+{: #overview-automation-solution-components}
 
 In addition to the {{site.data.keyword.powerSys_notm}} with VPC landing zone other deployable architectures and terraform based solutions might be deployed. 
 
 - [{{site.data.keyword.powerSys_notm}} for SAP HANA deployable architecture](/docs/sap-powervs)
 - [FalconStor StorSafe VTL for PowerVS Cloud](https://falconstor-download.s3.us-east.cloud-object-storage.appdomain.cloud/FalconStor%20VTL%20for%20IBM%20Deployment%20Guide.pdf){: external}
-
