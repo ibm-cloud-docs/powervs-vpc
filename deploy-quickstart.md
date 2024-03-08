@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-03-06"
+  years: 2023, 2024
+lastupdated: "2024-03-08"
 
 keywords:
 
@@ -58,7 +58,6 @@ To deploy a 'PowerVS quickstart' variation of Power Virtual Server with VPC land
 
 During the validation and deployment process, monitor the [needs attention items](/docs/secure-enterprise?topic=secure-enterprise-needs-attention-projects). The widget reflects any issue that occurs in your configurations.
 {: remember}
-
 
 
 ## Validating the deployment
