@@ -31,7 +31,7 @@ To deploy a 'PowerVS quickstart' variation of Power Virtual Server with VPC land
     - Power Virtual Server with VPC landing zone
 1.  Click the tile for the deployable architecture to open the details.
 1.  Select the latest product version in the Architecture section.
-1.  Select the variation 'PowerVS quickstart'
+1.  Select the variation **PowerVS quickstart**
 1.  Click **Review deployment options**.
 1.  Select the **Add to project** deployment type in Deployment options, and then click **Add to project**.
     1.  Name your project, enter a description, and specify a configuration name. Click **Create**.
@@ -51,15 +51,15 @@ To deploy a 'PowerVS quickstart' variation of Power Virtual Server with VPC land
     1.  Review the input values and make any necessary changes.
     1.  Click **Deploy**.
 
-        Deploying the deployable architecture can take more than an hour. You are notified when the deployment is successful.
+        The deployment typically can take up to 20 minutes but might take longer depending on the performance of {{site.data.keyword.cloud_notm}} components.You are notified when the deployment is successful.
+        {: note}
 
 1.  Review the outputs from the deployable architecture.
 
 During the validation and deployment process, monitor the [needs attention items](/docs/secure-enterprise?topic=secure-enterprise-needs-attention-projects). The widget reflects any issue that occurs in your configurations.
 {: remember}
 
-The deployment typically can take up to 20 minutes but might take longer depending on the performance of {{site.data.keyword.cloud_notm}} components.
-{: note}
+
 
 ## Validating the deployment
 {: #validate-powervs-quickstart}
