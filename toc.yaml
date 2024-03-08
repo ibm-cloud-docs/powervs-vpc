@@ -52,8 +52,6 @@ toc:
             topic: deploy-import-workspace.md
           - navtitle: Managing and monitoring the deployment
             topic: deploy-mgmt-monitoring.md
-          - navtitle: Accessing the environment
-            topic: deploy-access.md
 
     - navgroup:
         id: reference
