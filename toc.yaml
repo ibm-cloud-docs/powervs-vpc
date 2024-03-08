@@ -44,36 +44,38 @@ toc:
     - navgroup:
         id: deploy
         topics:
-          - topic: powervs-workspace.md
-            navtitle: Deploying the PowerVS Workspace architecture
-          - topic: quickstart-deploy.md
-            navtitle: Deploying the PowerVS Quickstart architecture
-          - topic: import-workspace-deploy.md
-            navtitle: Deploying the Import PowerVS Workspace architecture
-          - topic: mgmt-monitoring.md
-            navtitle: Managing and monitoring the deployment
-          - topic: access.md
-            navtitle: Accessing the environment
+          - navtitle: Deploying the PowerVS Quickstart architecture
+            topic: quickstart-deploy.md
+          - navtitle: Deploying the PowerVS Workspace architecture
+            topic: powervs-workspace.md
+          - navtitle: Deploying the Import PowerVS Workspace architecture
+            topic: import-workspace-deploy.md
+          - navtitle: Managing and monitoring the deployment
+            topic: mgmt-monitoring.md
+          - navtitle: Accessing the environment
+            topic: access.md
 
     - navgroup:
         id: reference
         topics:
-          - topic: responsibilities.md
-            navtitle: Responsibilities
+          - navtitle: Responsibilities
+            topic: responsibilities.md
+
     - navgroup:
         id: help
         topics:
-          - topic: support.md
-            navtitle: Getting help and support
-          - topic: faqs.md
-            navtitle: FAQs
+          - navtitle: Getting help and support
+            topic: support.md
+          - navtitle: FAQs
+            topic: faqs.md
           - topicgroup:
               label: Troubleshooting
               topics:
                 - topicgroup:
                     label: Troubleshooting deployment
                     topics:
-                      - troubleshoot-deploy.md
+                      - navtitle: My deployment failed, how do I proceed?
+                        topic: troubleshoot-deploy.md
                 - topicgroup:
                     label: Troubleshooting Schematics
                     topics:
