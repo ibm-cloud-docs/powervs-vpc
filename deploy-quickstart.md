@@ -77,10 +77,10 @@ You can connect to the landscape by using following SSH command:
 
 - To connect to the PowerVS instance:
     ```sh
-    ssh -A -o ServerAliveInterval=60 -o ServerAliveCountMax=600 -o ProxyCommand=\"ssh -W %h:%p root@\<access_host_floating_ip\>\" root@\<powervs_instance_management_ip\>
+    ssh -A -o ServerAliveInterval=60 -o ServerAliveCountMax=600 -o ProxyCommand="ssh -W %h:%p root@<access_host_floating_ip>" root@<powervs_instance_management_ip>
     ```
 - To connect to the NFS/NTP/DNS/Proxy Intel VSI:
   ```sh
-    ssh root@\<access_host_floating_ip\>
+    ssh root@<access_host_floating_ip>
     ```
     
