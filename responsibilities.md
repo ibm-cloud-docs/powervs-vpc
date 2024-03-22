@@ -25,7 +25,7 @@ Learn about the management responsibilities and terms and conditions that you ha
 Review the following section for the specific responsibilities for you and for {{site.data.keyword.IBM_notm}} when you use the Power Virtual Server with VPC landing zone deployable architecture.
 
 ## Security and regulation compliance
-{: #sap-powervs-automation-security}
+{: #powervs-automation-security}
 
 Security and regulation compliance includes tasks such as security controls implementation and compliance certification.
 
