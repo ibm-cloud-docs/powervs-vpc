@@ -38,8 +38,6 @@ toc:
     - navgroup:
         id: plan
         topics:
-          - navtitle: Deployment dependencies
-            topic: dependencies.md
           - navtitle: VPC landing zone configurations
             topic: vpc-presets.md
           - navtitle: Before you begin deploying
