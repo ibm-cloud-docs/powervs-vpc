@@ -39,10 +39,10 @@ Complete the following steps before you deploy the {{site.data.keyword.powerSys_
 {: #powervs-automation-IAM-prereqs}
 
 Set up account access ({{site.data.keyword.iamshort}} (IAM)):
-- Create an {{site.data.keyword.cloud_notm}} [API key](/docs/account?topic=account-userapikey#create_user_key). The user who owns this key must have the Administrator role.
+- Create an {{site.data.keyword.cloud_notm}} [API key](/docs/account?topic=account-userapikey&interface=ui#create_user_key). The user who owns this key must have the Administrator role.
 
 - For compliance with {{site.data.keyword.framework-fs_notm}}, users in your account are required to use [multi-factor authentication (MFA)](/docs/account?topic=account-account-getting-started#account-gs-mfa).
-- [Set up access groups](/docs/account?topic=account-accoungetting-started#account-gs-accessgroups).
+- [Set up access groups](/docs/account?topic=account-access-getstarted#create-access-group).
 
     User access to {{site.data.keyword.cloud_notm}} resources is controlled by using the access policies that are assigned to access groups. For {{site.data.keyword.cloud_notm}} Financial Services validation, do not assign direct IAM access to any {{site.data.keyword.cloud_notm}} resources.
 

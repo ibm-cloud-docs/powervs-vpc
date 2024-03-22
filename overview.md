@@ -70,7 +70,7 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 {: class="simple-tab-table"}
 {: tab-group="t-shirt size"}
 {: caption="Table 1. T-shirt size and configuration mapping" caption-side="top"}
-{: #resize_core_memory-1}
+{: #resize_core_memory-2}
 {: tab-title="IBM i"}
 
 |  | US1 \n Test/Dev |
@@ -81,7 +81,7 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 {: class="simple-tab-table"}
 {: tab-group="t-shirt size"}
 {: caption="Table 1. T-shirt size and configuration mapping" caption-side="top"}
-{: #resize_core_memory-1}
+{: #resize_core_memory-3}
 {: tab-title="SAP HANA (Red Hat)"}
 
 
