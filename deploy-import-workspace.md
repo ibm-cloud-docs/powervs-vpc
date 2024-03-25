@@ -15,6 +15,8 @@ subcollection: powervs-vpc
 # Deploying the Power Virtual Server with VPC landing zone - 'Import PowerVS Workspace' Variation
 {: #deploy-powervs-import-workspace}
 
+Check the pre-requisites for this variation [here](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/tree/main/solutions/import-workspace#pre-requisites).
+
 You can deploy a deployable architecture from the {{site.data.keyword.cloud_notm}} catalog. You can choose one of several deployment options, including with {{site.data.keyword.cloud_notm}} projects. [Learn about IaC deployments with projects](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects).
 
 ## Deploying with {{site.data.keyword.cloud_notm}} projects
