@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-01-22"
+lastupdated: "2024-03-26"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: powervs-vpc
 {{site.data.keyword.attribute-definition-list}}
 
 # Overview of {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture
-{: #powervs-automation-overview}
+{: #automation-solution-overview}
 
 Provisioning {{site.data.keyword.powerSys_notm}} with VPC landing zone by using deployable architectures provides an automated deployment method to create an isolated PowerVS workspace and connect it with IBM Cloud services and public internet. Network management components like DNS and NTP proxy servers and NFS server might be installed. Comparing the provisioning through the projects UI, user interaction is minimized and ready-to-go deployment time of a PowerVS workspace is reduced from days to less than 1 hour. 
 

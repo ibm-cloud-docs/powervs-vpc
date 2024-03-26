@@ -13,7 +13,7 @@ subcollection: powervs-vpc
 {{site.data.keyword.attribute-definition-list}}
 
 # Before you begin deploying the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture
-{: #powervs-automation-planning}
+{: #automation-planning}
 
 Before you begin the deployment, ensure that the prerequisites for the deployable architecture are met.
 {: shortdesc}

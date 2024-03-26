@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-03-08"
+lastupdated: "2024-03-26"
 
 keywords:
 
@@ -62,7 +62,7 @@ During the validation and deployment process, monitor the [needs attention items
 
 
 ## Validating the deployment
-{: #validate-powervs-workspace}
+{: #deploy-powervs-workspace-validate}
 
 After you provision an instance, verify the success of the deployment by:
 
@@ -71,7 +71,7 @@ After you provision an instance, verify the success of the deployment by:
 - Logging to all created VPC and PowerVS instances. Access should be possible.
 
 ## Next steps
-{: #next-steps-powervs-workspace}
+{: #deploy-powervs-workspace-next-steps}
 
 You can connect to the landscape by using following SSH command:
 

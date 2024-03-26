@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-03-08"
+lastupdated: "2024-03-26"
 
 keywords:
 
@@ -20,7 +20,7 @@ Check the pre-requisites for this variation [here](https://github.com/terraform-
 You can deploy a deployable architecture from the {{site.data.keyword.cloud_notm}} catalog. You can choose one of several deployment options, including with {{site.data.keyword.cloud_notm}} projects. [Learn about IaC deployments with projects](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects).
 
 ## Deploying with {{site.data.keyword.cloud_notm}} projects
-{: #deploy-powervs-quickstart-projects}
+{: #deploy-powervs-import-workspace-projects}
 
 To deploy a **Import PowerVS Workspace** variation of Power Virtual Server with VPC landing zone deployable architecture through the {{site.data.keyword.cloud_notm}} catalog, follow these steps:
 
@@ -62,7 +62,7 @@ During the validation and deployment process, monitor the [needs attention items
 {: remember}
 
 ## Validating the deployment
-{: #validate-powervs-import-workspace}
+{: #deploy-powervs-import-workspace-validate}
 
 After you provision an instance, verify the success of the deployment by:
 
@@ -70,6 +70,6 @@ After you provision an instance, verify the success of the deployment by:
 - Checking if all required VPC and PowerVS resource details are mentioned in the terraform output.
 
 ## Next steps
-{: #next-steps-powervs-import-workspace}
+{: #deploy-powervs-import-workspace-next-steps}
 
 Deploy the deployable architecture ['Power Virtual Server for SAP HANA'](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) on top of this solution.

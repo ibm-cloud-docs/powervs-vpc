@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-03-08"
+lastupdated: "2024-03-026"
 
 keywords:
 
@@ -70,7 +70,7 @@ After you provision an instance, verify the success of the deployment by:
 - Logging to all created VPC and PowerVS instances. Access should be possible.
 
 ## Next steps
-{: #next-steps-powervs-quickstart}
+{: #deploy-powervs-quickstart-next-steps}
 
 You can connect to the landscape by using following SSH command:
 
