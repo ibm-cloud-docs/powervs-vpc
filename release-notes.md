@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-05"
 
 keywords: 
 
@@ -19,6 +19,20 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries grouped by date.
 {: shortdesc}
+
+## 05 April 2024
+{: #powervs-vpc-apr05}
+{: release-note}
+
+Version 4.9.0 of the available
+: Version 4.9.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+    - Upgrade London 06 `lon06` DC to PER. New deployments in London 06 region will make use of PER.
+
+[Warning]{: tag-red}
+: Version 4.8.0 includes backward-incompatible changes for London 06 `lon06` DC only. 
+    - Do not upgrade to this version if previous deployments were made in London 06 `lon06` {{site.data.keyword.powerSys_notm}} zone as doing so will corrupt the landscape because of switch from Cloud connections to PER.
+    - Use this for new deployments in London 06 `lon06` {{site.data.keyword.powerSys_notm}} zone.
+    - Deployments done in other {{site.data.keyword.powerSys_notm}} zone can be upgraded with any issue.
 
 ## 03 April 2024
 {: #powervs-vpc-apr03}
