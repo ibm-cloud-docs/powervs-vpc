@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-04-05"
+lastupdated: "2024-04-14"
 
 keywords: 
 
@@ -19,6 +19,15 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries grouped by date.
 {: shortdesc}
+
+## 14 April 2024
+{: #powervs-vpc-apr14}
+{: release-note}
+
+Version 4.9.1 of the available
+: Version 4.9.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+    - Upgrade DAs to version 1.64.1 terraform IBM provider version
+    - Upgrade Quickstart Solution to make use of latest Aix and IBMi images.
 
 ## 05 April 2024
 {: #powervs-vpc-apr05}
