@@ -24,9 +24,9 @@ You can deploy a deployable architecture from the {{site.data.keyword.cloud_notm
 
 To deploy a **Import PowerVS Workspace** variation of Power Virtual Server with VPC landing zone deployable architecture through the {{site.data.keyword.cloud_notm}} catalog, follow these steps:
 
-1.  Make sure that you comply with the prerequisites in the [planning](/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning) topic:
-    - [Confirm your {{site.data.keyword.cloud_notm}} settings](/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#vpc-cloud-prereqs)
-    - [Set the IAM permissions](/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning#powervs-automation-IAM-prereqs)
+1.  Make sure that you comply with the prerequisites in the [planning](/docs/powervs-vpc?topic=powervs-vpc-automation-planning) topic:
+    - [Confirm your {{site.data.keyword.cloud_notm}} settings](/docs/powervs-vpc?topic=powervs-vpc-automation-planning#vpc-cloud-prereqs)
+    - [Set the IAM permissions](/docs/powervs-vpc?topic=powervs-vpc-automation-planning#powervs-automation-IAM-prereqs)
 
 1. Go to the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external} and search for the architecture that you're interested in deploying:
     - Power Virtual Server with VPC landing zone

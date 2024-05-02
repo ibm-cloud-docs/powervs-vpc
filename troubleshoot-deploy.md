@@ -28,7 +28,7 @@ As part of the development of the deployable architecture we verify the workflow
 If the deployment process does not finish successfully, we recommend first looking at the {{site.data.keyword.bplong_notm}} logs. These logs typically provide the information about the component that causes the issue. 
 {: tsResolve}
 
-- Ensure that all pre-requisites are applied according to the [planning guide](/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-planning)
+- Ensure that all pre-requisites are applied according to the [planning guide](/docs/powervs-vpc?topic=powervs-vpc-automation-planning)
 - Verify that correct input parameters are provided as described in the [readme file](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/full-stack/README.md){: external}
 
 
