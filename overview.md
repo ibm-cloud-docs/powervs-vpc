@@ -59,7 +59,7 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 |---------------------- | ------------------------- | ------------------------- | -------------------------  | ------------------------- |
 | Cores | 1 | 4 | 8 | 15 |
 | Memory | 32 | 128 | 256 | 512 |
-| Storage Tier-1 (GB) | 100 | 500 | 1000 | 2000 |
+| Storage Tier-3 (GB) | 100 | 500 | 1000 | 2000 |
 {: class="simple-tab-table"}
 {: tab-group="t-shirt size"}
 {: caption="Table 1. T-shirt size and configuration mapping" caption-side="top"}
@@ -70,7 +70,7 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 |---------------------- | ------------------------- | ------------------------- | -------------------------  | ------------------------- |
 | Cores | 0.25 | 1 | 2 | 4 |
 | Memory | 8 | 32 | 64 | 132 |
-| Storage Tier-1 (GB) | 100 | 500 | 1000 | 2000 |
+| Storage Tier-3 (GB) | 100 | 500 | 1000 | 2000 |
 {: class="simple-tab-table"}
 {: tab-group="t-shirt size"}
 {: caption="Table 1. T-shirt size and configuration mapping" caption-side="top"}
@@ -81,7 +81,7 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 |---------------------- | ------------------------- |
 | Cores | 4 |
 | Memory | 128 |
-| Storage Tier-1 (GB) | 750 |
+| Storage Tier-3 (GB) | 750 |
 {: class="simple-tab-table"}
 {: tab-group="t-shirt size"}
 {: caption="Table 1. T-shirt size and configuration mapping" caption-side="top"}
