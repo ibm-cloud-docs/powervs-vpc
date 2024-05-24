@@ -15,7 +15,8 @@ completion-time: 10 mins
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Connect to a VPC landing zone by using a client-to-site VPN
+# Connect by using a client-to-site VPN
+{: #solution-connect-client-vpn}
 
 This tutorial dives into the fastest option to get up and running with a [client VPN for VPC](/docs/vpc?topic=vpc-vpn-client-to-site-overview) connectivity.
 {: shortdesc}

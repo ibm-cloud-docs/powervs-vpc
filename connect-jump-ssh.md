@@ -14,7 +14,9 @@ completion-time: 10 mins
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Connect to a VPC VSIs or Power Virtual Server Instances
+# Connect to a VPC VSIs or Power Virtual Server Instances using floating IP
+{: #solution-ssh}
+
 After the deployment has been completed you can connect to the landscape by using ssh proxy command to connect to the private ip of both Intel and PowerVS instances over floating IP of jump box.
 {: shortdesc}
 
