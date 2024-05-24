@@ -27,6 +27,7 @@ After the deployment has been completed you can connect to the landscape by usin
 1. Review the outputs from the deployable architecture.
 
 ## Connect to the landscape
+{: #solution-ssh-connect}
 
 1. Make sure you have the right private SSH key.
 1. Use the following SSH commands to access the hosts.
