@@ -9,7 +9,7 @@ subcollection: powervs-vpc
 content-type: tutorial
 services: vpc, secrets-manager, dl, schematics
 account-plan: paid
-completion-time: 10 mins
+completion-time: 1h
 
 ---
 
