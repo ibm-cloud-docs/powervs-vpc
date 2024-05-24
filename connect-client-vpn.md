@@ -17,6 +17,9 @@ completion-time: 1h
 
 # Connect by using a client-to-site VPN
 {: #solution-connect-client-vpn}
+{: toc-content-type="tutorial"}
+{: toc-services="vpc, openshift, secrets-manager, dl, schematics"}
+{: toc-completion-time="1h"}
 
 This tutorial dives into the fastest option to get up and running with a [client VPN for VPC](/docs/vpc?topic=vpc-vpn-client-to-site-overview) connectivity.
 {: shortdesc}
