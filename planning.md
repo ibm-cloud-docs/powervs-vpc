@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-11-03"
+  years: 2024
+lastupdated: "2024-05-24"
 
 keywords:
 
@@ -12,14 +12,14 @@ subcollection: powervs-vpc
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Before you begin deploying the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture
-{: #automation-planning}
+# Planning for the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture
+{: #plan}
 
-Before you begin the deployment, ensure that the prerequisites for the deployable architecture are met.
+Before you begin the deployment, make sure that you understand and meet the prerequisites.
 {: shortdesc}
 
 ## Confirm your {{site.data.keyword.cloud_notm}} settings
-{: #vpc-cloud-prereqs}
+{: #powervs-automation-cloud-prereqs}
 
 Complete the following steps before you deploy the {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture.
 
@@ -30,7 +30,7 @@ Complete the following steps before you deploy the {{site.data.keyword.powerSys_
     - If you don't have an {{site.data.keyword.cloud_notm}} account, [create one](/docs/account?topic=account-account-getting-started).
     - If you have a Trial or Lite account, [upgrade your account](/docs/account?topic=account-upgrading-account).
 1.  Configure your {{site.data.keyword.cloud_notm}} account:
-    1.  Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} with the {{site.data.keyword.ibmid}} you used to set up the account. This {{site.data.keyword.ibmid}} user is the account owner and has full IAM access.
+    1.  Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com) with the {{site.data.keyword.ibmid}} you used to set up the account. This {{site.data.keyword.ibmid}} user is the account owner and has full IAM access.
     1.  [Complete the company profile](/docs/account?topic=account-contact-info) and contact information for the account. This profile is required to stay in compliance with {{site.data.keyword.cloud_notm}} Financial Services profile.
     1.  [Enable the Financial Services Validated option](/docs/account?topic=account-enabling-fs-validated) for your account.
     1.  Enable virtual routing and forwarding (VRF) and service endpoints by creating a support case. Follow the instructions in [enabling VRF and service endpoints](/docs/account?topic=account-vrf-service-endpoint&interface=ui#vrf).
@@ -38,18 +38,21 @@ Complete the following steps before you deploy the {{site.data.keyword.powerSys_
 ## Set the IAM permissions
 {: #powervs-automation-IAM-prereqs}
 
-Set up account access ({{site.data.keyword.iamshort}} (IAM)):
-- Create an {{site.data.keyword.cloud_notm}} [API key](/docs/account?topic=account-userapikey&interface=ui#create_user_key). The user who owns this key must have the Administrator role.
+1.  Set up account access ({{site.data.keyword.iamshort}} (IAM)):
+    1.  Create an {{site.data.keyword.cloud_notm}} [API key](/docs/account?topic=account-userapikey&interface=terraform#create_user_key-api-terra). The user who owns this key must have the Administrator role.
 
-- For compliance with {{site.data.keyword.framework-fs_notm}}, users in your account are required to use [multi-factor authentication (MFA)](/docs/account?topic=account-account-getting-started#account-gs-mfa).
-- [Set up access groups](/docs/account?topic=account-access-getstarted#create-access-group).
+        Service ID API keys are not supported for the Red Hat OpenShift Container Platform on VPC landing zone deployable architecture.
+        {: tip}
 
-    User access to {{site.data.keyword.cloud_notm}} resources is controlled by using the access policies that are assigned to access groups. For {{site.data.keyword.cloud_notm}} Financial Services validation, do not assign direct IAM access to any {{site.data.keyword.cloud_notm}} resources.
+    1.  For compliance with {{site.data.keyword.framework-fs_notm}}: Require users in your account to use [multifactor authentication (MFA)](/docs/account?topic=account-account-getting-started#account-gs-mfa).
+    1.  [Set up access groups](/docs/account?topic=account-account-getting-started#account-gs-accessgroups).
 
-    Select **All Identity and Access enabled services** when you assign access to the group.
+        User access to {{site.data.keyword.cloud_notm}} resources is controlled by using the access policies that are assigned to access groups. For {{site.data.keyword.cloud_notm}} Financial Services validation, do not assign direct IAM access to any {{site.data.keyword.cloud_notm}} resources.
+
+        Select **All Identity and Access enabled services** when you assign access to the group.
 
 ### Verify access roles
-{: #vpc-access-roles}
+{: #powervs-automation-access-roles}
 
 IAM access roles are required to install this deployable architecture and create all the required elements.
 
@@ -68,9 +71,9 @@ For information about configuring permissions, contact your {{site.data.keyword.
 
 You can use {{site.data.keyword.cloud_notm}} projects as a deployment option. Projects are designed with infrastructure as code and compliance in mind to help ensure that your projects are managed, secure, and always compliant. For more information, see [Learn about IaC deployments with projects](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects).
 
-You need the following access to create a project and create project tooling resources within the account. Make sure that you have the following access:
+You need the following access to create a project and create project tooling resources within the account. Make sure you have the following access:
 
-- The Editor role on the Projects service
+- The Editor role on the Projects service.
 - The Editor and Manager role on the {{site.data.keyword.bpshort}} service
 - The Viewer role on the resource group for the project
 
@@ -115,7 +118,7 @@ The key's randomart image is:
 ### Windows OS
 {: #ssh-key-windows}
 
-You can install [MobaXterm](https://mobaxterm.mobatek.net/download.html) application and start a local terminal.
+You can install [MobaXterm](https://mobaxterm.mobatek.net/download.html){: external} application and start a local terminal.
 On the command line type the command `ssh-keygen`. It will place the id_rsa and id_rsa.pub files under `/home/mobaxterm/.ssh/`
 
 ```sh
@@ -144,47 +147,32 @@ The key's randomart image is:
 
 These public and private keys can now be used in the input variables for the Deployable architectures.
 
-Paste the content of `id_rsa.pub` key directly in the field for input variable `ssh_public_key`.
-For `ssh_private_key` input variable, you need a [here-doc](https://developer.hashicorp.com/terraform/language/expressions/strings#heredoc-strings) string format.
-Replace value with your private ssh key value. You can use a text editor. Then copy the entire content and paste it in the field for `ssh_private_key` input variable.
+Paste the content of `id_rsa.pub` key and `id_rsa` key directly in the field for input variables `ssh_public_key` and `ssh_private_key`respectively.
 
-```sh
-<<-EOF
------BEGIN RSA PRIVATE KEY-----
-value
------BEGIN RSA PRIVATE KEY-----
-EOF
 
-```
+## Client to site VPN configuration
+{: #powervs-automation-vpn-prereqs}
 
-## Choose an operating system
-{: #powervs-automation-select-os}
+- The list of users who will connect over the VPN connection to your {{site.data.keyword.cloud_notm}} account.
 
-Choose a Linux operating system for your deployments. We recommend that you use the same OS release for all the hosts in the environment. When you use the same operating system version and release, it simplifies the operations management of the whole landscape. You might choose between Red Hat Enterprise Linux and Suse Linux Enterprise Server.
+    The module takes a list of email addresses of the users in your {{site.data.keyword.cloud_notm}} account. For more information about how to add users, see [Inviting users to an account](/docs/account?topic=account-iamuserinv&interface=ui).
 
-## Private networks
-{: #powervs-automation-private-networks}
+- If you have a {{site.data.keyword.secrets-manager_short}} instance, you need the following information:
 
-The following table lists the private networks that are created by the deployment automation with corresponding default values. 
+    The Terraform module creates a {{site.data.keyword.secrets-manager_short}} instance if you don't already have one.
+    {: reminder}
 
-The defaults must be changed if you specify more than one deployment landscape connected with each other. All IP address ranges in the subnets must be unique.
-{: note}
+    - Copy the `region` of your {{site.data.keyword.secrets-manager_short}} instance by using the {{site.data.keyword.cloud_notm}} console.
+    - Copy the `GUID` of the instance. You can locate the {{site.data.keyword.secrets-manager_short}} GUID in your account from the resource list in the {{site.data.keyword.cloud_notm}} console as shown in the following screenshot.
+        1.  Enter `secret` in the product filter. A list of {{site.data.keyword.secrets-manager_short}} instances are displayed.
+        1.  Click the row to display the details in the sidebar for the {{site.data.keyword.secrets-manager_short}} instance that you want to use.
+        1.  Copy the GUID.
 
-| Service | Private network | IP address ranges |
-| --- | --- | --- |
-| Management VPC | VPC management network for virtual server instances  | 10.10.10.0/24 |
-| Workload VPC | VPC workload network for virtual server instances | 10.20.10.0/"4 |
-| Edge VPC | VPC edge network for virtual server instances | 10.30.10.0/24 |
-| Power VS workspace | Power VS management network  \n PowerVS backup network  | 10.51.0.0/24 \n 10.52.0.0/24 |
-{: caption="Table 1. Private networks IP address ranges" caption-side="bottom"}
-
-## Learn about deployment input parameters
-{: #powervs-automation-input-parameters}
-
-Ensure that you are familiar with the required input for the deployment execution. 
-- [Description for 'Fullstack' input parameters - create new architecture](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/full-stack/README.md){: external}
-- [Description for 'Extension' input parameters - extend existing architecture](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/extension/README.md){: external}
-- [Description for 'Quickstart' input parameters - create new architecture](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/blob/main/solutions/quickstart/README.md){: external}
+            ![Example of resource list](images/secrets-manager-resource-list.png){: caption="Figure 1. Example view of the resource list in {{site.data.keyword.cloud_notm}} console" caption-side="bottom"}
+    - If you used a certificate template to create a private certificate that is applied to your {{site.data.keyword.secrets-manager_short}} instance, copy the name of the certificate template.
+        1.  In the resource list, click the name of the {{site.data.keyword.secrets-manager_short}} instance that you selected earlier.
+        1.  Click **Secrets engines** > **Private certificates**.
+        1.  In the Certificate authority table, expand the certificate authority and copy the name of the template.
 
 ## Additional background information
 {: #power-automation-prereqs-additional}
@@ -192,6 +180,13 @@ Ensure that you are familiar with the required input for the deployment executio
 - [{{site.data.keyword.powerSys_notm}} service documentation](https://cloud.ibm.com/docs/power-iaas)
 - [Deployable architecture code](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure){: external}
 - Main dependencies:
-   - [https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone){: external}
-   - [https://galaxy.ansible.com/ibm/power_linux_sap](https://galaxy.ansible.com/ibm/power_linux_sap){: external}
+   - [Terraform IBM Module - VPC Landing Zone](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone){: external}
+   - [Terraform IBM Module - PowerVS Workspace](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-workspace){: external}
+   - [Terraform IBM Module - PowerVS Instance](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-instance){: external}
+   - [Terraform IBM Module - Client to site VPN](https://github.com/terraform-ibm-modules/terraform-ibm-client-to-site-vpn){: external}
+   - [Terraform IBM Module - Secret Manager](https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager){: external}
+   - [Terraform IBM Module - Secrets Manager Group](https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager-secret-group){: external}
+   - [Terraform IBM Module - Private Secret Engine](https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager-private-cert-engine){: external}
+   - [Terraform IBM Module - Secrets Manager Private Certificate](https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager-private-cert){: external}
+   - [IBM Power Linux SAP ansible galaxy role](https://galaxy.ansible.com/ibm/power_linux_sap){: external}
    

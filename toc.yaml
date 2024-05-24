@@ -38,28 +38,27 @@ toc:
     - navgroup:
         id: plan
         topics:
-          - navtitle: VPC landing zone configurations
-            topic: vpc-presets.md
           - navtitle: Before you begin deploying
-            topic: prereqs.md
+            topic: planning.md
 
     - navgroup:
         id: deploy
         topics:
-          - navtitle: Deploying the PowerVS Quickstart architecture
-            topic: deploy-quickstart.md
-          - navtitle: Deploying the PowerVS Workspace architecture
-            topic: deploy-powervs-workspace.md
-          - navtitle: Deploying the Import PowerVS Workspace architecture
-            topic: deploy-import-workspace.md
-          - navtitle: Managing and monitoring the deployment
-            topic: deploy-mgmt-monitoring.md
+          - topic: deploying.md
+
+    - navgroup:
+      id: tutorial
+      topics:
+        - navtitle: Connect by using a client-to-site VPN
+          topic: connect-client-vpn.md
+        - navtitle: Connect using Floating IP
+          topic: connect-jump-ssh.md
 
     - navgroup:
         id: reference
         topics:
           - navtitle: Responsibilities
-            topic: responsibilities.md
+            topic: shared-responsibilities.md
 
     - navgroup:
         id: help
