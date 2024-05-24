@@ -47,12 +47,12 @@ toc:
           - topic: deploying.md
 
     - navgroup:
-      id: tutorial
-      topics:
-        - navtitle: Connect by using a client-to-site VPN
-          topic: connect-client-vpn.md
-        - navtitle: Connect using Floating IP
-          topic: connect-jump-ssh.md
+        id: tutorial
+        topics:
+          - navtitle: Connect by using a client-to-site VPN
+            topic: connect-client-vpn.md
+          - navtitle: Connect using Floating IP
+            topic: connect-jump-ssh.md
 
     - navgroup:
         id: reference
