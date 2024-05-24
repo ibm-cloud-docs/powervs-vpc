@@ -39,5 +39,5 @@ If you can't deploy successfully, follow these steps:
 
         This action resumes the job where it left off. In some cases, when the error was with provisioning a service, this second apply command is successful.
 
-If the issue persists after the second apply, [open a case](/docs/secure-infrastructure-vpc?topic=powervs-vpc-help-support#support-case-details) in the {{site.data.keyword.cloud_notm}} support center.
+If the issue persists after the second apply, [open a case](/docs/powervs-vpc?topic=powervs-vpc-help-support#support-case-details) in the {{site.data.keyword.cloud_notm}} support center.
 {: tsResolve}

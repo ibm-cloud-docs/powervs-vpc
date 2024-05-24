@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-03-24"
+lastupdated: "2024-05-24"
 
 keywords:
 
@@ -15,7 +15,7 @@ subcollection: powervs-vpc
 # Overview of {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture
 {: #automation-solution-overview}
 
-Provisioning {{site.data.keyword.powerSys_notm}} with VPC landing zone by using deployable architectures provides an automated deployment method to create an isolated PowerVS workspace and connect it with IBM Cloud services and public internet. Network management components like DNS and NTP proxy servers and NFS server might be installed. Comparing the provisioning through the projects UI, user interaction is minimized and ready-to-go deployment time of a PowerVS workspace is reduced from days to less than 1 hour. 
+Provisioning {{site.data.keyword.powerSys_notm}} with VPC landing zone by using deployable architectures provides an automated deployment method to create an isolated PowerVS workspace and connect it with IBM Cloud services and public internet. Network management components like DNS, NTP proxy servers and NFS as a Service might be installed. Comparing the provisioning through the projects UI, user interaction is minimized and ready-to-go deployment time of a PowerVS workspace is reduced from days to less than 1 hour. 
 
 Automated {{site.data.keyword.powerSys_notm}} with VPC landing zone provisioning that is described in this guide is based on {{site.data.keyword.cloud_notm}} catalog deployable architectures. In this documentation, we describe only specifics that are related to {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture.
 
@@ -26,9 +26,7 @@ In the following sections, the deployable architecture variants are described.
 
 The {{site.data.keyword.powerSys_notm}} with VPC landing zone as variation 'Create a new architecture' deploys VPC services and a {{site.data.keyword.powerSys_notm}} workspace and interconnects them.
 
-A proxy service for public internet access from the PowerVS workspace is configured. You can optionally configure some management components on VPC (such as an NFS server, NTP forwarder, and DNS forwarder).
-
-For more information on how to deploy, see [Deploying the {{site.data.keyword.powerSys_notm}} with VPC landing zone - 'PowerVS workspace' Variation](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-deploy-powervs-workspace).
+A proxy service for public internet access from the PowerVS workspace is configured. You can optionally configure some management components on VPC (such as an NFS as a Service, Client to site VPN, NTP forwarder, and DNS forwarder).
 
 ## Extend {{site.data.keyword.powerSys_notm}} with VPC landing zone - PowerVS Workspace variation
 {: #overview-powervs-workspace-extension-variant}
@@ -86,12 +84,10 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 {: tab-group="t-shirt size"}
 {: caption="Table 1. T-shirt size and configuration mapping" caption-side="top"}
 {: #resize_core_memory-3}
-{: tab-title="SAP HANA (Red Hat)"}
+{: tab-title="SAP HANA (RHEL/SLES)"}
 
 
-A proxy service for public internet access from the PowerVS workspace is also configured. You can optionally configure some management components on VPC such as an NFS server, NTP forwarder, and DNS forwarder.
-
-For more information on how to deploy, see [Deploying the {{site.data.keyword.powerSys_notm}} with VPC landing zone - 'PowerVS quickstart' variation](https://cloud.ibm.com/docs/powervs-vpc?topic=powervs-vpc-deploy-powervs-quickstart).
+A proxy service for public internet access from the PowerVS workspace is configured. You can optionally configure some management components on VPC (such as an NFS as a Service, Client to site VPN, NTP forwarder, and DNS forwarder).
 
 ## Other PowerVS related deployable architectures
 {: #overview-automation-solution-components}
