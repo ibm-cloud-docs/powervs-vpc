@@ -86,6 +86,17 @@ round-trip min/avg/max/stddev = 13.938/17.709/20.896/2.904 ms
 
 If you see no timeouts or other errors, your local workstation has connectivity to the VPC’s private network.
 
+- To connect to the Ansible Node Intel instance:
+
+    ```sh
+    ssh root@<ansible_host_or_ip>
+    ```
+
+- To connect to the Network services running on network-services Intel instance:
+    ```sh
+    ssh root@<ntp_host_or_ip>
+    ```
+
 ### Solving connectivity issues
 {: #connect-client-vpn-connectivity}
 
