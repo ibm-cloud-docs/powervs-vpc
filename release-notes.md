@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-26"
 
 keywords: 
 
@@ -20,11 +20,32 @@ content-type: release-note
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries grouped by date.
 {: shortdesc}
 
+## 26 May 2024
+{: #powervs-vpc-may26}
+{: release-note}
+
+Version 5.1.2 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 5.1.2 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
+    - Completely New architecture. Does not support upgrade process from previous version 4.x.x to 5.x.x
+    - Use this for new deployments only.
+    - Option to create `new secrets manager instance` or reuse existing one-
+    - Optional client to site VPN deployment.
+    - Switched from Block storage NFS volumes to File storage shares. Makes use of Application load balancer to mount the File storage shares on PowerVS instances.
+    - Removed Cloud connection support.
+    - Private SSH keys need be entered in here doc string format. Can be passed in directly.
+    - Improved documentation.
+
+[Warning]{: tag-red}
+: Version 5.1.2 includes backward-incompatible changes.
+    - Do not upgrade if you already have an existing deployment. 
+    - Make a new deployment and then restore your OS data using data migration techniques. 
+
+
 ## 10 May 2024
 {: #powervs-vpc-may10}
 {: release-note}
 
-Version 4.11.0 of the available
+Version 4.11.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 4.11.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade Toronto 01 `tor01` DC to PER. New deployments in Toronto 01 region will make use of PER.
     - Upgrade US-south `us-south` DC to PER. New deployments in Us-south region will make use of PER.
@@ -40,7 +61,7 @@ Version 4.11.0 of the available
 {: #powervs-vpc-apr30}
 {: release-note}
 
-Version 4.10.0 of the available
+Version 4.10.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 4.10.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade Sydney 04 `syd04` DC to PER. New deployments in Sydney 04 region will make use of PER.
 
@@ -54,7 +75,7 @@ Version 4.10.0 of the available
 {: #powervs-vpc-apr14}
 {: release-note}
 
-Version 4.9.1 of the available
+Version 4.9.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 4.9.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade DAs to version 1.64.1 terraform IBM provider version
     - Upgrade Quickstart Solution to make use of latest Aix and IBMi images.
@@ -63,7 +84,7 @@ Version 4.9.1 of the available
 {: #powervs-vpc-apr05}
 {: release-note}
 
-Version 4.9.0 of the available
+Version 4.9.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 4.9.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade London 06 `lon06` DC to PER. New deployments in London 06 region will make use of PER.
 
@@ -77,7 +98,7 @@ Version 4.9.0 of the available
 {: #powervs-vpc-apr03}
 {: release-note}
 
-Version 4.8.0 of the available
+Version 4.8.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 4.8.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade Sydney 05 `syd05` DC to PER. New deployments in Sydney 05 region will make use of PER.
 
@@ -91,7 +112,7 @@ Version 4.8.0 of the available
 {: #powervs-vpc-mar26}
 {: release-note}
 
-Version 4.7.0 of the available
+Version 4.7.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 4.7.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade Osaka 21 `osa21` DC to PER. New deployments in Osaka region will make use of PER.
 
@@ -105,7 +126,7 @@ Version 4.7.0 of the available
 {: #powervs-vpc-mar21}
 {: release-note}
 
-Version 4.6.1 of the available
+Version 4.6.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 4.6.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade Tokyo 04 `tok04` DC to PER. New deployments in Tokyo region will make use of PER.
 
@@ -119,7 +140,7 @@ Version 4.6.1 of the available
 {: #powervs-vpc-feb7}
 {: release-note}
 
-Version 4.5.0 of the available
+Version 4.5.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 4.5.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade Sao Paulo 01 `sao01` DC to PER. New deployments in Sao Paulo 01 region will make use of PER.
 
@@ -133,7 +154,7 @@ Version 4.5.0 of the available
 {: #powervs-vpc-feb1}
 {: release-note}
 
-Version 4.4.0 of the available
+Version 4.4.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 4.4.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade Dallas 12 `dal12` DC to PER. New deployments in Dallas 12 region will make use of PER.
 
@@ -147,7 +168,7 @@ Version 4.4.0 of the available
 {: #powervs-vpc-jan22}
 {: release-note}
 
-Version 4.3.0 of the available
+Version 4.3.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 :   Version 4.3.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Introducing the new import-workspace variant of {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture. See [{{site.data.keyword.powerSys_notm}} with VPC landing zone import-workspace variation](/docs/powervs-vpc?topic=powervs-vpc-automation-solution-overview#overview-powervs-workspace-import-variant) for more information.
 
@@ -155,7 +176,7 @@ Version 4.3.0 of the available
 {: #powervs-vpc-jan11}
 {: release-note}
 
-Version 4.2.0 of the available
+Version 4.2.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 :   Version 4.2.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade Frankfurt 1 `eu-de-1` DC to PER. New deployments in Frankfurt 1 region will make use of PER.
 
@@ -169,7 +190,7 @@ Version 4.2.0 of the available
 {: #powervs-vpc-jan10}
 {: release-note}
 
-Version 4.1.0 of the available
+Version 4.1.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 :   Version 4.1.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Enable support for `WDC07`, `MAD02`, `MAD04` and `SAO04` PER datacenters for {{site.data.keyword.powerSys_notm}} Workspace Variation only.
     - Enable support for `WDC07`and `SAO04`  PER datacenters for {{site.data.keyword.powerSys_notm}} Quickstart Variation.
@@ -186,7 +207,7 @@ Version 4.1.0 of the available
 {: #powervs-vpc-jan08}
 {: release-note}
 
-Version 4.0.1 of the available
+Version 4.0.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 :   Version 4.0.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade TF IBM provider version to `1.61.0`
     - Change default PowerVS images for AIX and IBM i for all variations
@@ -202,7 +223,7 @@ Version 4.0.1 of the available
 {: #powervs-vpc-dec05}
 {: release-note}
 
-Version 3.2.0 of the available
+Version 3.2.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 :   Version 3.2.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Support `MAD02` data center which is [PER enabled](/docs/power-iaas?topic=power-iaas-per).
 
@@ -210,7 +231,7 @@ Version 3.2.0 of the available
 {: #powervs-vpc-nov22}
 {: release-note}
 
-Version 3.1.0 of the available
+Version 3.1.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 :   Version 3.1.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Support `WDC06` data center which is [PER enabled](/docs/power-iaas?topic=power-iaas-per).
 
@@ -218,7 +239,7 @@ Version 3.1.0 of the available
 {: #powervs-vpc-oct27}
 {: release-note}
 
-Version 3.0.0 of the available
+Version 3.0.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 :   Version 3.0.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Support all private {{site.data.keyword.powerSys_notm}} CIDRs in ACL rule.
     - Import any number of {{site.data.keyword.powerSys_notm}} images, and in parallel.
