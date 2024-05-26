@@ -25,30 +25,6 @@ This tutorial dives into the fastest option to get up and running with a [client
 {: shortdesc}
 
 
-## Before you begin
-{: #solution-connect-client-vpn-prereqs}
-
-- The list of users who will connect over the VPN connection to your {{site.data.keyword.cloud_notm}} account.
-
-    The module takes a list of email addresses of the users in your {{site.data.keyword.cloud_notm}} account. For more information about how to add users, see [Inviting users to an account](/docs/account?topic=account-iamuserinv&interface=ui).
-
-- If you have a {{site.data.keyword.secrets-manager_short}} instance, you need the following information:
-
-    The Terraform module creates a {{site.data.keyword.secrets-manager_short}} instance if you don't already have one.
-    {: reminder}
-
-    - Copy the `region` of your {{site.data.keyword.secrets-manager_short}} instance by using the {{site.data.keyword.cloud_notm}} console.
-    - Copy the `GUID` of the instance. You can locate the {{site.data.keyword.secrets-manager_short}} GUID in your account from the resource list in the {{site.data.keyword.cloud_notm}} console as shown in the following screenshot.
-        1.  Enter `secret` in the product filter. A list of {{site.data.keyword.secrets-manager_short}} instances are displayed.
-        1.  Click the row to display the details in the sidebar for the {{site.data.keyword.secrets-manager_short}} instance that you want to use.
-        1.  Copy the GUID.
-
-            ![Example of resource list](images/secrets-manager-resource-list.png){: caption="Figure 1. Example view of the resource list in {{site.data.keyword.cloud_notm}} console" caption-side="bottom"}
-    - If you used a certificate template to create a private certificate that is applied to your {{site.data.keyword.secrets-manager_short}} instance, copy the name of the certificate template.
-        1.  In the resource list, click the name of the {{site.data.keyword.secrets-manager_short}} instance that you selected earlier.
-        1.  Click **Secrets engines** > **Private certificates**.
-        1.  In the Certificate authority table, expand the certificate authority and copy the name of the template.
-
 ## Configure the OpenVPN client
 {: #solution-connect-client-vpn-openvpn}
 {: step}
