@@ -28,11 +28,11 @@ Version 5.1.2 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 : Version 5.1.2 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Completely New architecture. Does not support upgrade process from previous version 4.x.x to 5.x.x
     - Use this for new deployments only.
-    - Option to create `new secrets manager instance` or reuse existing one-
-    - Optional client to site VPN deployment.
+    - Option to create `new secrets manager instance` or reuse existing one.
+    - Optional `client to site VPN` deployment.
     - Switched from Block storage NFS volumes to File storage shares. Makes use of Application load balancer to mount the File storage shares on PowerVS instances.
     - Removed Cloud connection support.
-    - Private SSH keys need be entered in here doc string format. Can be passed in directly.
+    - Private SSH keys need not be entered in here doc string format. Can be passed in directly.
     - Improved documentation.
 
 [Warning]{: tag-red}
