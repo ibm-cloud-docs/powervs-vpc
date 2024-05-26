@@ -34,6 +34,8 @@ Version 5.1.2 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Removed Cloud connection support.
     - Private SSH keys need not be entered in here doc string format. Can be passed in directly.
     - Improved documentation.
+    - Network-services vsi is now the central ansible execution node.
+    - Both intel VSIs run on RHEL 8.8 OS.
 
 [Warning]{: tag-red}
 : Version 5.1.2 includes backward-incompatible changes.
