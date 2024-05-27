@@ -61,4 +61,6 @@ During the validation and deployment process, monitor the [needs attention items
 ## Next steps
 {: #next-with-vsi}
 
-The next step is applicable only for **Quickstart variation**. See steps [here](/docs/powervs-vpc?topic=powervs-vpc-solution-quickstart-next-steps)
+* Configure OS for **Quickstart variation**. See steps [here](/docs/powervs-vpc?topic=powervs-vpc-solution-quickstart-next-steps)
+* Connecting to landscape using [Client to site VPN](/docs/powervs-vpc?topic=powervs-vpc-solution-connect-client-vpn-openvpn)
+* Connecting to landscape using [Floating IP](/docs/powervs-vpc?topic=powervs-vpc-solution-ssh)
