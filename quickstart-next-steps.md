@@ -72,7 +72,15 @@ mount <nfs_host_or_ip_path> /nfs
 
 **For AIX Instance:**
 ```sh
+# Configure the nfsv4 domain in nfsv4 AIX client
+chnfsdom test.com
+# Start the nfs services
+startsrc -g nfs
+# add the nfs ip into /etc/hosts file replace x with the fourth value from the <nfs_host_or_ip_path>
+echo "10.30.40.x nfs_server" >> /etc/hosts
+# create a directory
 mkdir /nfs
+# Mount using version 4.
 mount -o vers=4 <nfs_host_or_ip_path> /nfs
 ```
 
