@@ -39,7 +39,7 @@ export http_proxy=http://<proxy_host_or_ip_port>:3128
 export https_proxy=http://<proxy_host_or_ip_port>:3128
 export HTTP_PROXY=http://<proxy_host_or_ip_port>:3128
 export HTTPS_PROXY=http://<proxy_host_or_ip_port>:3128
-export no_proxy=161.0.0.0/0
+export no_proxy=161.0.0.0/0,10.0.0.0/8
 ```
 
 To test the connection execute curl command and you must obtain the output as below:
