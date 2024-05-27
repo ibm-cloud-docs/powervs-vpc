@@ -70,7 +70,7 @@ The security groups are created and attached to correct subnets/VPE/VPN. For man
 | Name | Source |  Protocol:Value | Attached resources
 |----------|------------|----------|--------|
 | management-sg | * [Schematics IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses&interface=ui#ipaddresses) \n * IBM Inbound 161.26.0.0/16 \n * Class A,B and C private address \n * Optional user provided IP address/CIDR   | * TCP:22 \n * ALL:- \n * TCP:22 \n * TCP:22   | * prefix-jump-box-001 VSI  |
-| network-services-sg | * IBM Inbound 161.26.0.0/16 \n * Class A,B and C private address \n * Optional user provided IP address/CIDR   | * ALL:- \n * ALL:-   | * prefix-network-services-001 VSI \n * load balancer \n * mount share targets  |
+| network-services-sg | * IBM Inbound 161.26.0.0/16 \n * Class A,B and C private address  | * ALL:- \n * ALL:-   | * prefix-network-services-001 VSI \n * load balancer \n * mount share targets  |
 | vpe-sg | * IBM Inbound 161.26.0.0/16 \n * Class A,B and C private address   | * ALL:- \n * ALL:-   | * Cloud Object storage  |
 {: caption="Table 3. SG rules" caption-side="bottom"}
 
