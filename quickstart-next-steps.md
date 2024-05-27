@@ -64,9 +64,16 @@ The file storage share created in the VPC can be mounted on the PowerVS instance
 
 1.  Run the below commands in a terminal on the the **PowerVS Aix/Linux instance**. Fetch the value `nfs_host_or_ip_path` from the outputs of the deployment in the project configuration screen.
 
+**For Linux (RHEL/SLES) Instance:**
 ```sh
 mkdir /nfs
 mount <nfs_host_or_ip_path> /nfs
+```
+
+**For AIX Instance:**
+```sh
+mkdir /nfs
+mount -o vers=4 <nfs_host_or_ip_path> /nfs
 ```
 
 ## Configure DNS on PowerVS instance
