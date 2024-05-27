@@ -55,6 +55,8 @@ toc:
             topic: connect-client-vpn.md
           - navtitle: Connect using Floating IP
             topic: connect-jump-ssh.md
+          - navtitle: PowerVS Quickstart next steps
+            topic: quickstart-next-steps.md
 
     - navgroup:
         id: reference

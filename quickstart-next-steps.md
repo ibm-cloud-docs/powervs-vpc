@@ -15,7 +15,7 @@ completion-time: 1h
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Quickstart Next steps
+# Quickstart next steps
 {: #solution-quickstart-next-steps}
 {: toc-content-type="tutorial"}
 {: toc-services="powervs, vpc, squid, ansible, dns, nfs"}
