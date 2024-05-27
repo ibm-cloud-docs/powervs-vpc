@@ -42,7 +42,7 @@ export HTTPS_PROXY=http://<proxy_host_or_ip_port>:3128
 export no_proxy=161.0.0.0/0
 ```
 
-1. To test the connection execute and you must obtain the output as below.:
+To test the connection execute curl command and you must obtain the output as below:
     
 ```sh
 curl google.com
