@@ -73,7 +73,7 @@ mount <nfs_host_or_ip_path> /nfs
 {: #solution-quickstart-dns}
 {: step}
 
-The DNS server is running as a service on network-services intel vsi. Configure the PowerVS instance to use this DNS service
+The DNS server is running as a service on network-services intel vsi. Configure the PowerVS instance to use this DNS service.
 
 1.  Run the below commands in a terminal on the the **PowerVS Aix/Linux instance**. Fetch the value `dns_host_or_ip_path` from the outputs of the deployment in the project configuration screen. 
 
