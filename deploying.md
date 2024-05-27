@@ -57,3 +57,8 @@ To deploy a Power Virtual Server with VPC landing zone deployable architecture t
 
 During the validation and deployment process, monitor the [needs attention items](/docs/secure-enterprise?topic=secure-enterprise-needs-attention-projects). The widget reflects any issue that occurs in your configurations.
 {: remember}
+
+## Next steps
+{: #next-with-vsi}
+
+The next step is applicable only for **Quickstart variation**. See steps [here](/docs/powervs-vpc?topic=powervs-vpc-solution-quickstart-next-steps)

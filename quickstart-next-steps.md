@@ -1,0 +1,80 @@
+---
+
+copyright:
+  years: 2023, 2024
+lastupdated: "2024-05-27"
+
+keywords:
+subcollection: powervs-vpc
+content-type: tutorial
+services: powervs, vpc, squid, ansible, dns, nfs
+account-plan: paid
+completion-time: 1h
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
+# Quickstart Next steps
+{: #solution-quickstart-next-steps}
+{: toc-content-type="tutorial"}
+{: toc-services="powervs, vpc, squid, ansible, dns, nfs"}
+{: toc-completion-time="1h"}
+
+This tutorial dives into the fastest option to configure PowerVS instance after the Quickstart variation has been deployed.
+{: shortdesc}
+
+
+## Configure the Proxy to reach internet
+{: #solution-quickstart-proxy}
+{: step}
+
+
+1.  Run the below commands in a terminal on the the **PowerVS Aix/Linux instance**. Fetch the value `proxy_host_or_ip_port` from the outputs of the deployment in the project configuration screen.
+
+![Projects Output](images/projects-outputs.png){: caption="Figure 1. Output from Projects" caption-side="bottom"}
+
+```sh
+export http_proxy=http://<proxy_host_or_ip_port>:3128
+export https_proxy=http://<proxy_host_or_ip_port>:3128
+export HTTP_PROXY=http://<proxy_host_or_ip_port>:3128
+export HTTPS_PROXY=http://<proxy_host_or_ip_port>:3128
+export no_proxy=161.0.0.0/0
+```
+
+1. To test the connection execute and you must obtain the output as below.:
+    
+```sh
+curl google.com
+
+output:
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="http://www.google.com/">here</A>.
+</BODY></HTML>
+```
+
+## Mount file storage share from VPC on PowerVS instance
+{: #solution-quickstart-nfs-mount}
+{: step}
+
+The file storage share created in the VPC can be mounted on the PowerVS instance to share files between landscape.
+
+1.  Run the below commands in a terminal on the the **PowerVS Aix/Linux instance**. Fetch the value `nfs_host_or_ip_path` from the outputs of the deployment in the project configuration screen.
+
+```sh
+mkdir /nfs
+mount <nfs_host_or_ip_path> /nfs
+```
+
+## Configure DNS on PowerVS instance
+{: #solution-quickstart-dns}
+{: step}
+
+The DNS server is running as a service on network-services intel vsi. Configure the PowerVS instance to use this DNS service
+
+1.  Run the below commands in a terminal on the the **PowerVS Aix/Linux instance**. Fetch the value `dns_host_or_ip_path` from the outputs of the deployment in the project configuration screen. 
+
+Add the `dns_host_or_ip_path` value at the **top** in the `/etc/resolv.conf` file.
