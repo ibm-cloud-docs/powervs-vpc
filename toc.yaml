@@ -28,12 +28,12 @@ toc:
     - navgroup:
         id: architecture
         topics:
-          - navtitle: PowerVS Quickstart
-            include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/quickstart/deploy-arch-ibm-pvs-inf-quickstart.md
           - navtitle: PowerVS Workspace - Create a New Architecture
             include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/full-stack/deploy-arch-ibm-pvs-inf-full-stack.md
           - navtitle: PowerVS Workspace - Extend PowerVS with VPC landing zone
             include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/extension/deploy-arch-ibm-pvs-inf-extension.md
+          - navtitle: PowerVS Quickstart
+            include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/quickstart/deploy-arch-ibm-pvs-inf-quickstart.md
           - navtitle: Import PowerVS Workspace
             include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/import-workspace/deploy-arch-ibm-pvs-inf-import-workspace.md
 
