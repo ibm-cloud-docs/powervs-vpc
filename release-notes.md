@@ -51,7 +51,7 @@ Version 5.1.2 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Network-services vsi is now the central ansible execution node.
     - Both intel VSIs run on RHEL 8.8 OS.
 
-[Warning]{: tag-red}
+[Breaking change]{: tag-red}
 : Version 5.1.2 includes backward-incompatible changes.
     - Do not upgrade if you already have an existing deployment. 
     - Make a new deployment and then restore your OS data using data migration techniques. 
