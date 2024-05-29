@@ -15,7 +15,7 @@ completion-time: 1h
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Connect using a client-to-site VPN
+# Connect by using a client-to-site VPN
 {: #solution-connect-client-vpn}
 {: toc-content-type="tutorial"}
 {: toc-services="vpc, secrets-manager, dl, schematics"}
@@ -53,7 +53,7 @@ After the VPN server cloud resources are deployed, set up the OpenVPN client on 
     You can follow the steps in [Setting up a VPN client](/docs/vpc?topic=vpc-setting-up-vpn-client).
     {: tip}
 
-    1.  Download and install the OpenVPN client application from https://openvpn.net.
+    1.  Download and install the OpenVPN client application from https://openvpn.net
     1.  Open the OpenVPN client application, and import the `client2site-vpn.ovpn` file.
     1.  Enter one of the {{site.data.keyword.cloud_notm}} email addresses that was configured to access the VPN as the user ID.
 1.  Go to [https://iam.cloud.ibm.com/identity/passcode](https://iam.cloud.ibm.com/identity/passcode) in your browser to generate a passcode. Copy the passcode.

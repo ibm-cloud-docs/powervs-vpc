@@ -32,7 +32,7 @@ SAP-certified designates that the deployable architecture creates services that 
 {: #automation-fs-sap-duration}
 {: faq}
 
-Duration for the deployment depends on the daily {{site.data.keyword.cloud_notm}} data center utilization.
+The duration for the deployment depends on the daily IBM Cloud data center utilization.
 
 ## Why certain IBM Cloud data centers might not be available?
 {: #automation-fs-sap-dc-selection}

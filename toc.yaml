@@ -51,7 +51,7 @@ toc:
     - navgroup:
         id: tutorial
         topics:
-          - navtitle: Connect using a client-to-site VPN
+          - navtitle: Connect by using a client-to-site VPN
             topic: connect-client-vpn.md
           - navtitle: Connect using Floating IP
             topic: connect-jump-ssh.md

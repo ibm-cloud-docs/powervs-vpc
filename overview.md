@@ -15,7 +15,7 @@ subcollection: powervs-vpc
 # Overview of {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture
 {: #automation-solution-overview}
 
-Provisioning {{site.data.keyword.powerSys_notm}} with VPC landing zone by using deployable architectures provides an automated deployment method to create an isolated PowerVS workspace and connect it with IBM Cloud services and public internet. Network management components like DNS, NTP proxy servers and NFS as a Service might be installed. Comparing the provisioning through the projects UI, user interaction is minimized and ready-to-go deployment time of a PowerVS workspace is reduced from days to less than 1 hour. 
+Provisioning {{site.data.keyword.powerSys_notm}} with VPC landing zone by using deployable architectures provides an automated deployment method to create an isolated PowerVS workspace and connect it with IBM Cloud services and public internet. Network management components like DNS, NTP, proxy servers and NFS as a Service might be installed. Comparing the provisioning through the projects UI, user interaction is minimized and ready-to-go deployment time of a PowerVS workspace is reduced from days to less than 1 hour. 
 
 Automated {{site.data.keyword.powerSys_notm}} with VPC landing zone provisioning that is described in this guide is based on {{site.data.keyword.cloud_notm}} catalog deployable architectures. In this documentation, we describe only specifics that are related to {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture.
 
@@ -34,8 +34,11 @@ A proxy service for public internet access from the PowerVS workspace is configu
 This PowerVS Workspace variation has a prerequisite. You must deploy the 'Create a new architecture PowerVS workspace' variant.
 {: important}
 
-The {{site.data.keyword.powerSys_notm}} with VPC landing zone as variation 'Extend {{site.data.keyword.powerSys_notm}} with VPC landing zone' creates an additional {{site.data.keyword.powerSys_notm}} workspace and connects it with already created {{site.data.keyword.powerSys_notm}} with VPC landing zone. It builds on existing {{site.data.keyword.powerSys_notm}} with VPC landing zone deployed as a variation 'Create a new architecture'.
-This is typically used for High Availability scenarios in same regions.
+The 'Extend {{site.data.keyword.powerSys_notm}} with VPC landing zone' variation creates an additional {{site.data.keyword.powerSys_notm}} workspace and connects it to the existing {{site.data.keyword.powerSys_notm}} with VPC landing zone. It builds on existing {{site.data.keyword.powerSys_notm}} with VPC landing zone deployed as a variation 'Create a new architecture'.
+This is typically used for High Availability scenarios in the same regions.
+
+
+The 'Extend Power Virtual Server with VPC Landing Zone' variation creates an additional Power Virtual Server workspace and connects it to the existing VPC landing zone.
 
 ## Create a new architecture - Import PowerVS Workspace variation
 {: #overview-powervs-workspace-import-variant}
@@ -49,9 +52,9 @@ Check the pre-requisites for this variation [here](https://github.com/terraform-
 ## Create a new architecture - PowerVS Quickstart variation
 {: #overview-powervs-quickstart-variant}
 
-You can now deploy a {{site.data.keyword.powerSys_notm}} (PowerVS) with VPC landing zone which creates VPC services, a {{site.data.keyword.powerSys_notm}} workspace and interconnect them. 
+You can now deploy a {{site.data.keyword.powerSys_notm}} (PowerVS) with VPC landing zone that creates VPC services, a {{site.data.keyword.powerSys_notm}} workspace and interconnect them. 
 
-You can run AIX, IBM i, and Linux images on your virtual server instances. Select the required T-shirt size and a virtual server instance with chosen T-shirt size or custom configuration is deployed. The T-shirt sizes and the configuration parameters mapping is shown in the table below:
+You can run AIX, IBM i, and Linux images on your virtual server instances. Select the required T-shirt size and a virtual server instance with chosen T-shirt size or custom configuration is deployed. The T-shirt sizes and the configuration parameters mapping are shown in the following table:
 
 |  | XS | S | M | L |
 |---------------------- | ------------------------- | ------------------------- | -------------------------  | ------------------------- |
