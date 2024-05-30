@@ -21,7 +21,7 @@ Automated {{site.data.keyword.powerSys_notm}} with VPC landing zone provisioning
 
 In the following sections, the deployable architecture variants are described. 
 
-![Solution Overview](images/overview-solutions.png){: caption="Figure 1. Solution Overview" caption-side="bottom"}
+![Solution Overview](images/overview-solutions.png){: caption="Figure 1. Solution Overview" caption-side="center"}
 
 ## Create a new architecture - PowerVS workspace variation
 {: #overview-powervs-workspace-variant}
