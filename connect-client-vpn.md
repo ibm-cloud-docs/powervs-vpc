@@ -21,7 +21,7 @@ completion-time: 1h
 {: toc-services="vpc, secrets-manager, dl, schematics"}
 {: toc-completion-time="1h"}
 
-This tutorial dives into the fastest option to get up and running with a [client VPN for VPC](/docs/vpc?topic=vpc-vpn-client-to-site-overview) connectivity.
+This tutorial dives into the fastest option to get up and running with a client VPN.
 {: shortdesc}
 
 
@@ -50,14 +50,12 @@ After the VPN server cloud resources are deployed, set up the OpenVPN client on 
       Look for the `VPN_SERVER` ID in the output of the Terraform apply from the validation step. If you don't find it there, follow the previous steps to download the profile and look in the `<vpn_server>.ovpn` file.
 1.  Set up the client:
 
-    You can follow the steps in [Setting up a VPN client](/docs/vpc?topic=vpc-setting-up-vpn-client).
-    {: tip}
-
-    1.  Download and install the OpenVPN client application from https://openvpn.net
+    1.  Download and install the OpenVPN client application from https://openvpn.net/client/
     1.  Open the OpenVPN client application, and import the `client2site-vpn.ovpn` file.
     1.  Enter one of the {{site.data.keyword.cloud_notm}} email addresses that was configured to access the VPN as the user ID.
 1.  Go to [https://iam.cloud.ibm.com/identity/passcode](https://iam.cloud.ibm.com/identity/passcode) in your browser to generate a passcode. Copy the passcode.
-1.  Return to the OpenVPN client application and paste the one-time passcode. Then, import the `client2site-vpn.ovpn` certificate file.
+1.  Return to the OpenVPN client application and paste the one-time passcode. 
+1.  Click Continue.
 
 ### Using client certificates rather than one-time passcodes
 {: #connect-client-vpn-certs}
