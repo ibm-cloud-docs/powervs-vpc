@@ -28,13 +28,13 @@ toc:
     - navgroup:
         id: architecture
         topics:
-          - navtitle: PowerVS Workspace - Create a New Architecture
+          - navtitle: Standard
             include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/full-stack/deploy-arch-ibm-pvs-inf-full-stack.md
-          - navtitle: PowerVS Workspace - Extend PowerVS with VPC landing zone
+          - navtitle: Standard - Extend
             include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/extension/deploy-arch-ibm-pvs-inf-extension.md
-          - navtitle: PowerVS Quickstart
+          - navtitle: Standard with Instance
             include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/quickstart/deploy-arch-ibm-pvs-inf-quickstart.md
-          - navtitle: Import PowerVS Workspace
+          - navtitle: Import
             include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/import-workspace/deploy-arch-ibm-pvs-inf-import-workspace.md
 
     - navgroup:
@@ -55,8 +55,8 @@ toc:
             topic: connect-client-vpn.md
           - navtitle: Connect using Floating IP
             topic: connect-jump-ssh.md
-          - navtitle: PowerVS Quickstart next steps
-            topic: quickstart-next-steps.md
+          - navtitle: Standard with Instance Variation Next Steps
+            topic: standard-with-instance-next-steps.md
 
     - navgroup:
         id: reference

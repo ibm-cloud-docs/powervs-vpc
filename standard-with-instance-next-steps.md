@@ -15,18 +15,18 @@ completion-time: 1h
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Quickstart next steps
-{: #solution-quickstart-next-steps}
+# Standard with Instance next steps
+{: #solution-standard-with-instance-next-steps}
 {: toc-content-type="tutorial"}
 {: toc-services="powervs, vpc, squid, ansible, dns, nfs"}
 {: toc-completion-time="15m"}
 
-This tutorial explores the fastest way to configure a PowerVS instance after deploying the Quickstart variation.
+This tutorial explores the fastest way to configure a PowerVS instance after deploying the Standard with Instance variation.
 {: shortdesc}
 
 
 ## Configure the Proxy to reach the internet
-{: #solution-quickstart-proxy}
+{: #solution-standard-with-instance-proxy}
 {: step}
 
 
@@ -57,7 +57,7 @@ The document has moved
 ```
 
 ## Mount file storage share from VPC on a PowerVS instance
-{: #solution-quickstart-nfs-mount}
+{: #solution-standard-with-instance-nfs-mount}
 {: step}
 
 The file storage share that is created in the VPC can be mounted on the PowerVS instance to share files between landscape.
@@ -85,7 +85,7 @@ mount -o vers=4 <nfs_host_or_ip_path> /nfs
 ```
 
 ## Configure DNS on PowerVS instance
-{: #solution-quickstart-dns}
+{: #solution-standard-with-instance-dns}
 {: step}
 
 The DNS server is running as a service on network-services intel vsi. Configure the PowerVS instance to use this DNS service.

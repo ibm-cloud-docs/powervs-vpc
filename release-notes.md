@@ -30,7 +30,7 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 Version 5.1.3 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 5.1.3 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
     - Take a look at may26 release notes( version 5.1.2).
-    - Support Linux images in custom images for Quickstart variation.
+    - Support Linux images in custom images for Standard with Instance variation.
     - Upgrade IBMi images in tshirt sizes.
 
 
@@ -65,7 +65,7 @@ Version 4.11.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone d
 : Version 4.11.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade Toronto 01 `tor01` DC to PER. New deployments in theToronto 01 region makes use of PER.
     - Upgrade US-south `us-south` DC to PER. New deployments in theUs-south region makes use of PER.
-    - Quickstart now supports SLES SAP DEV t-shirt size.
+    - Standard with Instance now supports SLES SAP DEV t-shirt size.
 
 [Warning]{: tag-red}
 : Version 4.11.0 includes backward-incompatible changes for `tor01` and `us-south` DCs only. 
@@ -97,7 +97,7 @@ Version 4.10.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone d
 Version 4.9.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 4.9.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade DAs to version 1.64.1 terraform IBM provider version
-    - Upgrade Quickstart Solution to utilize the latest AIX and IBMi images.
+    - Upgrade Standard with Instance Solution to utilize the latest AIX and IBMi images.
 
 ### 05 April 2024
 {: #powervs-vpc-apr05}
@@ -221,7 +221,7 @@ Version 4.2.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 Version 4.1.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 :   Version 4.1.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Enable support for `WDC07`, `MAD02`, `MAD04` and `SAO04` PER datacenters for {{site.data.keyword.powerSys_notm}} Workspace Variation only.
-    - Enable support for `WDC07`and `SAO04`  PER datacenters for {{site.data.keyword.powerSys_notm}} Quickstart Variation.
+    - Enable support for `WDC07`and `SAO04`  PER datacenters for {{site.data.keyword.powerSys_notm}} Standard with Instance Variation.
     - Upgrade Frankfurt 2 `eu-de-2` DC to PER. New deployments in the Frankfurt 2 region makes use of PER.
     - Fixes outputs of workspace when DNS, NTP and NFS services are set to false.
 
@@ -239,7 +239,7 @@ Version 4.0.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 :   Version 4.0.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade TF IBM provider version to `1.61.0`
     - Change default PowerVS images for AIX and IBM i for all variations
-    - Quickstart flavour now has a tshirt size `Custom (Configure in optional parameters)` in the dropdown. This is used when `custom_profile` needs to be used for custom deployments.
+    - Standard with Instance flavour now has a tshirt size `Custom (Configure in optional parameters)` in the dropdown. This is used when `custom_profile` needs to be used for custom deployments.
 
 [Breaking change]{: tag-red}
 : Version 4.0.1 includes backward-incompatible changes. Review the following information before you upgrade.
@@ -291,7 +291,7 @@ Version 3.0.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Schedule the upgrade. 
         - The new landing zone version re-creates the 1 TB storage disk in a different resource group, so you will experience less down time.
         - When you upgrade, the deployable architecture will be down for about 20 minutes, and the Intel VSI will reboot.
-   - If you deployed the QuickStart variation, you might want to create another deployable architecture rather than upgrade. The VM and VPC subnets are re-created, which might affect demos and PoCs.
+   - If you deployed the Standard with Instance variation, you might want to create another deployable architecture rather than upgrade. The VM and VPC subnets are re-created, which might affect demos and PoCs.
 
 ## September 2023
 {: #powervs-vpc-2023-09}
@@ -314,7 +314,7 @@ Version 2.0.0 available
 
 Version 1.2.0 available
 :   Version 1.2.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
-    - Introducing the new quickstart variant of {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture. For more information see [{{site.data.keyword.powerSys_notm}} with VPC landing zone quickstart variation](/docs/powervs-vpc?topic=powervs-vpc-automation-solution-overview#overview-powervs-quickstart-variant)
+    - Introducing the new Standard with Instance variant of {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture. For more information see [{{site.data.keyword.powerSys_notm}} with VPC landing zone Standard with Instance variation](/docs/powervs-vpc?topic=powervs-vpc-automation-solution-overview#overview-standard-with-instance-variant)
 
 ## July 2023
 {: #powervs-vpc-2023-07}

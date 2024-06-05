@@ -23,15 +23,15 @@ In the following sections, the deployable architecture variants are described.
 
 ![Solution Overview](images/overview-solutions.png){: caption="Figure 1. Solution Overview" caption-side="center"}
 
-## Create a new architecture - PowerVS workspace variation
-{: #overview-powervs-workspace-variant}
+## Create a new architecture - Standard variation
+{: #overview-standard-new-variant}
 
 The {{site.data.keyword.powerSys_notm}} with VPC landing zone as variation 'Create a new architecture' deploys VPC services and a {{site.data.keyword.powerSys_notm}} workspace and interconnects them.
 
 A proxy service for public internet access from the PowerVS workspace is configured. You can optionally configure some management components on VPC (such as an NFS as a Service, Client to site VPN, NTP forwarder, and DNS forwarder).
 
-## Extend {{site.data.keyword.powerSys_notm}} with VPC landing zone - PowerVS Workspace variation
-{: #overview-powervs-workspace-extension-variant}
+## Extend {{site.data.keyword.powerSys_notm}} with VPC landing zone - Standard variation
+{: #overview-standard-extension-variant}
 
 This PowerVS Workspace variation has a prerequisite. You must deploy the 'Create a new architecture PowerVS workspace' variant.
 {: important}
@@ -42,8 +42,8 @@ This is typically used for High Availability scenarios in the same regions.
 
 The 'Extend Power Virtual Server with VPC Landing Zone' variation creates an additional Power Virtual Server workspace and connects it to the existing VPC landing zone.
 
-## Create a new architecture - PowerVS Quickstart variation
-{: #overview-powervs-quickstart-variant}
+## Create a new architecture - Standard with Instance variation
+{: #overview-standard-with-instance-variant}
 
 You can now deploy a {{site.data.keyword.powerSys_notm}} (PowerVS) with VPC landing zone that creates VPC services, a {{site.data.keyword.powerSys_notm}} workspace and interconnect them. 
 
@@ -85,8 +85,8 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 
 A proxy service for public internet access from the PowerVS workspace is configured. You can optionally configure some management components on VPC (such as an NFS as a Service, Client to site VPN, NTP forwarder, and DNS forwarder).
 
-## Create a new architecture - Import PowerVS Workspace variation
-{: #overview-powervs-workspace-import-variant}
+## Create a new architecture - Import variation
+{: #overview-import-variant}
 
 Create an IBM Cloud schematics workspace for your pre-existing VPC and PowerVS infrastructure resources using the new {{site.data.keyword.powerSys_notm}} (PowerVS) with VPC landing zone variation - 'Import PowerVS Workspace'. 
 
