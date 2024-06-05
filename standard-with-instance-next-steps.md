@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-05-27"
+lastupdated: "2024-06-05"
 
 keywords:
 subcollection: powervs-vpc
@@ -15,7 +15,7 @@ completion-time: 1h
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Standard with Instance next steps
+# Standard with Instance Variation Next Steps
 {: #solution-standard-with-instance-next-steps}
 {: toc-content-type="tutorial"}
 {: toc-services="powervs, vpc, squid, ansible, dns, nfs"}

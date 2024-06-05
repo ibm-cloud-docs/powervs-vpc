@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2024-05-27"
+lastupdated: "2024-06-05"
 
 subcollection: powervs-vpc
 
