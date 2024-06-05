@@ -31,14 +31,12 @@ This tutorial dives into the fastest option to get up and running with a client 
 
 After the VPN server cloud resources are deployed, set up the OpenVPN client on devices that will access your landing zone.
 
-1.  Download the OpenVPN profile from the VPN server
+1.  Download the OpenVPN profile from the VPN server using one of the following methods:
 
     - By using the {{site.data.keyword.cloud_notm}} console:
         1.  Click the **Navigation menu** icon ![Navigation menu icon](../icons/icon_hamburger.svg "Menu"), and then click **VPC Infrastructure** > **VPNs** in the **Network** section to open the VPNs for VPC page.
         1.  Click the **Client-to-site servers** tab and select the client-to-site VPN server that you created.
         1.  Click the **Clients** tab. Then, click **Download client profile**.
-
-      Or
 
     - By using the {{site.data.keyword.cloud_notm}} CLI:
 
