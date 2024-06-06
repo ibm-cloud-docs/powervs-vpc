@@ -28,14 +28,14 @@ toc:
     - navgroup:
         id: architecture
         topics:
-          - navtitle: PowerVS Workspace - Create a New Architecture
-            include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/full-stack/deploy-arch-ibm-pvs-inf-full-stack.md
-          - navtitle: PowerVS Workspace - Extend PowerVS with VPC landing zone
-            include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/extension/deploy-arch-ibm-pvs-inf-extension.md
-          - navtitle: PowerVS Quickstart
-            include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/quickstart/deploy-arch-ibm-pvs-inf-quickstart.md
-          - navtitle: Import PowerVS Workspace
-            include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/import-workspace/deploy-arch-ibm-pvs-inf-import-workspace.md
+          - navtitle: Standard
+            include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard/deploy-arch-ibm-pvs-inf-standard.md
+          - navtitle: Standard Extend
+            include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard-extend/deploy-arch-ibm-pvs-inf-standard-extend.md
+          - navtitle: Quickstart
+            include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard-plus-vsi/deploy-arch-ibm-pvs-inf-standard-plus-vsi.md
+          - navtitle: Import
+            include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/import/deploy-arch-ibm-pvs-inf-import.md
 
     - navgroup:
         id: plan
