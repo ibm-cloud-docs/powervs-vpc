@@ -46,7 +46,8 @@ toc:
     - navgroup:
         id: deploy
         topics:
-          - topic: deploying.md
+          - navtitle: Deploy using Projects
+            topic: deploying.md
 
     - navgroup:
         id: tutorial
@@ -55,7 +56,7 @@ toc:
             topic: connect-client-vpn.md
           - navtitle: Connect using Floating IP
             topic: connect-jump-ssh.md
-          - navtitle: PowerVS Quickstart next steps
+          - navtitle: Quickstart next steps
             topic: quickstart-next-steps.md
 
     - navgroup:
