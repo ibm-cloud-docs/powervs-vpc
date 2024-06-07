@@ -23,27 +23,24 @@ In the following sections, the deployable architecture variants are described.
 
 ![Solution Overview](images/overview-solutions.png){: caption="Figure 1. Solution Overview" caption-side="center"}
 
-## Create a new architecture - PowerVS workspace variation
-{: #overview-powervs-workspace-variant}
+## Create a new architecture - Standard variation
+{: #overview-standard-variant}
 
-The {{site.data.keyword.powerSys_notm}} with VPC landing zone as variation 'Create a new architecture' deploys VPC services and a {{site.data.keyword.powerSys_notm}} workspace and interconnects them.
+Deploys VPC services and a {{site.data.keyword.powerSys_notm}} workspace and interconnects them.
 
 A proxy service for public internet access from the PowerVS workspace is configured. You can optionally configure some management components on VPC (such as an NFS as a Service, Client to site VPN, NTP forwarder, and DNS forwarder).
 
-## Extend {{site.data.keyword.powerSys_notm}} with VPC landing zone - PowerVS Workspace variation
-{: #overview-powervs-workspace-extension-variant}
+## Extend {{site.data.keyword.powerSys_notm}} with VPC landing zone - Standard variation
+{: #overview-standard-extend-variant}
 
-This PowerVS Workspace variation has a prerequisite. You must deploy the 'Create a new architecture PowerVS workspace' variant.
+This variation has a prerequisite. You must deploy the 'Create a new architecture Standard' variant.
 {: important}
 
 The 'Extend {{site.data.keyword.powerSys_notm}} with VPC landing zone' variation creates an additional {{site.data.keyword.powerSys_notm}} workspace and connects it to the existing {{site.data.keyword.powerSys_notm}} with VPC landing zone. It builds on existing {{site.data.keyword.powerSys_notm}} with VPC landing zone deployed as a variation 'Create a new architecture'.
 This is typically used for High Availability scenarios in the same regions.
 
-
-The 'Extend Power Virtual Server with VPC Landing Zone' variation creates an additional Power Virtual Server workspace and connects it to the existing VPC landing zone.
-
-## Create a new architecture - PowerVS Quickstart variation
-{: #overview-powervs-quickstart-variant}
+## Create a new architecture - Quickstart variation
+{: #overview-quickstart-variant}
 
 You can now deploy a {{site.data.keyword.powerSys_notm}} (PowerVS) with VPC landing zone that creates VPC services, a {{site.data.keyword.powerSys_notm}} workspace and interconnect them. 
 
@@ -85,12 +82,12 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 
 A proxy service for public internet access from the PowerVS workspace is configured. You can optionally configure some management components on VPC (such as an NFS as a Service, Client to site VPN, NTP forwarder, and DNS forwarder).
 
-## Create a new architecture - Import PowerVS Workspace variation
+## Create a new architecture - Import variation
 {: #overview-powervs-workspace-import-variant}
 
 Create an IBM Cloud schematics workspace for your pre-existing VPC and PowerVS infrastructure resources using the new {{site.data.keyword.powerSys_notm}} (PowerVS) with VPC landing zone variation - 'Import PowerVS Workspace'. 
 
-This variation helps to install the deployable architecture ['Power Virtual Server for SAP HANA'](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) on top of a pre-existing Power Virtual Server(PowerVS) landscape. 'Power Virtual Server for SAP HANA' automations requires a schematics workspace id for installation. The 'import-workspace' solution creates a schematics workspace by taking pre-existing VPC and PowerVS infrastructure resource details as inputs. The ID of this schematics workspace will be the pre-requisite workspace id required by 'Power Virtual Server for SAP HANA' to create and configure the PowerVS instances for SAP on top of the existing infrastructure. 
+This variation helps to install the deployable architecture ['Power Virtual Server for SAP HANA'](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) on top of a pre-existing Power Virtual Server(PowerVS) landscape. 'Power Virtual Server for SAP HANA' automations requires a schematics workspace id for installation. The 'Import' solution creates a schematics workspace by taking pre-existing VPC and PowerVS infrastructure resource details as inputs. The ID of this schematics workspace will be the pre-requisite workspace id required by 'Power Virtual Server for SAP HANA' to create and configure the PowerVS instances for SAP on top of the existing infrastructure. 
 
 Check the pre-requisites for this variation [here](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/tree/main/solutions/import-workspace#pre-requisites).
 
