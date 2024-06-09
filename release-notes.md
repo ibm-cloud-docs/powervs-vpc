@@ -23,7 +23,7 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 ## June 2024
 {: #powervs-vpc-2024-06}
 
-### 29 May 2024
+### 07 June 2024
 {: #powervs-vpc-jun07}
 {: release-note}
 
