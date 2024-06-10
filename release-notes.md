@@ -326,7 +326,7 @@ Version 2.0.0 available
 
 Version 1.2.0 available
 :   Version 1.2.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
-    - Introducing the new quickstart variant of {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture. For more information see [{{site.data.keyword.powerSys_notm}} with VPC landing zone quickstart variation](/docs/powervs-vpc?topic=powervs-vpc-automation-solution-overview#overview-powervs-quickstart-variant)
+    - Introducing the new quickstart variant of {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture. For more information see [{{site.data.keyword.powerSys_notm}} with VPC landing zone quickstart variation](/docs/powervs-vpc?topic=powervs-vpc-automation-solution-overview#overview-powervs-workspace-import-variant)
 
 ## July 2023
 {: #powervs-vpc-2023-07}
