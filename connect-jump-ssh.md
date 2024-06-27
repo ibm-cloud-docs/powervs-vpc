@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-05-27"
+lastupdated: "2024-06-27"
 
 keywords:
 subcollection: powervs-vpc
@@ -33,9 +33,13 @@ After deployment, connect to the landscape via SSH proxy using the jump box's fl
 1. Use the following SSH commands to access the hosts.
 
 ```sh
-ssh root@<access_host_or_ip>
+ssh root@<access_host_or_ip> -i <path_to_private_key>
 
-ssh -A -o ServerAliveInterval=60 -o ServerAliveCountMax=600 -o ProxyCommand="ssh -W %h:%p root@<access_host_or_ip>" root@<ansible_host_or_ip>
+ssh -A -o ServerAliveInterval=60 -o ServerAliveCountMax=600 -o ProxyCommand="ssh -W %h:%p root@<access_host_or_ip> -i <path_to_private_key>" root@<ansible_host_or_ip> -i <path_to_private_key>
 
-ssh -A -o ServerAliveInterval=60 -o ServerAliveCountMax=600 -o ProxyCommand="ssh -W %h:%p root@<access_host_or_ip>" root@<ntp_host_or_ip>
+ssh -A -o ServerAliveInterval=60 -o ServerAliveCountMax=600 -o ProxyCommand="ssh -W %h:%p root@<access_host_or_ip> -i <path_to_private_key>" root@<ntp_host_or_ip> -i <path_to_private_key>
+
+ssh -A -o ServerAliveInterval=60 -o ServerAliveCountMax=600 -o ProxyCommand="ssh -W %h:%p root@<access_host_or_ip> -i <path_to_private_key>" root@<dns_host_or_ip> -i <path_to_private_key>
+
+ssh -A -o ServerAliveInterval=60 -o ServerAliveCountMax=600 -o ProxyCommand="ssh -W %h:%p root@<access_host_or_ip> -i <path_to_private_key>" root@powervs_instance_management_ip> -i <path_to_private_key>
 ```
