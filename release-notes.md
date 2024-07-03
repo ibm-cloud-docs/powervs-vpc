@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-06-08"
+lastupdated: "2024-07-03"
 
 keywords: 
 
@@ -19,6 +19,17 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries are grouped by date.
 {: shortdesc}
+
+## July 2024
+{: #powervs-vpc-2024-06}
+
+### 03 July 2024
+{: #powervs-vpc-jul03}
+{: release-note}
+
+Version 5.3.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 5.3.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+    - Enable support for global transit gateway in optional parameters for standard variation.
 
 ## June 2024
 {: #powervs-vpc-2024-06}
