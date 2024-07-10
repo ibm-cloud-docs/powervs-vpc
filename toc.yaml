@@ -13,7 +13,6 @@ toc:
     deployable: true
     description: Deploy Power Virtual Server workspace and connects it with VPC services with a deployable architecture.
     label: Power Systems Virtual Server with VPC landing zone
-
   entries:
     - navgroup:
         id: overview
@@ -24,7 +23,6 @@ toc:
             topic: release-notes.md
           - navtitle: VPC landing zone architecture for PowerVS
             topic: vpc-landing-zone-preset.md
-
     - navgroup:
         id: architecture
         topics:
@@ -36,19 +34,16 @@ toc:
             include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard-plus-vsi/deploy-arch-ibm-pvs-inf-standard-plus-vsi.md
           - navtitle: Import
             include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/import/deploy-arch-ibm-pvs-inf-import.md
-
     - navgroup:
         id: plan
         topics:
           - navtitle: Before you begin deploying
             topic: planning.md
-
     - navgroup:
         id: deploy
         topics:
           - navtitle: Deploy using Projects
             topic: deploying.md
-
     - navgroup:
         id: tutorial
         topics:
@@ -58,13 +53,13 @@ toc:
             topic: connect-jump-ssh.md
           - navtitle: Quickstart next steps
             topic: quickstart-next-steps.md
-
+          - navtitle: Workload protection for Power Virtual Server
+            topic: scc-wp-on-powervs.md
     - navgroup:
         id: reference
         topics:
           - navtitle: Responsibilities
             topic: shared-responsibilities.md
-
     - navgroup:
         id: help
         topics:

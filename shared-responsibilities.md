@@ -63,8 +63,8 @@ Security and regulation compliance includes tasks such as security controls impl
 ## Disaster recovery
 {: #vpc-disaster-recovery}
 
-<!-- Use this section description exactly as worded. -->
-<!-- If there is a task that is the customer's responsibility and you have associated docs for how a customer completes that task, link to it from the Your responsibilities column. -->
+
+
 
 Disaster recovery includes tasks such as providing dependencies on disaster recovery sites, provision disaster recovery environments, data and configuration backup, replicating data and configuration to the disaster recovery environment, and failover on disaster events.
 
