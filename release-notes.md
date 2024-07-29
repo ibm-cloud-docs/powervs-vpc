@@ -2,9 +2,9 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-07-29"
 
-keywords: 
+keywords:
 
 subcollection: powervs-vpc
 
@@ -22,6 +22,18 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 
 ## July 2024
 {: #powervs-vpc-2024-06}
+
+### 29 July 2024
+{: #powervs-vpc-jul29}
+{: release-note}
+
+Version 6.0.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 6.0.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+    - create ibm_is_share in correct resource group and update ansible role version
+
+[Breaking change]{: tag-red}
+    - Backup your data. All data on the NFS share will be lost
+    - If you upgrade from an older version this will destroy and recreate the NFS share in correct resource group. It is important to backup your data. You can copy the the data to COS or copy it locally using commands. The automation does not help in doing this. Once it is recreated, and mounted you can copy the files to the NFS mount.
 
 ### 03 July 2024
 {: #powervs-vpc-jul03}
@@ -76,7 +88,7 @@ Version 5.1.2 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 
 [Breaking change]{: tag-red}
 : Version 5.1.2 includes backward-incompatible changes.
-    - Do not upgrade if you already have an existing deployment. 
+    - Do not upgrade if you already have an existing deployment.
     - Make a new deployment and then restore your OS data that use data migration techniques.
 
 
@@ -91,7 +103,7 @@ Version 4.11.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone d
     - Quickstart now supports SLES SAP DEV t-shirt size.
 
 [Warning]{: tag-red}
-: Version 4.11.0 includes backward-incompatible changes for `tor01` and `us-south` DCs only. 
+: Version 4.11.0 includes backward-incompatible changes for `tor01` and `us-south` DCs only.
     - Do not upgrade to this version if previous deployments were made in `tor01` and `us-south` {{site.data.keyword.powerSys_notm}} zone as doing so corrupts the landscape due to the switch from Cloud Connections to PER.
     - Use this version for New deployments in the`tor01` and `us-south` {{site.data.keyword.powerSys_notm}} zone.
     - Deployments that are done in other {{site.data.keyword.powerSys_notm}} zone can be upgraded with any issue.
@@ -108,7 +120,7 @@ Version 4.10.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone d
     - Upgrade Sydney 04 `syd04` DC to PER. New deployments in theSydney 04 region makes use of PER.
 
 [Warning]{: tag-red}
-: Version 4.10.0 includes backward-incompatible changes for Sydney 04 `syd04` DC only. 
+: Version 4.10.0 includes backward-incompatible changes for Sydney 04 `syd04` DC only.
     - Do not upgrade to this version if previous deployments were made in Sydney 04 `syd04` {{site.data.keyword.powerSys_notm}} zone as doing so corrupts the landscape due to the switch from Cloud Connections to PER.
     - Use this version for New deployments in theSydney 04 `syd04` {{site.data.keyword.powerSys_notm}} zone.
     - Deployments that are done in other {{site.data.keyword.powerSys_notm}} zone can be upgraded with any issue.
@@ -131,7 +143,7 @@ Version 4.9.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Upgrade London 06 `lon06` DC to PER. New deployments in theLondon 06 region makes use of PER.
 
 [Warning]{: tag-red}
-: Version 4.9.0 includes backward-incompatible changes for London 06 `lon06` DC only. 
+: Version 4.9.0 includes backward-incompatible changes for London 06 `lon06` DC only.
     - Do not upgrade to this version if previous deployments were made in London 06 `lon06` {{site.data.keyword.powerSys_notm}} zone as doing so corrupts the landscape due to the switch from Cloud Connections to PER.
     - Use this version for New deployments in theLondon 06 `lon06` {{site.data.keyword.powerSys_notm}} zone.
     - Deployments that are done in other {{site.data.keyword.powerSys_notm}} zone can be upgraded with any issue.
@@ -145,7 +157,7 @@ Version 4.8.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Upgrade Sydney 05 `syd05` DC to PER. New deployments in theSydney 05 region makes use of PER.
 
 [Warning]{: tag-red}
-: Version 4.8.0 includes backward-incompatible changes for Sydney 05 `syd05` DC only. 
+: Version 4.8.0 includes backward-incompatible changes for Sydney 05 `syd05` DC only.
     - Do not upgrade to this version if previous deployments were made in Sydney 05 `syd05` {{site.data.keyword.powerSys_notm}} zone as doing so corrupts the landscape due to the switch from Cloud Connections to PER.
     - Use this version for New deployments in theSydney 05 `syd05` {{site.data.keyword.powerSys_notm}} zone.
     - Deployments that are done in other {{site.data.keyword.powerSys_notm}} zone can be upgraded with any issue.
@@ -162,7 +174,7 @@ Version 4.7.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Upgrade Osaka 21 `osa21` DC to PER. New deployments in theOsaka region makes use of PER.
 
 [Warning]{: tag-red}
-: Version 4.7.0 includes backward-incompatible changes for Osaka 21 `osa21` DC only. 
+: Version 4.7.0 includes backward-incompatible changes for Osaka 21 `osa21` DC only.
     - Do not upgrade to this version if previous deployments were made in Osaka 21 `osa21` {{site.data.keyword.powerSys_notm}} zone as doing so corrupts the landscape due to the switch from Cloud Connections to PER.
     - Use this version for New deployments in theOsaka 21 `osa21` {{site.data.keyword.powerSys_notm}} zone.
     - Deployments that are done in other {{site.data.keyword.powerSys_notm}} zone can be upgraded with any issue.
@@ -176,7 +188,7 @@ Version 4.6.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Upgrade Tokyo 04 `tok04` DC to PER. New deployments in theTokyo region makes use of PER.
 
 [Warning]{: tag-red}
-: Version 4.6.1 includes backward-incompatible changes for Tokyo 04 `tok04` DC only. 
+: Version 4.6.1 includes backward-incompatible changes for Tokyo 04 `tok04` DC only.
     - Do not upgrade to this version if previous deployments were made in Tokyo 04 `tok04` {{site.data.keyword.powerSys_notm}} zone as doing so corrupts the landscape due to the switch from Cloud Connections to PER.
     - Use this version for New deployments in theTokyo 04 `tok04` {{site.data.keyword.powerSys_notm}} zone.
     - Deployments that are done in other {{site.data.keyword.powerSys_notm}} zone can be upgraded with any issue.
@@ -193,7 +205,7 @@ Version 4.5.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Upgrade Sao Paulo 01 `sao01` DC to PER. New deployments in the Sao Paulo 01 region makes use of PER.
 
 [Warning]{: tag-red}
-: Version 4.5.0 includes backward-incompatible changes for Sao Paulo 01 `sao01` DC only. 
+: Version 4.5.0 includes backward-incompatible changes for Sao Paulo 01 `sao01` DC only.
     - Do not upgrade to this version if previous deployments were made in Sao Paulo 01 `sao01` {{site.data.keyword.powerSys_notm}} zone as doing so corrupts the landscape due to the switch from Cloud Connections to PER.
     - Use this version for New deployments in the Sao Paulo 01 `sao01` {{site.data.keyword.powerSys_notm}} zone.
     - Deployments that are done in other {{site.data.keyword.powerSys_notm}} zone can be upgraded with any issue.
@@ -207,7 +219,7 @@ Version 4.4.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Upgrade Dallas 12 `dal12` DC to PER. New deployments in the Dallas 12 region makes use of PER.
 
 [Warning]{: tag-red}
-: Version 4.4.0 includes backward-incompatible changes for Dallas 12 `dal12` DC only. 
+: Version 4.4.0 includes backward-incompatible changes for Dallas 12 `dal12` DC only.
     - Do not upgrade to this version if previous deployments were made in Dallas 12 `dal12` {{site.data.keyword.powerSys_notm}} zone as doing so corrupts the landscape due to the switch from Cloud Connections to PER.
     - Use this version for New deployments in the Dallas 12 `dal12` {{site.data.keyword.powerSys_notm}} zone.
     - Deployments that are done in other {{site.data.keyword.powerSys_notm}} zone can be upgraded with any issue.
@@ -232,7 +244,7 @@ Version 4.2.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Upgrade Frankfurt 1 `eu-de-1` DC to PER. New deployments in the Frankfurt 1 region makes use of PER.
 
 [Warning]{: tag-red}
-: Version 4.2.0 includes backward-incompatible changes for Frankfurt 1 `eu-de-1` DC only . 
+: Version 4.2.0 includes backward-incompatible changes for Frankfurt 1 `eu-de-1` DC only .
     - Do not upgrade to this version if previous deployments were made in Frankfurt 1 `eu-de-1` {{site.data.keyword.powerSys_notm}} zone as doing so corrupts the landscape due to the switch from Cloud Connections to PER.
     - Use this version for New deployments in the Frankfurt 1 `eu-de-1` {{site.data.keyword.powerSys_notm}} zone.
     - Deployments that are done in other {{site.data.keyword.powerSys_notm}} zone can be upgraded with any issue.
@@ -249,7 +261,7 @@ Version 4.1.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Fixes outputs of workspace when DNS, NTP and NFS services are set to false.
 
 [Warning]{: tag-red}
-: Version 4.1.0 includes backward-incompatible changes for Frankfurt 2 `eu-de-2` DC only . 
+: Version 4.1.0 includes backward-incompatible changes for Frankfurt 2 `eu-de-2` DC only .
     - Do not upgrade to this version if previous deployments were made in Frankfurt 2 `eu-de-2` {{site.data.keyword.powerSys_notm}} zone as doing so corrupts the landscape due to the switch from Cloud Connections to PER.
     - Use this version for New deployments in the Frankfurt 2 `eu-de-2` {{site.data.keyword.powerSys_notm}} zone.
     - Deployments that are done in other {{site.data.keyword.powerSys_notm}} zone can be upgraded with any issue.
@@ -268,7 +280,7 @@ Version 4.0.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 : Version 4.0.1 includes backward-incompatible changes. Review the following information before you upgrade.
     - When upgrading to this version floating IPs are going to be deleted and recreated upon apply. This is due to a bug where the floating IPs were being created incorrectly in the Default resource group. Upon re-creation, the floating IPs will be created in the same resource group as the VSI.
     - Accordingly, please plan before upgrading incase this change will cause disruption for whatever is using the floating IPs.
-    - 3 sleep resources will be deleted because of changes in the VPC landing zone module version 
+    - 3 sleep resources will be deleted because of changes in the VPC landing zone module version
 
 ## December 2023
 {: #powervs-vpc-2023-12}
@@ -311,7 +323,7 @@ Version 3.0.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 : Version 3.0.0 includes backward-incompatible changes. Review the following information before you upgrade.
     - Back up the data on the 10.20.10.4 `private-svs-1` VSI in the `/nfs` directory before you upgrade to version 3.0.0.
     - When you upgrade the full-stack solution, the Ansible roles are triggered again, the ACL rules are updated, and the NFS disk will be re-created.
-    - Schedule the upgrade. 
+    - Schedule the upgrade.
         - The new landing zone version re-creates the 1 TB storage disk in a different resource group, so you will experience less down time.
         - When you upgrade, the deployable architecture will be down for about 20 minutes, and the Intel VSI will reboot.
    - If you deployed the QuickStart variation, you might want to create another deployable architecture rather than upgrade. The VM and VPC subnets are re-created, which might affect demos and PoCs.
