@@ -31,7 +31,8 @@ Version 6.0.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 : Version 6.0.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
     - create ibm_is_share in correct resource group and update ansible role version
 
-[Breaking change]{: tag-red}<br>
+[Breaking change]{: tag-red}
+:
     - Backup your data. All data on the NFS share will be lost
     - If you upgrade from an older version this will destroy and recreate the NFS share in correct resource group. It is important to backup your data. You can copy the the data to COS or copy it locally using commands. The automation does not help in doing this. Once it is recreated, and mounted you can copy the files to the NFS mount.
 
