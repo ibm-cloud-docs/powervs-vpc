@@ -98,7 +98,7 @@ First, use a deployable architecture that's offered in {{site.data.keyword.cloud
 ### {{site.data.keyword.powerSys_notm}} Quickstart post setup
 {: #solution-scc-wp-on-powervs-1-2-pvs-post-da}
 
-Make sure to follow the [ Quickstart next steps](/docs/powervs-vpc?topic=powervs-vpc-solution-quickstart-next-steps) to allow the {{site.data.keyword.powerSys_notm}} instance to access the internet and mount nfs drive.
+Make sure to follow the [Quickstart next steps](/docs/powervs-vpc?topic=powervs-vpc-solution-quickstart-next-steps) to allow the {{site.data.keyword.powerSys_notm}} instance to access the internet and mount nfs drive.
 {: note}
 
 1. Add proxy settings in /etc/bashrc. Locate the `proxy_host_or_ip_port` value in the output section of the deployment, and add the following entries at the end of `/etc/bashrc` file:
@@ -218,8 +218,7 @@ Next, let's install the agent on the VSI in Edge VPC by installing it on the jum
 
 Complete the following steps to install the Host on RHEL. For more information, see [Vulnerability Host Scanner installation](https://docs.sysdig.com/en/docs/installation/sysdig-secure/install-agent-components/hosts/packages/vulnerability-host-scanner/#installation){: external}.
 
-1. For RPM-based (Red Hat Package Manager) operating systems such as Red Hat Enterprise Linux or SUSE Linux Enterprise, we need to
-configure the RPM repository and Sysdig GPG key:
+1. For RPM-based (Red Hat Package Manager) operating systems such as Red Hat Enterprise Linux or SUSE Linux Enterprise, we need to configure the RPM repository and Sysdig GPG key:
 
    ```bash
    sudo rpm --import https://download.sysdig.com/DRAIOS-GPG-KEY.public
@@ -370,7 +369,7 @@ Now, let’s set up the vulnerability scanning component, which can detect all i
    SYSDIG_ACCESS_KEY=$ACCESS_KEY SYSDIG_API_URL=https://$API_ENDPOINT SCAN_ON_START=true ./sysdig-host-scanner
    ```
 
-4. Create an environment file to store the configuration and a systemd unit file to run the binary as a service. Make sure that  <access key> and <api-url> are set.
+4. Create an environment file to store the configuration and a systemd unit file to run the binary as a service. Make sure that  `access key` and `api-url` are set.
 
    ```bash
    sudo mv ./sysdig-host-scanner /usr/local/bin/vuln-host-scanner
