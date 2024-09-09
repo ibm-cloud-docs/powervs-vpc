@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-07-02"
+lastupdated: "2024-09-09"
 
 keywords: Power Virtual Server, Security and Compliance Center Workload Protection
 subcollection: powervs-vpc
@@ -101,7 +101,7 @@ First, use a deployable architecture that's offered in {{site.data.keyword.cloud
 Make sure to follow the [ Quickstart next steps](/docs/powervs-vpc?topic=powervs-vpc-solution-quickstart-next-steps) to allow the {{site.data.keyword.powerSys_notm}} instance to access the internet and mount nfs drive.
 {: note}
 
-1. Add proxy settings in /etc/bashrc. Locate the <proxy_host_or_ip_port> value in the output section of the deployment, and add the following entries at the end of `/etc/bashrc` file:
+1. Add proxy settings in /etc/bashrc. Locate the `proxy_host_or_ip_port` value in the output section of the deployment, and add the following entries at the end of `/etc/bashrc` file:
 
    ```bash
    export http_proxy=http://<proxy_host_or_ip_port>:3128
