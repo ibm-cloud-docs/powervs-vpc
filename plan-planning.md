@@ -47,10 +47,10 @@ For information about configuring permissions, contact your {{site.data.keyword.
 The API key is **mandatory** for the deployment. The API keys can be deleted independently if compromised without interfering with other API keys or even the user. You can create up to 20 API keys.
 
 To create an API key for your user identity in the UI, complete the following steps:
-1. In the IBM Cloud console, go to Manage > Access (IAM) > API keys.
-1. Click Create an IBM Cloud API key.
+1. In the IBM Cloud console, go to **Manage > Access (IAM) > API keys**.
+1. Click Create an **IBM Cloud API key**.
 1. Enter a name and description for your API key.
-1. Click Create.
+1. Click **Create**.
 1. Then, click Show to display the API key. Or, click Copy to copy and save it for later, or click Download.
 
 
@@ -123,7 +123,7 @@ The key's randomart image is:
 
 **These public and private key values** can now be used in the input variables for the Deployable architectures.
 
-Paste the content of `id_rsa.pub` key and `id_rsa` key directly in the field for input variables `ssh_public_key` and `ssh_private_key`respectively.
+**Paste the content of `id_rsa.pub` key and `id_rsa` key directly in the field for input variables `ssh_public_key` and `ssh_private_key`respectively.**
 
 
 ## Client to site VPN configuration (Optional)
