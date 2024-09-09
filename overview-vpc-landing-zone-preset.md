@@ -35,7 +35,7 @@ As part of the automation an [override json preset](https://github.com/terraform
     - Activity tracker
     - Optional Secrets Manager Instance with private certificate.
 
-- A local **transit gateway**
+- A local or global **transit gateway**
 
 
 ## ACL
