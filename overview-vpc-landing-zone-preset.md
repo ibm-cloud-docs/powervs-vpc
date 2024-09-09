@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2024
-lastupdated: "2024-05-27"
+lastupdated: "2024-09-09"
 
 keywords:
 
@@ -35,7 +35,7 @@ As part of the automation an [override json preset](https://github.com/terraform
     - Activity tracker
     - Optional Secrets Manager Instance with private certificate.
 
-- A local **transit gateway**
+- A local or global **transit gateway**
 
 
 ## ACL
