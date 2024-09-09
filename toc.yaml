@@ -18,11 +18,11 @@ toc:
         id: overview
         topics:
           - navtitle: Overview
-            topic: overview.md
+            topic: overview-overview.md
           - navtitle: Release notes
-            topic: release-notes.md
+            topic: overview-release-notes.md
           - navtitle: VPC landing zone architecture for PowerVS
-            topic: vpc-landing-zone-preset.md
+            topic: overview-vpc-landing-zone-preset.md
     - navgroup:
         id: architecture
         topics:
@@ -38,35 +38,38 @@ toc:
         id: plan
         topics:
           - navtitle: Before you begin deploying
-            topic: planning.md
+            topic: plan-planning.md
     - navgroup:
         id: deploy
         topics:
           - navtitle: Deploy using Projects
-            topic: deploying.md
+            topic: deploy-deploying.md
     - navgroup:
         id: tutorial
         topics:
-          - navtitle: Connect by using a client-to-site VPN
-            topic: connect-client-vpn.md
-          - navtitle: Connect using Floating IP
-            topic: connect-jump-ssh.md
-          - navtitle: Quickstart next steps
-            topic: quickstart-next-steps.md
-          - navtitle: Workload protection for Power Virtual Server
-            topic: scc-wp-on-powervs.md
+          - topicgroup:
+              label: Post Deployment
+              topics:
+                - navtitle: Connect by using a client-to-site VPN
+                  topic: tutorial-connect-client-vpn.md
+                - navtitle: Connect using Floating IP
+                  topic: tutorial-connect-jump-ssh.md
+                - navtitle: Quickstart Variation next steps
+                  topic: tutorial-quickstart-next-steps.md
+                - navtitle: Workload protection for Power Virtual Server
+                  topic: tutorial-scc-wp-on-powervs.md
     - navgroup:
         id: reference
         topics:
           - navtitle: Responsibilities
-            topic: shared-responsibilities.md
+            topic: reference-shared-responsibilities.md
     - navgroup:
         id: help
         topics:
           - navtitle: Getting help and support
-            topic: support.md
+            topic: help-support.md
           - navtitle: FAQs
-            topic: faqs.md
+            topic: help-faqs.md
           - topicgroup:
               label: Troubleshooting
               topics:
@@ -74,7 +77,7 @@ toc:
                     label: Troubleshooting deployment
                     topics:
                       - navtitle: My deployment failed, how do I proceed?
-                        topic: troubleshoot-deploy.md
+                        topic: help-troubleshoot-deploy.md
                 - topicgroup:
                     label: Troubleshooting Schematics
                     topics:

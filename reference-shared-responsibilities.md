@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2024-05-27"
+  years: 2023, 2024
+lastupdated: "2024-09-09"
 
 subcollection: powervs-vpc
 
