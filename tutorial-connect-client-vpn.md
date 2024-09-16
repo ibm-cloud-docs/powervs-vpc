@@ -14,7 +14,7 @@ completion-time: 1h
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Connect by using a client-to-site VPN
+# Connect using a client-to-site VPN
 {: #solution-connect-client-vpn}
 {: toc-content-type="tutorial"}
 {: toc-services="vpc, secrets-manager, dl, schematics"}

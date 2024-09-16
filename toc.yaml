@@ -47,15 +47,12 @@ toc:
     - navgroup:
         id: tutorial
         topics:
-          - topicgroup:
-              label: Post Deployment
-              topics:
-                - navtitle: Connect by using a client-to-site VPN
-                  topic: tutorial-connect-client-vpn.md
-                - navtitle: Connect using Floating IP
-                  topic: tutorial-connect-jump-ssh.md
-                - navtitle: Quickstart Variation next steps
-                  topic: tutorial-quickstart-next-steps.md
+          - navtitle: Connect using a client-to-site VPN
+            topic: tutorial-connect-client-vpn.md
+          - navtitle: Connect using Floating IP
+            topic: tutorial-connect-jump-ssh.md
+          - navtitle: Quickstart Variation next steps
+            topic: tutorial-quickstart-next-steps.md
           - navtitle: Workload protection for Power Virtual Server
             topic: tutorial-scc-wp-on-powervs.md
     - navgroup:
