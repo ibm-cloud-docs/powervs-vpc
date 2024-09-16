@@ -2,8 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-09"
-
+lastupdated: "2024-09-16"
 keywords:
 subcollection: powervs-vpc
 content-type: tutorial
@@ -15,7 +14,7 @@ completion-time: 1h
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Connect by using a client-to-site VPN
+# Connect using a client-to-site VPN
 {: #solution-connect-client-vpn}
 {: toc-content-type="tutorial"}
 {: toc-services="vpc, secrets-manager, dl, schematics"}
@@ -25,40 +24,26 @@ This tutorial dives into the fastest option to get up and running with a client 
 {: shortdesc}
 
 
-## Configure the OpenVPN client
-{: #solution-connect-client-vpn-openvpn}
+## Download the OpenVPN client profile template
+{: #solution-connect-client-vpn-openvpn-template}
 {: step}
 
 After the VPN server cloud resources are deployed, set up the OpenVPN client on devices that will access your landing zone.
+By using the {{site.data.keyword.cloud_notm}} console:
+1. Click the **Navigation menu** icon ![Navigation menu icon](../icons/icon_hamburger.svg "Menu"), and then click **VPC Infrastructure** > **VPNs** in the **Network** section to open the VPNs for VPC page.
+1. Click the **Client-to-site servers** tab and select the client-to-site VPN server that you created.
+1. Click the **Clients** tab. Then, click **Download client profile**.
 
-1.  Download the OpenVPN profile from the VPN server using one of the following methods:
+## Download the OpenVPN client software
+{: #solution-connect-client-vpn-openvpn-software}
+{: step}
 
-    - By using the {{site.data.keyword.cloud_notm}} console:
-        1.  Click the **Navigation menu** icon ![Navigation menu icon](../icons/icon_hamburger.svg "Menu"), and then click **VPC Infrastructure** > **VPNs** in the **Network** section to open the VPNs for VPC page.
-        1.  Click the **Client-to-site servers** tab and select the client-to-site VPN server that you created.
-        1.  Click the **Clients** tab. Then, click **Download client profile**.
-
-    - By using the {{site.data.keyword.cloud_notm}} CLI:
-
-      ```sh
-      ibmcloud is vpn-server-client-configuration VPN_SERVER --file client2site-vpn.ovpn
-      ```
-      {: pre}
-
-      Look for the `VPN_SERVER` ID in the output of the Terraform apply from the validation step. If you don't find it there, follow the previous steps to download the profile and look in the `<vpn_server>.ovpn` file.
-1.  Set up the client:
-
-    1.  Download and install the OpenVPN client application from https://openvpn.net/client/
-    1.  Open the OpenVPN client application, and import the `client2site-vpn.ovpn` file.
-    1.  Enter one of the {{site.data.keyword.cloud_notm}} email addresses that was configured to access the VPN as the user ID.
+1.  Download and install the OpenVPN client application from https://openvpn.net/client/
+1.  Open the OpenVPN client application, and import the `client2site-vpn.ovpn` file which was downloaded in Step 1.
+1.  Enter one of the {{site.data.keyword.cloud_notm}} email addresses that was configured to access the VPN as the user ID.
 1.  Go to [https://iam.cloud.ibm.com/identity/passcode](https://iam.cloud.ibm.com/identity/passcode) in your browser to generate a passcode. Copy the passcode.
 1.  Return to the OpenVPN client application and paste the one-time passcode. 
 1.  Click Continue.
-
-### Using client certificates rather than one-time passcodes
-{: #connect-client-vpn-certs}
-
-If you want to configure client certs on the VPN rather than using a one-time-passcode, follow the instructions in the [Managing VPN server and client certifications](/docs/vpc?topic=vpc-client-to-site-authentication#creating-cert-manager-instance-import) section of the client-to-site documentation.
 
 ## Test your VPN connection
 {: #connect-client-vpn-connection}

@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-09-16"
 
 keywords:
 
@@ -25,9 +25,9 @@ To deploy a Power Virtual Server with VPC landing zone deployable architecture t
 1.  Make sure that you comply with the prerequisites in the [planning](/docs/powervs-vpc?topic=powervs-vpc-plan) topic:
     - Have an {{site.data.keyword.cloud_notm}} API key.
     - Verify access roles.
-    - Create an SSH key.
+    - An SSH key which doesn't exist in target deployment region.
 1.  Go to the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external} and search for the architecture that you're interested in deploying:
-    - Power Virtual Server with VPC landing zone
+    - **Power Virtual Server with VPC landing zone**
 1.  Click the tile for the deployable architecture to open the details.
 1.  Select the latest product version in the Architecture section.
 1.  Select a variation, if more than one is available.
