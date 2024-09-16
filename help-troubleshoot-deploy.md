@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-09-16"
 
 keywords:
 
@@ -19,7 +19,7 @@ subcollection: powervs-vpc
 Your deployment failed.
 {: shortdesc}
 
-You attempted to deploy an instance of the Power Virtual Server for SAP HANA deployable architecture but it failed.
+You attempted to deploy a variation of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture but it failed.
 {: tsSymptoms}
 
 Several infrastructure layers and components are included in the deployment, and an issue in one of those pieces is causing the failure. For example, maintenance in a particular data center or errors in the VPC or network services can cause deployment failures.
