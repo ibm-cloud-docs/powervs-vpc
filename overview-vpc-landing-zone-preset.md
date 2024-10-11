@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-10-09"
 
 keywords:
 
@@ -49,7 +49,7 @@ The ACL rules for the Edge VPC allow all traffic.
 | Priority | Allow or deny | Protocol | Source | Destination |
 |----------|------------|----------|--------|-------------|
 | 1 | Allow | ALL | ANY IP | ANY IP  |
-{: caption="Table 1. Inbound ACL rules" caption-side="bottom"}
+{: caption="Inbound ACL rules" caption-side="bottom"}
 
 ### Outbound rules
 {: #landing-zone-acl-outbound}
@@ -57,7 +57,7 @@ The ACL rules for the Edge VPC allow all traffic.
 | Priority | Allow or deny | Protocol | Source | Destination |
 |----------|------------|----------|--------|-------------|
 | 1 | Allow | ALL | ANY IP | ANY IP  |
-{: caption="Table 2. Outbound ACL rules" caption-side="bottom"}
+{: caption="Outbound ACL rules" caption-side="bottom"}
 
 ## Security Groups
 {: #landing-zone-sg}
@@ -72,7 +72,7 @@ The security groups are created and attached to correct subnets/VPE/VPN. For the
 | management-sg | * [Schematics IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses&interface=ui#ipaddresses) \n * IBM Inbound `161.26.0.0/16` \n * `10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16` \n * Optional user provided IP address/CIDR   | * TCP: 22 \n * ALL: - \n * TCP: 22 \n * TCP: 22   | prefix-jump-box-001 VSI  |
 | network-services-sg | * IBM Inbound `161.26.0.0/16` \n * `10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16`  | * ALL: - \n * ALL: -   | prefix-network-services-001 VSI, load balancer, mount share targets  |
 | vpe-sg | * IBM Inbound 161.26.0.0/16 \n * `10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16`   | * ALL: - \n * ALL: -   | Cloud Object storage  |
-{: caption="Table 3. SG rules" caption-side="bottom"}
+{: caption="SG rules" caption-side="bottom"}
 
 ## Private networks
 {: #landing-zone-private-networks}
@@ -85,4 +85,4 @@ The following table lists the private networks that are created in Edge VPC that
 | prefix-edge-vsi-management-zone-1| Management network for Bastion virtual server instance | 10.30.20.0/24 |
 | prefix-edge-vpe-zone-1| Private network for Cloud Object storage VPE | 10.30.30.0/24 |
 | prefix-edge-vsi-edge-zone-1| Private network for Network services VSI. This subnet has public gateway enabled. | 10.30.40.0/24 |
-{: caption="Table 4. Private networks IP address ranges" caption-side="bottom"}
+{: caption="Private networks IP address ranges" caption-side="bottom"}

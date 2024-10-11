@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-16"
+lastupdated: "2024-10-09"
 keywords: iam, permissions
 subcollection: powervs-vpc
 content-type: tutorial
@@ -161,7 +161,7 @@ Allowing the user to pass the details of existing {{site.data.keyword.secrets-ma
         1.  Click the row to display the details in the sidebar for the {{site.data.keyword.secrets-manager_short}} instance that you want to use.
         1.  Copy the GUID.
 
-            ![Example of resource list](images/secrets-manager-resource-list.png){: caption="Figure 1. Example view of the resource list in {{site.data.keyword.cloud_notm}} console" caption-side="bottom"}
+            ![Example of resource list](images/secrets-manager-resource-list.png){: caption="Example view of the resource list in {{site.data.keyword.cloud_notm}} console" caption-side="bottom"}
     - If you used a certificate template to create a private certificate that is applied to your {{site.data.keyword.secrets-manager_short}} instance, copy the name of the certificate template.
         1.  In the resource list, click the name of the {{site.data.keyword.secrets-manager_short}} instance that you selected earlier.
         1.  Click **Secrets engines** > **Private certificates**.

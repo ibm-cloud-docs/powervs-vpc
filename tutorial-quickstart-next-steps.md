@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-10-09"
 
 keywords:
 subcollection: powervs-vpc
@@ -32,7 +32,7 @@ This tutorial explores the fastest way to configure a PowerVS instance after dep
 
 1.  Run the following commands in a terminal on the **PowerVS Aix/Linux instance**. Fetch the value `proxy_host_or_ip_port` from the outputs of the deployment in the project configuration screen.
 
-![Projects Output](images/projects-outputs.png){: caption="Figure 1. Output from Projects" caption-side="bottom"}
+![Projects Output](images/projects-outputs.png){: caption="Output from Projects" caption-side="bottom"}
 
 ```sh
 export http_proxy=http://<proxy_host_or_ip_port>:3128

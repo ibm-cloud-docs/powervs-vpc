@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-10-09"
 keywords: powervs, landing zone, sap, automation, deployable architecture
 subcollection: powervs-vpc
 
@@ -19,7 +19,7 @@ Automated {{site.data.keyword.powerSys_notm}} with VPC landing zone provisioning
 
 In the following sections, the deployable architecture variants are described. 
 
-![Solution Overview](images/overview-solutions.png){: caption="Figure 1. Solution Overview" caption-side="center"}
+![Solution Overview](images/overview-solutions.png){: caption="Solution Overview" caption-side="center"}
 
 ## Create a new architecture - Standard variation
 {: #overview-standard-variant}
@@ -51,7 +51,7 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 | Storage Tier-3 (GB) | 100 | 500 | 1000 | 2000 |
 {: class="simple-tab-table"}
 {: tab-group="t-shirt size"}
-{: caption="Table 1. T-shirt size and configuration mapping" caption-side="top"}
+{: caption="T-shirt size and configuration mapping" caption-side="top"}
 {: #resize_core_memory-1}
 {: tab-title="AIX"}
 
@@ -62,7 +62,7 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 | Storage Tier-3 (GB) | 100 | 500 | 1000 | 2000 |
 {: class="simple-tab-table"}
 {: tab-group="t-shirt size"}
-{: caption="Table 1. T-shirt size and configuration mapping" caption-side="top"}
+{: caption="T-shirt size and configuration mapping" caption-side="top"}
 {: #resize_core_memory-2}
 {: tab-title="IBM i"}
 
@@ -73,7 +73,7 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 | Storage Tier-3 (GB) | 750 |
 {: class="simple-tab-table"}
 {: tab-group="t-shirt size"}
-{: caption="Table 1. T-shirt size and configuration mapping" caption-side="top"}
+{: caption="T-shirt size and configuration mapping" caption-side="top"}
 {: #resize_core_memory-3}
 {: tab-title="SAP HANA (RHEL/SLES)"}
 
