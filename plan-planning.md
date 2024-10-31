@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-31"
 keywords: iam, permissions
 subcollection: powervs-vpc
 content-type: tutorial
@@ -174,8 +174,8 @@ Allowing the user to pass the details of existing {{site.data.keyword.secrets-ma
 - [Deployable architecture code](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure){: external}
 - Main dependencies:
    - [Terraform IBM Module - VPC Landing Zone](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone){: external}
-   - [Terraform IBM Module - PowerVS Workspace](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-workspace){: external}
-   - [Terraform IBM Module - PowerVS Instance](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-instance){: external}
+   - [Terraform IBM Module - {{site.data.keyword.powerSys_notm}} Workspace](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-workspace){: external}
+   - [Terraform IBM Module - {{site.data.keyword.powerSys_notm}} Instance](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-instance){: external}
    - [Terraform IBM Module - Client to site VPN](https://github.com/terraform-ibm-modules/terraform-ibm-client-to-site-vpn){: external}
    - [Terraform IBM Module - Secret Manager](https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager){: external}
    - [Terraform IBM Module - Secrets Manager Group](https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager-secret-group){: external}

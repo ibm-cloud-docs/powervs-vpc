@@ -21,7 +21,7 @@ toc:
             topic: overview-overview.md
           - navtitle: Release notes
             topic: overview-release-notes.md
-          - navtitle: VPC landing zone architecture for PowerVS
+          - navtitle: VPC landing zone architecture for Power Virtual Server
             topic: overview-vpc-landing-zone-preset.md
     - navgroup:
         id: architecture

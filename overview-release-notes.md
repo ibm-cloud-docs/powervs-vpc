@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-10-31"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -50,8 +50,8 @@ Version 5.3.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 
 Version 5.2.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 5.2.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
-    - Renamed PowerVS Workspace Variation to Standard.
-    - Renamed Import PowerVS Workspace to Import.
+    - Renamed {{site.data.keyword.powerSys_notm}} Workspace Variation to Standard.
+    - Renamed Import {{site.data.keyword.powerSys_notm}} Workspace to Import.
 
 ## May 2024
 {: #powervs-vpc-2024-05}
@@ -77,7 +77,7 @@ Version 5.1.2 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Use this version for new deployments only.
     - Option to create `new secrets manager instance` or reuse existing one.
     - Optional `client to site VPN` deployment.
-    - Switched from Block storage NFS volumes to File storage shares. Uses Application Load Balancer to mount the File Storage shares on PowerVS instances.
+    - Switched from Block storage NFS volumes to File storage shares. Uses Application Load Balancer to mount the File Storage shares on {{site.data.keyword.powerSys_notm}} instances.
     - Removed Cloud connection support.
     - Private SSH keys need not be entered in here doc string format. Can be passed in directly.
     - Improved documentation.
@@ -271,7 +271,7 @@ Version 4.1.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 Version 4.0.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 :   Version 4.0.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Upgrade TF IBM provider version to `1.61.0`
-    - Change default PowerVS images for AIX and IBM i for all variations
+    - Change default {{site.data.keyword.powerSys_notm}} images for AIX and IBM i for all variations
     - Quickstart flavour now has a tshirt size `Custom (Configure in optional parameters)` in the dropdown. This is used when `custom_profile` needs to be used for custom deployments.
 
 [Breaking change]{: tag-red}
@@ -359,4 +359,4 @@ Version 1.2.0 available
 Version 1.1.0 available
 :   Version 1.1.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
     - Introducing {{site.data.keyword.powerSys_notm}} with VPC landing zone
-    - The {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture is released. You can use the deployable architecture to create an isolated PowerVS landscape connected with VPC landing zone.
+    - The {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture is released. You can use the deployable architecture to create an isolated {{site.data.keyword.powerSys_notm}} landscape connected with VPC landing zone.

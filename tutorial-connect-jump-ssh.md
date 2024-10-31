@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-10-31"
 
 keywords:
 subcollection: powervs-vpc
@@ -17,7 +17,7 @@ completion-time: 10 mins
 # Connect to a VPC VSIs or Power Virtual Server Instances by using floating IP
 {: #solution-ssh}
 
-After deployment, connect to the landscape via SSH proxy using the jump box's floating IP to access the private IPs of Intel and PowerVS instances.
+After deployment, connect to the landscape via SSH proxy using the jump box's floating IP to access the private IPs of Intel and {{site.data.keyword.powerSys_notm}} instances.
 {: shortdesc}
 
 ## Before you begin

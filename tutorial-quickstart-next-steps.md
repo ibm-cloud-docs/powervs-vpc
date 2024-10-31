@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-31"
 
 keywords:
 subcollection: powervs-vpc
@@ -21,7 +21,7 @@ completion-time: 1h
 {: toc-services="powervs, vpc, squid, ansible, dns, nfs"}
 {: toc-completion-time="15m"}
 
-This tutorial explores the fastest way to configure a PowerVS instance after deploying the Quickstart variation.
+This tutorial explores the fastest way to configure a {{site.data.keyword.powerSys_notm}} instance after deploying the Quickstart variation.
 {: shortdesc}
 
 
@@ -30,7 +30,7 @@ This tutorial explores the fastest way to configure a PowerVS instance after dep
 {: step}
 
 
-1.  Run the following commands in a terminal on the **PowerVS Aix/Linux instance**. Fetch the value `proxy_host_or_ip_port` from the outputs of the deployment in the project configuration screen.
+1.  Run the following commands in a terminal on the **{{site.data.keyword.powerSys_notm}} Aix/Linux instance**. Fetch the value `proxy_host_or_ip_port` from the outputs of the deployment in the project configuration screen.
 
 ![Projects Output](images/projects-outputs.png){: caption="Output from Projects" caption-side="bottom"}
 
@@ -56,13 +56,13 @@ The document has moved
 </BODY></HTML>
 ```
 
-## Mount file storage share from VPC on a PowerVS instance
+## Mount file storage share from VPC on a {{site.data.keyword.powerSys_notm}} instance
 {: #solution-quickstart-nfs-mount}
 {: step}
 
-The file storage share that is created in the VPC can be mounted on the PowerVS instance to share files between landscape.
+The file storage share that is created in the VPC can be mounted on the {{site.data.keyword.powerSys_notm}} instance to share files between landscape.
 
-1.  Run the following commands in a terminal on the **PowerVS Aix/Linux instance**. Fetch the value `nfs_host_or_ip_path` from the outputs of the deployment in the project configuration screen.
+1.  Run the following commands in a terminal on the **{{site.data.keyword.powerSys_notm}} Aix/Linux instance**. Fetch the value `nfs_host_or_ip_path` from the outputs of the deployment in the project configuration screen.
 
 **For Linux (RHEL/SLES) Instance:**
 ```sh
@@ -84,12 +84,12 @@ mkdir /nfs
 mount -o vers=4 <nfs_host_or_ip_path> /nfs
 ```
 
-## Configure DNS on PowerVS instance
+## Configure DNS on {{site.data.keyword.powerSys_notm}} instance
 {: #solution-quickstart-dns}
 {: step}
 
-The DNS server is running as a service on network-services intel vsi. Configure the PowerVS instance to use this DNS service.
+The DNS server is running as a service on network-services intel vsi. Configure the {{site.data.keyword.powerSys_notm}} instance to use this DNS service.
 
-1.  Run the following commands in a terminal on the **PowerVS Aix/Linux instance**. Fetch the value `dns_host_or_ip_path` from the outputs of the deployment in the project configuration screen. 
+1.  Run the following commands in a terminal on the **{{site.data.keyword.powerSys_notm}} Aix/Linux instance**. Fetch the value `dns_host_or_ip_path` from the outputs of the deployment in the project configuration screen. 
 
 Add the `dns_host_or_ip_path` value at the **top** in the `/etc/resolv.conf` file.
