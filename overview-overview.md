@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-10-31"
+lastupdated: "2024-11-01"
 keywords: powervs, landing zone, sap, automation, deployable architecture
 subcollection: powervs-vpc
 
@@ -26,7 +26,7 @@ In the following sections, the deployable architecture variants are described.
 
 This deployable architecture variation supports these features:
 - A **VPC Infrastructure** with the following components:
-    - One RHEL VSI for one management (jump/bastion) VSI
+    - One RHEL VSI for management (jump/bastion)
     - One RHEL VSI for network-services configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [ibm.power_linux_sap collection](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/). This VSI also acts as central ansible execution node
     - Optional [Client to site VPN server](https://cloud.ibm.com/docs/vpc?topic=vpc-vpn-client-to-site-overview)
     - Optional [File storage share](https://cloud.ibm.com/docs/vpc?topic=vpc-file-storage-create&interface=ui)
@@ -66,7 +66,7 @@ This deployable architecture variation supports these features:
 
 This deployable architecture variation supports these features:
 - A **VPC Infrastructure** with the following components:
-    - One RHEL VSI for one management (jump/bastion) VSI
+    - One RHEL VSI for management (jump/bastion)
     - One RHEL VSI for network-services configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [ibm.power_linux_sap collection](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/). This VSI also acts as central ansible execution node.
     - Optional [Client to site VPN server](https://cloud.ibm.com/docs/vpc?topic=vpc-vpn-client-to-site-overview)
     - Optional [File storage share](https://cloud.ibm.com/docs/vpc?topic=vpc-file-storage-create&interface=ui)
