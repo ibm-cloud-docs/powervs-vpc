@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-11-02"
 
 keywords:
 
@@ -18,13 +18,13 @@ subcollection: powervs-vpc
 If you experience an issue or have questions when deploying {{site.data.keyword.powerSys_notm}} with VPC landing zone, you can use the following resources before you open a support case.
 {: shortdesc}
 
-- Review the [FAQs](/docs/powervs-vpc?topic=powervs-vpc-automation-faqs) in the deployment guide.
+- Review the [FAQs](/docs/powervs-vpc?topic=powervs-vpc-faqs) in the deployment guide.
 - ![{{site.data.keyword.cloud_notm}} icon](../icons/ibm-cloud-16.svg "IBM Cloud icon") Check the status of the {{site.data.keyword.cloud_notm}} platform and resources by going to the [Status page](https://cloud.ibm.com/status){: external}.
 - ![GitHub icon](../icons/logo-github-16.svg "GitHub icon") Review the [GitHub issues](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/issues){: external} to see whether other users experienced the same problem.
-- Review the [troubleshooting documentation](/docs/powervs-vpc?topic=powervs-vpc-troubleshoot-deploy) to troubleshoot and resolve common issues.
+- Review the [troubleshooting documentation](/docs/powervs-vpc?topic=powervs-vpc-ts-deploy) to troubleshoot and resolve common issues.
 - ![Slack icon](../icons/logo-slack-16.svg "Slack icon") Ask product experts and the community questions on the [sap-on-power-deployable-architectures](https://ibm-cloudplatform.slack.com/archives/C04RJB1UX53) Slack channel.
 
-If you still can't resolve the problem, you can open a support case. For more information, see [Creating support cases](/docs/get-support?topic=get-support-open-case). And, if you're looking to provide feedback, see [Submitting feedback](/docs/overview?topic=overview-feedback).
+If you still can't resolve the problem, you can open a support case. For more information, see [Creating support cases](/docs/account?topic=account-open-case&interface=ui). And, if you're looking to provide feedback, see [Submitting feedback](/docs/overview?topic=overview-feedback).
 
 ## Providing support case details
 {: #support-case-details}
@@ -77,4 +77,3 @@ If you can't deploy your deployable architecture, open a support case with the m
 {: #support-routing-deploy}
 
 If you successfully deployed, yet have an issue with a service in the deployable architecture, open a support case and use the name of that service.
-
