@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-11-01"
+lastupdated: "2024-11-08"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -35,7 +35,7 @@ Version 7.0.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - The `landing-zone-vsi` submodule is updated from 3.3.0 to 4.2.0. In this version, the naming convention for Virtual Server Instances has changed to be `prefix- + the last 4 digits of the subnet ID + a sequential number for each subnet`. For example, `prefix-3ad7-001`.
 
 ## July 2024
-{: #powervs-vpc-2024-06}
+{: #powervs-vpc-2024-07}
 
 ### 29 July 2024
 {: #powervs-vpc-jul29}
