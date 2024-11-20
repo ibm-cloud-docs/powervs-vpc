@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-11-08"
+lastupdated: "2024-11-20"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -20,6 +20,19 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 ## November 2024
 {: #powervs-vpc-2024-11}
 
+### 20 November 2024
+{: #powervs-vpc-nov20}
+{: release-note}
+
+Version 7.1.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 7.1.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+    
+    - Upgraded minimum required terraform version to >=1.9.0
+    - Upgraded IBM terraform provider version to v1.71.1
+    - Upgraded Default IBMi and AIX images for Quickstart
+    - Upgraded version of `powervs-workspace` module to 2.2.0
+    - support custom image import from Cloud Object Storage to PowerVS workspace for up to three images in the Standard and standard extension variations
+
 ### 01 November 2024
 {: #powervs-vpc-nov01}
 {: release-note}
@@ -28,7 +41,8 @@ Version 7.0.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 : Version 7.0.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
     
     - **BREAKING CHANGE:**
-        - When you upgrade to version 7.0.0, you might see some of your infrastructure marked for deletion and re-creation. Fully supported migration steps will be available shortly to prevent this from occurring, so if re-creating infrastructure is going to impact day-to-day operations, don't update to this version until there is a fully supported migration path. 
+        - Version 7.0.0 includes backward-incompatible changes.
+        - When you upgrade to version 7.0.0, you might see some of your infrastructure marked for deletion and re-creation. Fully supported migration steps will be available shortly to prevent this from occurring, so if re-creating infrastructure is going to impact day-to-day operations, don't update to this version until there is a fully supported migration path.
     - VPC landing zone deployable architecture is not affected.
     - Allows user to specify the compute profile (cores and memory) for network services Intel VSI
     - The IBM Terraform provider version is now locked to 1.69.2.
@@ -45,9 +59,10 @@ Version 6.0.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 : Version 6.0.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
 
     - **BREAKING CHANGE:**
-      - create ibm_is_share in correct resource group and update ansible role version
-      - Backup your data. All data on the NFS share will be lost.
-      - If you upgrade from an older version, this will destroy and recreate the NFS share in correct resource group. It is important to backup your data. You can copy the the data to COS or copy it locally using commands. The automation does not help in doing this. Once it is recreated and mounted, you can copy the files to the NFS mount.
+        - Version 6.0.0 includes backward-incompatible changes.
+        - create ibm_is_share in correct resource group and update ansible role version
+        - Backup your data. All data on the NFS share will be lost.
+        - If you upgrade from an older version, this will destroy and recreate the NFS share in correct resource group. It is important to backup your data. You can copy the the data to COS or copy it locally using commands. The automation does not help in doing this. Once it is recreated and mounted, you can copy the files to the NFS mount.
       
 
 ### 03 July 2024
