@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-11-19"
+lastupdated: "2024-11-20"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -20,8 +20,8 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 ## November 2024
 {: #powervs-vpc-2024-11}
 
-### 01 November 2024
-{: #powervs-vpc-nov19}
+### 20 November 2024
+{: #powervs-vpc-nov20}
 {: release-note}
 
 Version 7.1.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
