@@ -43,10 +43,10 @@ Version 7.0.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - **BREAKING CHANGE:**
         - Version 7.0.0 includes backward-incompatible changes.
         - When you upgrade to version 7.0.0, you might see some of your infrastructure marked for deletion and re-creation. Fully supported migration steps will be available shortly to prevent this from occurring, so if re-creating infrastructure is going to impact day-to-day operations, don't update to this version until there is a fully supported migration path.
-        - VPC landing zone deployable architecture is not affected.
-        - Allows user to specify the compute profile (cores and memory) for network services Intel VSI
-        - The IBM Terraform provider version is now locked to 1.69.2.
-        - The `landing-zone-vsi` submodule is updated from 3.3.0 to 4.2.0. In this version, the naming convention for Virtual Server Instances has changed to be `prefix- + the last 4 digits of the subnet ID + a sequential number for each subnet`. For example, `prefix-3ad7-001`.
+    - VPC landing zone deployable architecture is not affected.
+    - Allows user to specify the compute profile (cores and memory) for network services Intel VSI
+    - The IBM Terraform provider version is now locked to 1.69.2.
+    - The `landing-zone-vsi` submodule is updated from 3.3.0 to 4.2.0. In this version, the naming convention for Virtual Server Instances has changed to be `prefix- + the last 4 digits of the subnet ID + a sequential number for each subnet`. For example, `prefix-3ad7-001`.
 
 ## July 2024
 {: #powervs-vpc-2024-07}
