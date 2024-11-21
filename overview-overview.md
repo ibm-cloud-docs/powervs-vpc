@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-11-01"
+lastupdated: "2024-11-21"
 keywords: powervs, landing zone, sap, automation, deployable architecture
 subcollection: powervs-vpc
 
@@ -40,9 +40,10 @@ This deployable architecture variation supports these features:
 - A local or global **transit gateway**
 - A **{{site.data.keyword.powerSys_notm}}** workspace with the following network topology:
     - Creates two private networks: a management network and a backup network
-    - Attaches the {{site.data.keyword.powerSys_notm}} workspace to transit gateway
+    - Attaches {{site.data.keyword.powerSys_notm}} workspace to transit gateway
     - Creates an SSH key
-    - Imports catalog stock images
+    - Optionally imports list of stock catalog images.
+    - Optionally imports up to three custom images from Cloud Object Storage.
 
 ## Extend {{site.data.keyword.powerSys_notm}} with VPC landing zone - Standard variation
 {: #overview-standard-extend-variant}
@@ -58,7 +59,8 @@ This deployable architecture variation supports these features:
     - Creates two private networks: a management network and a backup network
     - Attaches the {{site.data.keyword.powerSys_notm}} workspace to transit gateway
     - Creates an SSH key
-    - Imports catalog stock images
+    - Optionally imports list of stock catalog images.
+    - Optionally imports up to three custom images from Cloud Object Storage.
 
 
 ## Quickstart variation
