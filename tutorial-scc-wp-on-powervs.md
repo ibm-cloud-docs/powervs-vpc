@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-10-11"
+lastupdated: "2024-11-22"
 
 keywords: Power Virtual Server, Security and Compliance Center Workload Protection
 subcollection: powervs-vpc
@@ -21,9 +21,11 @@ completion-time: 2h
 {: toc-services="power-iaas, security-compliance, vpc, virtual-servers"}
 {: toc-completion-time="2h"}
 
-This tutorial shows how to set up {{site.data.keyword.sysdigsecure_full_notm}} on {{site.data.keyword.powerSys_notm}} and {{site.data.keyword.vsi_is_short}}.
+This tutorial shows how to set up {{site.data.keyword.sysdigsecure_full_notm}} for Linux on {{site.data.keyword.powerSys_notm}} and {{site.data.keyword.vsi_is_short}}.
 {: shortdesc}
 
+This tutorial shows detailed instructions on RHEL Linux. Refer to [{{site.data.keyword.sysdigsecure_full_notm}} documentation]{/docs/workload-protection?topic=workload-protection-about} for supported platforms and operating systems.
+{: note}
 
 ## Objectives
 {: #solution-scc-wp-on-powervs-objectives}
@@ -101,7 +103,7 @@ First, use a deployable architecture that's offered in {{site.data.keyword.cloud
 Make sure to follow the [Quickstart next steps](/docs/powervs-vpc?topic=powervs-vpc-solution-quickstart-next-steps) to allow the {{site.data.keyword.powerSys_notm}} instance to access the internet and mount nfs drive.
 {: note}
 
-1. Add proxy settings in /etc/bashrc. Locate the `proxy_host_or_ip_port` value in the output section of the deployment, and add the following entries at the end of `/etc/bashrc` file:
+1. Add proxy settings in /etc/bashrc. Locate the <proxy_host_or_ip_port> value in the output section of the deployment, and add the following entries at the end of `/etc/bashrc` file:
 
    ```bash
    export http_proxy=http://<proxy_host_or_ip_port>:3128
@@ -128,15 +130,16 @@ Make sure to follow the [Quickstart next steps](/docs/powervs-vpc?topic=powervs-
 
 1. Configure DNS on the {{site.data.keyword.powerSys_notm}} instance. Add the `dns_host_or_ip_path` value at the top in the /etc/resolv.conf file.
 
-1. Add the port to the Squid proxy configuration.
-   1. SSH to the jump server VSI, and then ssh to the network service VSI. You need to make the SSH private key available on the jump server to access the network service VSI. Make sure that the port, 6443, is added to the proxy. Open file /etc/squid/squid.conf, add 6443 to the end of the acl line if it is not there already.
+1. Add the port to the Squid proxy configuration and restart the service if needed.
+   1. SSH to the jump server VSI, and then ssh to the network service VSI `dns_host_or_ip`. You need to make the SSH private key available on the jump server to access the network service VSI.
+   1. Make sure that the port, 6443, is added to the end of the line for SLL_ports in file /etc/squid/squid.conf, if it is not there already.
 
       ```bash
       acl SSL_ports port 443 8443 6443
       ```
       {: da-post-squid-config}
 
-1. Restart the Squid proxy service.
+   1. Restart the Squid proxy service if the Squid configuration file was updated.
 
       ```bash
       systemctl restart squid
@@ -153,20 +156,17 @@ As mentioned in the last section, the {{site.data.keyword.powerSys_notm}} Quicks
 
 [{{site.data.keyword.sysdigsecure_full_notm}} documentation](/docs/workload-protection?topic=workload-protection-getting-started) described the steps to set up SCC Workload Protection. Let's follow the step 1 and step 2 in this documentation to set up the {{site.data.keyword.sysdigsecure_full_notm}} instance. In the following sections, we will demonstrate how to config an agent on VPC/VSI and {{site.data.keyword.powerSys_notm}} instance.
 
-Once the {{site.data.keyword.sysdigsecure_full_notm}} instance is created, we can collect the configuration information for the instance. We can either follow the instructions in this [document](/docs/workload-protection?topic=workload-protection-protecting-linux-hosts) or get the information from the {{site.data.keyword.sysdigsecure_full_notm}} dashboard. We will briefly describe both methods.
+Once the {{site.data.keyword.sysdigsecure_full_notm}} instance is created, we can collect the configuration information for the instance. We can follow the instructions in this [document](/docs/workload-protection?topic=workload-protection-protecting-linux-hosts) to collect configuration information.
 
-1. To collect the configuration from {{site.data.keyword.sysdigsecure_full_notm}} dashboard, click the **{{site.data.keyword.sysdigsecure_full_notm}}** instance. From the Get Connected section, click **Install the Agent** > **Edit Sources**. From here, the commands to run are listed. It has the access key and endpoint. It's recommended to use the private endpoint.
-
-1. Collect the configuration by using {{site.data.keyword.cloud_notm}} documentation:
-   1. To get the access key, click the **{{site.data.keyword.sysdigsecure_full_notm}}** instance. Next, click **Actions** > **Manage key**. Click **show key** to view the key.
-   1. Select the ingestion URL from [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion). It's recommended to use the private endpoint URL.
-   1. Select the API endpoint URL from the [Workload Protection API](https://cloud.ibm.com/apidocs/workload-protection#endpoint-url){: external}. It's recommended to use the private endpoint.
+1. To get the access key, click the **{{site.data.keyword.sysdigsecure_full_notm}}** instance. Next, click **Actions** > **Manage key**. Click **show key** to view the key.
+1. Select the ingestion URL from [Collector endpoints](/docs/workload-protection?topic=workload-protection-endpoints#endpoints_ingestion). It's recommended to use the private endpoint URL.
+1. Select the API endpoint URL from the [Workload Protection API](https://cloud.ibm.com/apidocs/workload-protection#endpoint-url){: external}. It's recommended to use the private endpoint.
 
 For this example, the {{site.data.keyword.sysdigsecure_full_notm}} instance is in Dallas. The following configuration information is used for the following sections:
 
 ```bash
 ACCESS_KEY=your_access_key
-COLLECTOR_ENDPOINT=ingest.private.us-south.monitoring.cloud.ibm.com
+COLLECTOR_ENDPOINT=ingest.private.us-south.security-compliance-secure.cloud.ibm.com
 API_ENDPOINT=private.us-south.security-compliance-secure.cloud.ibm.com
 ```
 
@@ -204,7 +204,7 @@ Next, let's install the agent on the VSI in Edge VPC by installing it on the jum
 1. Deploy the Workload Protection agent:
 
    ```bash
-   curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key $ACCESS_KEY --collector $COLLECTOR_ENDPOINT --collector_port 6443 --secure true --additional_conf 'sysdig_capture_enabled: false\nfeature:\n    mode: monitor_light'
+   curl -sL https://ibm.biz/install-sysdig-agent | sudo bash -s -- --access_key $ACCESS_KEY --collector $COLLECTOR_ENDPOINT --collector_port 6443
    ```
 
 1. Check that Workload Protection agent is running:
@@ -216,7 +216,7 @@ Next, let's install the agent on the VSI in Edge VPC by installing it on the jum
 ### Identifying vulnerabilities with Host Analyzer
 {: #solution-scc-wp-host-analyzer}
 
-Complete the following steps to install the Host on RHEL. For more information, see [Vulnerability Host Scanner installation](https://docs.sysdig.com/en/docs/sysdig-secure/install-agent-components/install-agent-components/hosts/packages/vulnerability-host-scanner/){: external}.
+Complete the following steps to install the Host on RHEL. For more information, see [Vulnerability Host Scanner installation](https://docs.sysdig.com/en/docs/installation/sysdig-secure/install-agent-components/hosts/packages/vulnerability-host-scanner/#installation){: external}.
 
 1. For RPM-based (Red Hat Package Manager) operating systems such as Red Hat Enterprise Linux or SUSE Linux Enterprise, we need to configure the RPM repository and Sysdig GPG key:
 
@@ -288,11 +288,11 @@ Next, let's install the threat detection agent.
 1. Install dkms
 
    ```bash
-   sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-   sudo yum install dkms
+   yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+   yum install dkms
    ```
 
-2. Enabled the extended Berkeley Packet Filter (eBPF). Add the following line to the end of the `/etc/sysconfig/dragnet`.
+2. Enabled the extended Berkeley Packet Filter (eBPF). Add the following line to the end of the `/etc/sysconfig/dragent`.
 
    ```bash
    SYSDIG_AGENT_DRIVER=universal_ebpf
@@ -301,13 +301,13 @@ Next, let's install the threat detection agent.
 3. Trust the GPG key and configure the yum repository
 
    ```bash
-   sudo rpm --import https://download.sysdig.com/DRAIOS-GPG-KEY.public && sudo curl -s -o /etc/yum.repos.d/draios.repo https://download.sysdig.com/stable/rpm/draios.repo
+   rpm --import https://download.sysdig.com/DRAIOS-GPG-KEY.public && curl -s -o /etc/yum.repos.d/draios.repo https://download.sysdig.com/stable/rpm/draios.repo
    ```
 
 4. Install the agent package
 
    ```bash
-   sudo yum -y install draios-agent
+   yum -y install draios-agent
    ```
 
 5. Update the agent yaml file, where `ACCESS_KEY` and `COLLECTOR_ENDPOINT` are the values from section 3.2.1. For this tutorial, the proxy information is added to the agent yaml file. Proxy information can be found in the outputs section of the configuration.
@@ -317,7 +317,7 @@ Next, let's install the threat detection agent.
    echo collector: $COLLECTOR_ENDPOINT >> /opt/draios/etc/dragent.yaml
    ```
 
-   Review the following complete /opt/draios/etc/dragnet.yaml file.
+   Review the following complete /opt/draios/etc/dragent.yaml file.
 
    ```bash
    # cat /opt/draios/etc/dragent.yaml
@@ -331,13 +331,13 @@ Next, let's install the threat detection agent.
 6. Enable the agent
 
    ```bash
-   sudo systemctl enable dragnet
+   systemctl enable dragent
    ```
 
 7. Start the agent
 
    ```bash
-   sudo systemctl start dragnet
+   systemctl start dragent
    ```
 
 8. If the agent does not start correctly, check the log file for errors.
@@ -369,20 +369,20 @@ Now, let’s set up the vulnerability scanning component, which can detect all i
    SYSDIG_ACCESS_KEY=$ACCESS_KEY SYSDIG_API_URL=https://$API_ENDPOINT SCAN_ON_START=true ./sysdig-host-scanner
    ```
 
-4. Create an environment file to store the configuration and a systemd unit file to run the binary as a service. Make sure that  `access key` and `api-url` are set.
+4. Create an environment file to store the configuration and a systemd unit file to run the binary as a service. Make sure that <access key> and <api-url> are set.
 
    ```bash
-   sudo mv ./sysdig-host-scanner /usr/local/bin/vuln-host-scanner
-   sudo restorecon -Rv /usr/local/bin/vuln-host-scanner
-   sudo mkdir -p /opt/draios/etc/vuln-host-scanner/
+   mv ./sysdig-host-scanner /usr/local/bin/vuln-host-scanner
+   restorecon -Rv /usr/local/bin/vuln-host-scanner
+   mkdir -p /opt/draios/etc/vuln-host-scanner/
 
-   cat << EOF | sudo tee /opt/draios/etc/vuln-host-scanner/env
+   cat << EOF | tee /opt/draios/etc/vuln-host-scanner/env
    SYSDIG_ACCESS_KEY=$ACCESS_KEY
    SYSDIG_API_URL=https://$API_ENDPOINT/api
    SCAN_ON_START=true
    EOF
 
-   cat << EOF | sudo tee /etc/systemd/system/vuln-host-scanner.service
+   cat << EOF | tee /etc/systemd/system/vuln-host-scanner.service
    [Unit]
    Description=Sysdig Vuln Host Scanner component
 
@@ -394,8 +394,8 @@ Now, let’s set up the vulnerability scanning component, which can detect all i
    WantedBy=multi-user.target
    EOF
 
-   sudo systemctl daemon-reload
-   sudo systemctl enable --now vuln-host-scanner.service
+   systemctl daemon-reload
+   systemctl enable --now vuln-host-scanner.service
    ```
 
 5. Control Host Scanner by using the service vul-host-scanner
@@ -421,8 +421,6 @@ Run the Kubernetes Security Posture Management (KSPM) analyzer as a container or
    podman run -d -v /:/host:ro -v /tmp:/host/tmp --privileged --network host --pid host --env ACCESS_KEY=$ACCESS_KEY --env API_ENDPOINT=$API_ENDPOINT quay.io/sysdig/kspm-analyzer:latest
    ```
 
-Next, let's set up the {{site.data.keyword.sysdigsecure_full_notm}} in Linux host on {{site.data.keyword.powerSys_notm}}.
-
 
 ## Monitoring with {{site.data.keyword.sysdigsecure_full_notm}}
 {: #solution-scc-wp-on-powervs-5}
@@ -447,26 +445,29 @@ Host scanning can be used to find and prioritize software vulnerabilities.
 ### Posture management
 {: #solution-scc-wp-on-powervs-5-2-scc-wp-posture-management}
 
-To explore posture management, click **Posture** > **Compliance**. You can also click
+To explore posture management, click **Compliance**. You can also click
 **Inventory** and check the posture for each inventory item.
 
 ### Threat detection
 {: #solution-scc-wp-on-powervs-5-3-scc-wp-thread-detection}
 
-* For Threat detection, you can look at Integrations -> Sysdig Agents.
+* You can look at **Threats** -> **Host** or other platforms depending where you set up the agents.
 
-* You can also look at Events -> Host and Container Events.
+* You can also look at **Integrations** -> **Sysdig Agents**.
+
 
 
 ## Monitoring with {{site.data.keyword.monitoringfull_notm}}
 {: #solution-scc-wp-on-powervs-6}
 {: step}
 
-{{site.data.keyword.monitoringfull_notm}} is also integrated with Sysdig and has information on the dashboard.
+{{site.data.keyword.monitoringfull_notm}} is also integrated with {{site.data.keyword.sysdigsecure_full_notm}}.
 
-* From the Logging and monitoring section in the Resource list, you can find the {{site.data.keyword.cloud_notm}} Monitoring instance if it's enabled. Click the instance to ensure that it's connected with the Workload Protection.
+* You can create a Cloud Monitoring instance under **Observability** -> **Monitoring** and connect a Workload Protection instance.
 
-* You can click the ‘Open dashboard’ button and explore the {{site.data.keyword.cloud_notm}} Monitor dashboard. Click ‘All Workloads’ dropdown on the top of the page, and in our case, we can choose ‘Hosts & Containers’. You can see the 3 hosts in the environment and you can explore various information in the environment.
+* Find the instance under Logging and monitoring section in the Resource list.
+
+* You can click the ‘Open dashboard’ button and explore the {{site.data.keyword.monitoringfull_notm}} dashboard. Click on **Dashboard** -> **Host Infrastructure** -> **Linux Host Overview**, you can see the usage information of the hosts. You can also explore different sections of the dashboard.
 
 ## Remove resources
 {: #solution-scc-wp-on-powervs-7}
