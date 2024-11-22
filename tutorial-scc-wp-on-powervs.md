@@ -24,7 +24,7 @@ completion-time: 2h
 This tutorial shows how to set up {{site.data.keyword.sysdigsecure_full_notm}} for Linux on {{site.data.keyword.powerSys_notm}} and {{site.data.keyword.vsi_is_short}}.
 {: shortdesc}
 
-This tutorial shows detailed instructions on RHEL Linux. Refer to [{{site.data.keyword.sysdigsecure_full_notm}} documentation]{/docs/workload-protection?topic=workload-protection-about} for supported platforms and operating systems.
+This tutorial shows detailed instructions on RHEL Linux. Refer to [{{site.data.keyword.sysdigsecure_full_notm}} documentation](/docs/workload-protection?topic=workload-protection-about) for supported platforms and operating systems.
 {: note}
 
 ## Objectives
