@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-22"
+lastupdated: "2024-12-02"
 
 keywords: Power Virtual Server, Security and Compliance Center Workload Protection
 subcollection: powervs-vpc
@@ -216,7 +216,7 @@ Next, let's install the agent on the VSI in Edge VPC by installing it on the jum
 ### Identifying vulnerabilities with Host Analyzer
 {: #solution-scc-wp-host-analyzer}
 
-Complete the following steps to install the Host on RHEL. For more information, see [Vulnerability Host Scanner installation](https://docs.sysdig.com/en/docs/installation/sysdig-secure/install-agent-components/hosts/packages/vulnerability-host-scanner/#installation){: external}.
+Complete the following steps to install the Host on RHEL. For more information, see [Vulnerability Host Scanner installation](https://docs.sysdig.com/en/sysdig-secure/install-agent-components/install-agent-components/hosts/packages/vulnerability-host-scanner/){: external}.
 
 1. For RPM-based (Red Hat Package Manager) operating systems such as Red Hat Enterprise Linux or SUSE Linux Enterprise, we need to configure the RPM repository and Sysdig GPG key:
 
