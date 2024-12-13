@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-11-20"
+lastupdated: "2024-12-13"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -16,6 +16,30 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries are grouped by date.
 {: shortdesc}
+
+## December 2024
+{: #powervs-vpc-2024-12}
+
+### 13 December 2024
+{: #powervs-vpc-dec13}
+{: release-note}
+
+Version 8.1.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 8.1.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+    
+    - **Breaking Change**:
+        - New landing zone version `6.4.0` creates VSis using `VNIs` and legacy interfaces are not used any more.
+        - Landing zone preset reworked to create security groups separately and then assign to VSIs. This will recreate the VSIs.
+
+    **Features:**
+    - Provision Monitoring Instance and an intel VSI to host and process monitoring metrics for SAP
+    - Upgrade Rhel images running on Intel VSI (jump box and network services vsi to `RHEL 9.4`)
+    - Upgraded minimum IBM power linux sap ansible role version to `v3.0.0`
+    - Upgraded IBM TF version to `1.71.3`
+    - Remove ansible collection version dependencies from scripts instead install collection dependencies from ansible galaxy requirements.yml
+    - Support `DAL14` and `LON04` DC
+    - Support `Mad04` DC for Quickstart. Deployments in MAD04 requires value in custom profile to be set as this DC supports P10 only.
+
 
 ## November 2024
 {: #powervs-vpc-2024-11}

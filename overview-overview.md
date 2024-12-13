@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-11-21"
+lastupdated: "2024-12-13"
 keywords: powervs, landing zone, sap, automation, deployable architecture
 subcollection: powervs-vpc
 
@@ -28,6 +28,7 @@ This deployable architecture variation supports these features:
 - A **VPC Infrastructure** with the following components:
     - One RHEL VSI for management (jump/bastion)
     - One RHEL VSI for network-services configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [ibm.power_linux_sap collection](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/). This VSI also acts as central ansible execution node
+    - Optional SLES VSI for Monitoring Host
     - Optional [Client to site VPN server](https://cloud.ibm.com/docs/vpc?topic=vpc-vpn-client-to-site-overview)
     - Optional [File storage share](https://cloud.ibm.com/docs/vpc?topic=vpc-file-storage-create&interface=ui)
     - Optional [Application load balancer](https://cloud.ibm.com/docs/vpc?topic=vpc-load-balancers&interface=ui)
@@ -38,6 +39,7 @@ This deployable architecture variation supports these features:
     - Activity tracker
     - Optional Secrets Manager Instance Instance with private certificate
 - A local or global **transit gateway**
+- An optional IBM Cloud Monitoring Instance
 - A **{{site.data.keyword.powerSys_notm}}** workspace with the following network topology:
     - Creates two private networks: a management network and a backup network
     - Attaches {{site.data.keyword.powerSys_notm}} workspace to transit gateway
@@ -70,6 +72,7 @@ This deployable architecture variation supports these features:
 - A **VPC Infrastructure** with the following components:
     - One RHEL VSI for management (jump/bastion)
     - One RHEL VSI for network-services configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [ibm.power_linux_sap collection](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/). This VSI also acts as central ansible execution node.
+    - Optional SLES VSI for Monitoring Host
     - Optional [Client to site VPN server](https://cloud.ibm.com/docs/vpc?topic=vpc-vpn-client-to-site-overview)
     - Optional [File storage share](https://cloud.ibm.com/docs/vpc?topic=vpc-file-storage-create&interface=ui)
     - Optional [Application load balancer](https://cloud.ibm.com/docs/vpc?topic=vpc-load-balancers&interface=ui)
@@ -80,6 +83,7 @@ This deployable architecture variation supports these features:
     - Activity tracker
     - Optional Secrets Manager Instance Instance with private certificate.
 - A local or global **transit gateway**
+- An optional IBM Cloud Monitoring Instance
 - A **{{site.data.keyword.powerSys_notm}} workspace** with the following network topology:
     - Creates two private networks: a management network and a backup network
     - Attaches the {{site.data.keyword.powerSys_notm}} workspace to transit gateway
