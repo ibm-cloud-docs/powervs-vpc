@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-12-13"
+  years: 2023, 2024, 2025
+lastupdated: "2025-01-07"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -16,6 +16,25 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries are grouped by date.
 {: shortdesc}
+
+## January 2025
+{: #powervs-vpc-2025-01}
+
+### 07 January 2025
+{: #powervs-vpc-jan07}
+{: release-note}
+
+Version 8.1.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 8.1.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+    
+    **Features:**
+    - Upgraded version of `powervs-workspace` module to 2.4.0
+        - Support tags for networks and images 
+        - Upgrade minimum IBM provider version to >=1.71.0
+    - Upgraded version of `powervs-instance` module to 2.3.0
+        - Support tags for instance and storage
+    - Upgraded Default IBMi and RHEL images for Quickstart 
+
 
 ## December 2024
 {: #powervs-vpc-2024-12}
