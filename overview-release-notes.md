@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2023, 2025
+  years: 2023, 2024, 2025
 lastupdated: "2025-01-07"
 keywords:
 subcollection: powervs-vpc
@@ -29,10 +29,10 @@ Version 8.1.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     
     **Features:**
     - Upgraded version of `powervs-workspace` module to 2.4.0
-        - Support tags for networks and images
+        - Support tags for networks and images 
         - Upgrade minimum IBM provider version to >=1.71.0
-    - Upgraded version of `powervs-instance` module to 2.3.0. 
-        - Support tags for instance and storage.
+    - Upgraded version of `powervs-instance` module to 2.3.0
+        - Support tags for instance and storage
     - Upgraded Default IBMi and RHEL images for Quickstart 
 
 
