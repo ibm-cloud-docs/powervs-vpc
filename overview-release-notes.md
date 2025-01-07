@@ -24,8 +24,8 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 {: #powervs-vpc-jan07}
 {: release-note}
 
-Version 8.1.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
-: Version 8.1.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+Version 8.1.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 8.1.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
     
     **Features:**
     - Upgraded version of `powervs-workspace` module to 2.4.0
