@@ -8,7 +8,8 @@ keywords: ssh, login
 subcollection: powervs-vpc
 content-type: tutorial
 services: ssh
-completion-time: 10 mins
+account-plan: lite
+completion-time: 10m
 
 ---
 
@@ -16,18 +17,24 @@ completion-time: 10 mins
 
 # Connect to a VPC VSIs or Power Virtual Server Instances by using floating IP
 {: #solution-ssh}
+{: toc-content-type="tutorial"}
+{: toc-services="ssh"}
+{: toc-completion-time="10m"}
 
 After deployment, connect to the landscape via SSH proxy using the jump box's floating IP to access the private IPs of Intel and {{site.data.keyword.powerSys_notm}} instances.
 {: shortdesc}
 
+
 ## Before you begin
 {: #solution-ssh-prereqs}
+{: step}
 
 1. Ensure you deployed the landscape by entering a value in the `external_access_ip` field. Only this IP is allowed to login to the environment as it is allowed in the management-sg group.
 1. Review the outputs from the deployable architecture.
 
 ## Connect to the landscape
 {: #solution-ssh-connect}
+{: step}
 
 1. Make sure you have the right private SSH key.
 1. Use the following SSH commands to access the hosts.

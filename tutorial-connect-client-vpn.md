@@ -6,9 +6,9 @@ lastupdated: "2025-02-03"
 keywords: vpn, openvpn
 subcollection: powervs-vpc
 content-type: tutorial
-services: vpc, secrets-manager, dl, schematics
+services: vpc, secrets-manager, vpn
 account-plan: paid
-completion-time: 1h
+completion-time: 20m
 
 ---
 
@@ -17,8 +17,8 @@ completion-time: 1h
 # Connect using a client-to-site VPN
 {: #solution-connect-client-vpn}
 {: toc-content-type="tutorial"}
-{: toc-services="vpc, secrets-manager, dl, schematics"}
-{: toc-completion-time="1h"}
+{: toc-services="vpc, secrets-manager, vpn"}
+{: toc-completion-time="20m"}
 
 This tutorial dives into the fastest option to get up and running with a client VPN.
 {: shortdesc}

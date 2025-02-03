@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2024-12-02"
+  years: 2025
+lastupdated: "2025-02-03"
 
 keywords: Power Virtual Server, Security and Compliance Center Workload Protection
 subcollection: powervs-vpc
@@ -277,7 +277,7 @@ In this section, the {{site.data.keyword.sysdigsecure_full_notm}} agents have be
 {: #solution-scc-wp-on-powervs-4}
 {: step}
 
-When we run the {{site.data.keyword.powerSys_notm}} Quickstart deployable architecture, we create a {{site.data.keyword.powerSys_notm}} instance with Linux RHEL 9.2. We can set up the {{site.data.keyword.sysdigsecure_full_notm}} on the {{site.data.keyword.powerSys_notm}} instance. For more information, see [Managing the Workload Protection agent in Linux on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs).
+When we run the {{site.data.keyword.powerSys_notm}} Quickstart deployable architecture, we create a {{site.data.keyword.powerSys_notm}} instance with Linux RHEL 9.2. We can set up the {{site.data.keyword.sysdigsecure_full_notm}} on the {{site.data.keyword.powerSys_notm}} instance. For more information, see [Managing the Workload Protection agent in Linux on {{site.data.keyword.powerSys_notm}}](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs).
 
 
 ### Install threat detection agent
@@ -369,7 +369,7 @@ Now, let’s set up the vulnerability scanning component, which can detect all i
    SYSDIG_ACCESS_KEY=$ACCESS_KEY SYSDIG_API_URL=https://$API_ENDPOINT SCAN_ON_START=true ./sysdig-host-scanner
    ```
 
-4. Create an environment file to store the configuration and a systemd unit file to run the binary as a service. Make sure that <access key> and <api-url> are set.
+4. Create an environment file to store the configuration and a systemd unit file to run the binary as a service. Make sure that `access key` and `api-url` are set.
 
    ```bash
    mv ./sysdig-host-scanner /usr/local/bin/vuln-host-scanner

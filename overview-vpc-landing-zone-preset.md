@@ -12,7 +12,7 @@ subcollection: powervs-vpc
 
 {{site.data.keyword.attribute-definition-list}}
 
-# VPC landing zone architecture for PowerVS
+# VPC landing zone architecture for {{site.data.keyword.powerSys_notm}}
 {: #landing-zone-preset}
 
 The {{site.data.keyword.powerSys_notm}} with VPC landing zone makes use of [Terraform IBM Module - VPC Landing Zone](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone){: external}.

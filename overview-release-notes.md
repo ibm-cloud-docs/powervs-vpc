@@ -84,7 +84,7 @@ Version 7.1.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Upgraded IBM terraform provider version to v1.71.1
     - Upgraded Default IBMi and AIX images for Quickstart
     - Upgraded version of `powervs-workspace` module to 2.2.0
-    - support custom image import from Cloud Object Storage to PowerVS workspace for up to three images in the Standard and standard extension variations
+    - support custom image import from Cloud Object Storage to {{site.data.keyword.powerSys_notm}} workspace for up to three images in the Standard and standard extension variations
 
 ### 01 November 2024
 {: #powervs-vpc-nov01}

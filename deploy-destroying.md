@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-01-02"
+lastupdated: "2025-02-03"
 subcollection: powervs-vpc
 content-type: tutorial
 account-plan: paid
@@ -26,7 +26,7 @@ In this tutorial, you'll learn how to destroy the resources deployed by the [Pow
 {: #destroy-resources-prerequisites}
 
 - You have an existing deployment of [Power Systems Virtual Server with VPC landing zone](/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) that you don't need anymore and want to destroy
-- You have already destroyed any additional resources that were added to the [Power Systems Virtual Server with VPC landing zone](/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) after deployment, like for example additional PowerVS instances in the connected PowerVS workspace, or a deployment of [Power Systems Virtual Server for SAP HANA](/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) that was using the [Power Systems Virtual Server with VPC landing zone](/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global) that you're about to destroy
+- You have already destroyed any additional resources that were added to the [Power Systems Virtual Server with VPC landing zone](/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) after deployment, like for example additional {{site.data.keyword.powerSys_notm}} instances in the connected {{site.data.keyword.powerSys_notm}} workspace, or a deployment of [Power Systems Virtual Server for SAP HANA](/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) that was using the [Power Systems Virtual Server with VPC landing zone](/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global) that you're about to destroy
 - You have backed up all data that you will need in the future that is stored on the resources you're about to destroy
 - You deployed using [Projects](/docs/secure-enterprise?topic=secure-enterprise-understanding-projects)
 
@@ -71,7 +71,7 @@ In this tutorial, you'll learn how to destroy the resources deployed by the [Pow
 If your destroy job failed, check out the following:
 1. Examine logs. You can find them either in your project's configuration or in the related Schematics workspace.
 1. Determine if there's a resource blocking your destroy process. There is a chance that modifications outside the automation are blocking the resource from getting deleted. Common examples are:
-    - additional instances in the PowerVS workspace which block subnets from getting deleted
+    - additional instances in the {{site.data.keyword.powerSys_notm}} workspace which block subnets from getting deleted
     - locked objects in cloud object storage that block the bucket's deletion
     - a deployment of [Power Systems Virtual Server for SAP HANA](/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) that uses the [Power Systems Virtual Server with VPC landing zone](/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global) as a pre-requisite
 1. Try to clean up the resource that's blocking the destroy process from finishing.

@@ -19,7 +19,7 @@ completion-time: 1h
 {: #solution-quickstart-next-steps}
 {: toc-content-type="tutorial"}
 {: toc-services="powervs, vpc, squid, ansible, dns, nfs"}
-{: toc-completion-time="15m"}
+{: toc-completion-time="1h"}
 
 This tutorial explores the fastest way to configure a {{site.data.keyword.powerSys_notm}} instance after deploying the Quickstart variation.
 {: shortdesc}
