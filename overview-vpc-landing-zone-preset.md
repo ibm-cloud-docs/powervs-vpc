@@ -32,7 +32,7 @@ As part of the automation an [override json preset](https://github.com/terraform
 | Flow Logs for VPC|  | [Flow Logs for VPC](https://cloud.ibm.com/docs/vpc?topic=vpc-flow-logs) enables the collection, storage, and presentation of information about the Internet Protocol (IP) traffic going to and from network interfaces within your VPC|
 | Client to Site VPN Server,\nSecrets Manager | Yes | [Client to Site VPN Server](https://cloud.ibm.com/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](https://cloud.ibm.com/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
 {: class="landing-zone-table"}
-{: tab-group="landing-zone-variant"}
+{: tab-group="landing-zone"}
 {: #landing-zone-1}
 {: tab-title="VPC"}
 {: caption="VPC Landing Zone Components" caption-side="bottom"}
