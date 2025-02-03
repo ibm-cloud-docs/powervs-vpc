@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-12-13"
+  years: 2023, 2025
+lastupdated: "2025-02-03"
 keywords: powervs, landing zone, sap, automation, deployable architecture
 subcollection: powervs-vpc
 
@@ -21,33 +21,50 @@ In the following sections, the deployable architecture variants are described.
 
 ![Solution Overview](images/overview-solutions.png){: caption="Solution Overview" caption-side="center"}
 
-## Standard variation
+## 1. Standard variation
 {: #overview-standard-variant}
 
-This deployable architecture variation supports these features:
-- A **VPC Infrastructure** with the following components:
-    - One RHEL VSI for management (jump/bastion)
-    - One RHEL VSI for network-services configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [ibm.power_linux_sap collection](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/). This VSI also acts as central ansible execution node
-    - Optional SLES VSI for Monitoring Host
-    - Optional [Client to site VPN server](https://cloud.ibm.com/docs/vpc?topic=vpc-vpn-client-to-site-overview)
-    - Optional [File storage share](https://cloud.ibm.com/docs/vpc?topic=vpc-file-storage-create&interface=ui)
-    - Optional [Application load balancer](https://cloud.ibm.com/docs/vpc?topic=vpc-load-balancers&interface=ui)
-    - IBM Cloud Object storage(COS) Virtual Private endpoint gateway(VPE)
-    - IBM Cloud Object storage(COS) Instance and buckets
-    - VPC flow logs
-    - KMS keys
-    - Activity tracker
-    - Optional Secrets Manager Instance Instance with private certificate
-- A local or global **transit gateway**
-- An optional IBM Cloud Monitoring Instance
-- A **{{site.data.keyword.powerSys_notm}}** workspace with the following network topology:
-    - Creates two private networks: a management network and a backup network
-    - Attaches {{site.data.keyword.powerSys_notm}} workspace to transit gateway
-    - Creates an SSH key
-    - Optionally imports list of stock catalog images.
-    - Optionally imports up to three custom images from Cloud Object Storage.
+This deployable architecture variation deploys these resources:
 
-## Extend {{site.data.keyword.powerSys_notm}} with VPC landing zone - Standard variation
+| Resource Type | Optional | Description |
+|---|---|---|
+| Workspace for {{site.data.keyword.powerSys_notm}} |  | [Workspace for {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) with 2 subnets and an SSH key |
+| Stock Images  | Yes | Imports IBM Provided Stock Catalog Images into Workspace for {{site.data.keyword.powerSys_notm}} |
+| Custom Images | Yes | Imports up to three custom images from Cloud Object Storage into Workspace for {{site.data.keyword.powerSys_notm}} |
+{: class="standard-variant-table"}
+{: tab-group="standard-variant"}
+{: #standard-variant-1}
+{: tab-title="{{site.data.keyword.powerSys_notm}}"}
+{: caption="Standard Variation Components" caption-side="bottom"}
+
+| Resource Type | Optional | Description |
+|---|---|---|
+|  VPC |  |  Edge VPC: ACL, SGs, SSH Key and 4 Subnets |
+|  Intel VSI |  | Jump box running RHEL 9.4 with floating IP attached |
+|  Intel VSI |  | Network Services running RHEL 9.4 configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [IBM Power Linux for SAP](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/)). Also configured as central ansible execution node |
+| Intel VSI,\nIBM Cloud Monitoring Instance | Yes | Monitoring Host Running SLES 15SP5 to collect metrics and forward it to IBM Monitoring Instance\n [IBM Cloud monitoring Instance](https://cloud.ibm.com/docs/monitoring) displays the platform metrics and OS metrics |
+| File storage share,\n Application load balancer | Yes | [NFS as a Service]((https://cloud.ibm.com/docs/vpc?topic=vpc-file-storage-create&interface=ui))\n [Application Load Balancer](https://cloud.ibm.com/docs/vpc?topic=vpc-load-balancers&interface=ui) is deployed along with File storage share to access the share IP from Power Virtual Server |
+| Virtual Private Endpoint Gateway|  | A [Virtual Private Endpoint Gateway](https://cloud.ibm.com/docs/vpc?topic=vpc-about-vpe) to reach the Cloud Object Storage bucket |
+| Flow Logs for VPC|  | [Flow Logs for VPC](https://cloud.ibm.com/docs/vpc?topic=vpc-flow-logs) enables the collection, storage, and presentation of information about the Internet Protocol (IP) traffic going to and from network interfaces within your VPC|
+| Client to Site VPN Server,\nSecrets Manager | Yes | [Client to Site VPN Server](https://cloud.ibm.com/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](https://cloud.ibm.com/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
+{: class="standard-variant-table"}
+{: tab-group="standard-variant"}
+{: #standard-variant-2}
+{: tab-title="VPC"}
+{: caption="Standard Variation Components" caption-side="bottom"}
+
+| Resource Type | Optional | Description |
+|---|---|---|
+| Key Protect |  | [Key Protect](https://cloud.ibm.com/docs/key-protect/index.html) provides key management by integrating the IBM Key Protect for IBM Cloud service. These key management services help you create, manage, and use encryption keys to protect your sensitive data |
+| Transit Gateway |  | Global or local [Transit Gateway](https://cloud.ibm.com/docs/transit-gateway) to interconnect VPC and {{site.data.keyword.powerSys_notm}} workspace |
+| Cloud Object Storage | |  [Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage) instance, buckets and credentials are created |
+{: class="standard-variant-table"}
+{: tab-group="standard-variant"}
+{: #standard-variant-3}
+{: tab-title="Cloud Service"}
+{: caption="Standard Variation Components" caption-side="bottom"}
+
+## 2. Standard Extend variation
 {: #overview-standard-extend-variant}
 
 This variation has a prerequisite. You must deploy the 'Create a new architecture Standard' variant first.
@@ -56,43 +73,62 @@ This variation has a prerequisite. You must deploy the 'Create a new architectur
 The 'Extend {{site.data.keyword.powerSys_notm}} with VPC landing zone' variation creates an additional {{site.data.keyword.powerSys_notm}} workspace and connects it to the existing {{site.data.keyword.powerSys_notm}} with VPC landing zone. It builds on existing {{site.data.keyword.powerSys_notm}} with VPC landing zone deployed as a variation 'Create a new architecture'.
 This is typically used for High Availability scenarios in the same regions.
 
-This deployable architecture variation supports these features:
-- A **{{site.data.keyword.powerSys_notm}} workspace** with the following network topology:
-    - Creates two private networks: a management network and a backup network
-    - Attaches the {{site.data.keyword.powerSys_notm}} workspace to transit gateway
-    - Creates an SSH key
-    - Optionally imports list of stock catalog images.
-    - Optionally imports up to three custom images from Cloud Object Storage.
+This deployable architecture variation deploys these resources:
+
+| Resource Type | Optional | Description |
+|---|---|---|
+| Workspace for {{site.data.keyword.powerSys_notm}} |  | [Workspace for {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) with 2 subnets and an SSH key |
+| Stock Images  | Yes | Imports IBM Provided Stock Catalog Images into Workspace for {{site.data.keyword.powerSys_notm}} |
+| Custom Images | Yes | Imports up to three custom images from Cloud Object Storage into Workspace for {{site.data.keyword.powerSys_notm}} |
+{: class="standard-extend-variant-table"}
+{: tab-group="standard-extend-variant"}
+{: #standard-extend-variant-1}
+{: tab-title="{{site.data.keyword.powerSys_notm}}"}
+{: caption="Standard Extend Variation Components" caption-side="bottom"}
 
 
-## Quickstart variation
+## 3. Quickstart variation
 {: #overview-quickstart-variant}
 
-This deployable architecture variation supports these features:
-- A **VPC Infrastructure** with the following components:
-    - One RHEL VSI for management (jump/bastion)
-    - One RHEL VSI for network-services configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [ibm.power_linux_sap collection](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/). This VSI also acts as central ansible execution node.
-    - Optional SLES VSI for Monitoring Host
-    - Optional [Client to site VPN server](https://cloud.ibm.com/docs/vpc?topic=vpc-vpn-client-to-site-overview)
-    - Optional [File storage share](https://cloud.ibm.com/docs/vpc?topic=vpc-file-storage-create&interface=ui)
-    - Optional [Application load balancer](https://cloud.ibm.com/docs/vpc?topic=vpc-load-balancers&interface=ui)
-    - IBM Cloud Object storage(COS) Virtual Private endpoint gateway(VPE)
-    - IBM Cloud Object storage(COS) Instance and buckets
-    - VPC flow logs
-    - KMS keys
-    - Activity tracker
-    - Optional Secrets Manager Instance Instance with private certificate.
-- A local or global **transit gateway**
-- An optional IBM Cloud Monitoring Instance
-- A **{{site.data.keyword.powerSys_notm}} workspace** with the following network topology:
-    - Creates two private networks: a management network and a backup network
-    - Attaches the {{site.data.keyword.powerSys_notm}} workspace to transit gateway
-    - Creates an SSH key
-    - Imports cloud catalog stock images
-- A **{{site.data.keyword.powerSys_notm}} Instance** with following options:
-    - t-shirt profile (Aix/IBMi/SAP Image)
-    - Custom profile ( cores, memory, storage and image)
-    - 1 volume
+This deployable architecture variation deploys these resources:
+
+| Resource Type | Optional | Description |
+|---|---|---|
+| Workspace for {{site.data.keyword.powerSys_notm}} |  | [Workspace for {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) with 2 subnets and an SSH key |
+| {{site.data.keyword.powerSys_notm}} Instance  |  | A {{site.data.keyword.powerSys_notm}} instance of chosen T-shirt size or a custom t-shirt size. Refer to the [table](/docs/powervs-vpc?topic=powervs-vpc-automation-solution-overview#resize_core_memory-1) below. |
+{: class="quickstart-variant-table"}
+{: tab-group="quickstart-variant"}
+{: #quickstart-variant-1}
+{: tab-title="{{site.data.keyword.powerSys_notm}}"}
+{: caption="Quickstart Variation Components" caption-side="bottom"}
+
+| Resource Type | Optional | Description |
+|---|---|---|
+|  VPC |  |  Edge VPC: ACL, SGs, SSH Key and 4 Subnets |
+|  Intel VSI |  | Jump box running RHEL 9.4 with floating IP attached |
+|  Intel VSI |  | Network Services running RHEL 9.4 configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [IBM Power Linux for SAP](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/)). Also configured as central ansible execution node |
+| Intel VSI,\nIBM Cloud Monitoring Instance | Yes | Monitoring Host Running SLES 15SP5 to collect metrics and forward it to IBM Monitoring Instance\n [IBM Cloud monitoring Instance](https://cloud.ibm.com/docs/monitoring) displays the platform metrics and OS metrics |
+| File storage share,\n Application load balancer | Yes | [NFS as a Service]((https://cloud.ibm.com/docs/vpc?topic=vpc-file-storage-create&interface=ui))\n [Application Load Balancer](https://cloud.ibm.com/docs/vpc?topic=vpc-load-balancers&interface=ui) is deployed along with File storage share to access the share IP from Power Virtual Server |
+| Virtual Private Endpoint Gateway|  | A [Virtual Private Endpoint Gateway](https://cloud.ibm.com/docs/vpc?topic=vpc-about-vpe) to reach the Cloud Object Storage bucket |
+| Flow Logs for VPC|  | [Flow Logs for VPC](https://cloud.ibm.com/docs/vpc?topic=vpc-flow-logs) enables the collection, storage, and presentation of information about the Internet Protocol (IP) traffic going to and from network interfaces within your VPC|
+| Client to Site VPN Server,\nSecrets Manager | Yes | [Client to Site VPN Server](https://cloud.ibm.com/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](https://cloud.ibm.com/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
+{: class="quickstart-variant-table"}
+{: tab-group="quickstart-variant"}
+{: #quickstart-variant-2}
+{: tab-title="VPC"}
+{: caption="Quickstart Variation Components" caption-side="bottom"}
+
+| Resource Type | Optional | Description |
+|---|---|---|
+| Key Protect |  | [Key Protect](https://cloud.ibm.com/docs/key-protect/index.html) provides key management by integrating the IBM Key Protect for IBM Cloud service. These key management services help you create, manage, and use encryption keys to protect your sensitive data |
+| Transit Gateway |  | Global or local [Transit Gateway](https://cloud.ibm.com/docs/transit-gateway) to interconnect VPC and {{site.data.keyword.powerSys_notm}} workspace |
+| Cloud Object Storage | |  [Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage) instance, buckets and credentials are created |
+{: class="quickstart-variant-table"}
+{: tab-group="quickstart-variant"}
+{: #quickstart-variant-3}
+{: tab-title="Cloud Service"}
+{: caption="Quickstart Variation Components" caption-side="bottom"}
+
 
 You can run AIX, IBM i, and Linux images on your virtual server instances. Select the required T-shirt size and a virtual server instance with chosen T-shirt size or custom configuration is deployed. The T-shirt sizes and the configuration parameters mapping are shown in the following table:
 
@@ -129,7 +165,7 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 {: #resize_core_memory-3}
 {: tab-title="SAP HANA (RHEL/SLES)"}
 
-## Import variation
+## 4. Import variation
 {: #overview-powervs-workspace-import-variant}
 
 Create an IBM Cloud schematics workspace for your pre-existing VPC and {{site.data.keyword.powerSys_notm}} infrastructure resources using the new {{site.data.keyword.powerSys_notm}} (PowerVS) with VPC landing zone variation - 'Import {{site.data.keyword.powerSys_notm}} Workspace'. 

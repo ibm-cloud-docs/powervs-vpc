@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-09-16"
-keywords:
+  years: 2023, 2025
+lastupdated: "2025-02-03"
+keywords: vpn, openvpn
 subcollection: powervs-vpc
 content-type: tutorial
 services: vpc, secrets-manager, dl, schematics

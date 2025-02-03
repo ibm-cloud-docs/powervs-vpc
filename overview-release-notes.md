@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2024, 2025
-lastupdated: "2025-01-24"
+   years: 2023, 2025
+lastupdated: "2025-02-03"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note

@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2023, 2024
-lastupdated: "2024-10-31"
+  years: 2023, 2025
+lastupdated: "2025-02-03"
 
-keywords:
+keywords: powervs, vpc, squid, ansible, dns, nfs, proxy
 subcollection: powervs-vpc
 content-type: tutorial
 services: powervs, vpc, squid, ansible, dns, nfs
