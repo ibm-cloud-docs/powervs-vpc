@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-04"
 keywords: powervs, landing zone, sap, automation, deployable architecture
 subcollection: powervs-vpc
 
@@ -28,7 +28,7 @@ This deployable architecture variation deploys these resources:
 
 | Resource Type | Optional | Description |
 |---|---|---|
-| Workspace for {{site.data.keyword.powerSys_notm}} |  | [Workspace for {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) with 2 subnets and an SSH key |
+| Workspace for {{site.data.keyword.powerSys_notm}} |  | [Workspace for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) with 2 subnets and an SSH key |
 | Stock Images  | Yes | Imports IBM Provided Stock Catalog Images into Workspace for {{site.data.keyword.powerSys_notm}} |
 | Custom Images | Yes | Imports up to three custom images from Cloud Object Storage into Workspace for {{site.data.keyword.powerSys_notm}} |
 {: class="standard-variant-table"}
@@ -42,11 +42,11 @@ This deployable architecture variation deploys these resources:
 |  VPC |  |  Edge VPC: ACL, SGs, SSH Key and 4 Subnets |
 |  Intel VSI |  | Jump box running RHEL 9.4 with floating IP attached |
 |  Intel VSI |  | Network Services running RHEL 9.4 configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [IBM Power Linux for SAP](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/)). Also configured as central ansible execution node |
-| Intel VSI,\nIBM Cloud Monitoring Instance | Yes | Monitoring Host Running SLES 15SP5 to collect metrics and forward it to IBM Monitoring Instance\n [IBM Cloud monitoring Instance](https://cloud.ibm.com/docs/monitoring) displays the platform metrics and OS metrics |
-| File storage share,\n Application load balancer | Yes | [NFS as a Service]((https://cloud.ibm.com/docs/vpc?topic=vpc-file-storage-create&interface=ui))\n [Application Load Balancer](https://cloud.ibm.com/docs/vpc?topic=vpc-load-balancers&interface=ui) is deployed along with File storage share to access the share IP from Power Virtual Server |
-| Virtual Private Endpoint Gateway|  | A [Virtual Private Endpoint Gateway](https://cloud.ibm.com/docs/vpc?topic=vpc-about-vpe) to reach the Cloud Object Storage bucket |
-| Flow Logs for VPC|  | [Flow Logs for VPC](https://cloud.ibm.com/docs/vpc?topic=vpc-flow-logs) enables the collection, storage, and presentation of information about the Internet Protocol (IP) traffic going to and from network interfaces within your VPC|
-| Client to Site VPN Server,\nSecrets Manager | Yes | [Client to Site VPN Server](https://cloud.ibm.com/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](https://cloud.ibm.com/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
+| Intel VSI,\nIBM Cloud Monitoring Instance | Yes | Monitoring Host Running SLES 15SP5 to collect metrics and forward it to IBM Monitoring Instance\n [IBM Cloud monitoring Instance](/docs/monitoring) displays the platform metrics and OS metrics |
+| File storage share,\n Application load balancer | Yes | [NFS as a Service]((/docs/vpc?topic=vpc-file-storage-create&interface=ui))\n [Application Load Balancer](/docs/vpc?topic=vpc-load-balancers&interface=ui) is deployed along with File storage share to access the share IP from Power Virtual Server |
+| Virtual Private Endpoint Gateway|  | A [Virtual Private Endpoint Gateway](/docs/vpc?topic=vpc-about-vpe) to reach the Cloud Object Storage bucket |
+| Flow Logs for VPC|  | [Flow Logs for VPC](/docs/vpc?topic=vpc-flow-logs) enables the collection, storage, and presentation of information about the Internet Protocol (IP) traffic going to and from network interfaces within your VPC|
+| Client to Site VPN Server,\nSecrets Manager | Yes | [Client to Site VPN Server](/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
 {: class="standard-variant-table"}
 {: tab-group="standard-variant"}
 {: #standard-variant-2}
@@ -55,9 +55,9 @@ This deployable architecture variation deploys these resources:
 
 | Resource Type | Optional | Description |
 |---|---|---|
-| Key Protect |  | [Key Protect](https://cloud.ibm.com/docs/key-protect/index.html) provides key management by integrating the IBM Key Protect for IBM Cloud service. These key management services help you create, manage, and use encryption keys to protect your sensitive data |
-| Transit Gateway |  | Global or local [Transit Gateway](https://cloud.ibm.com/docs/transit-gateway) to interconnect VPC and {{site.data.keyword.powerSys_notm}} workspace |
-| Cloud Object Storage | |  [Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage) instance, buckets and credentials are created |
+| Key Protect |  | [Key Protect](/docs/key-protect/index.html) provides key management by integrating the IBM Key Protect for IBM Cloud service. These key management services help you create, manage, and use encryption keys to protect your sensitive data |
+| Transit Gateway |  | Global or local [Transit Gateway](/docs/transit-gateway) to interconnect VPC and {{site.data.keyword.powerSys_notm}} workspace |
+| Cloud Object Storage | |  [Cloud Object Storage](/docs/cloud-object-storage) instance, buckets and credentials are created |
 {: class="standard-variant-table"}
 {: tab-group="standard-variant"}
 {: #standard-variant-3}
@@ -77,7 +77,7 @@ This deployable architecture variation deploys these resources:
 
 | Resource Type | Optional | Description |
 |---|---|---|
-| Workspace for {{site.data.keyword.powerSys_notm}} |  | [Workspace for {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) with 2 subnets and an SSH key |
+| Workspace for {{site.data.keyword.powerSys_notm}} |  | [Workspace for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) with 2 subnets and an SSH key |
 | Stock Images  | Yes | Imports IBM Provided Stock Catalog Images into Workspace for {{site.data.keyword.powerSys_notm}} |
 | Custom Images | Yes | Imports up to three custom images from Cloud Object Storage into Workspace for {{site.data.keyword.powerSys_notm}} |
 {: class="standard-extend-variant-table"}
@@ -94,7 +94,7 @@ This deployable architecture variation deploys these resources:
 
 | Resource Type | Optional | Description |
 |---|---|---|
-| Workspace for {{site.data.keyword.powerSys_notm}} |  | [Workspace for {{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) with 2 subnets and an SSH key |
+| Workspace for {{site.data.keyword.powerSys_notm}} |  | [Workspace for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) with 2 subnets and an SSH key |
 | {{site.data.keyword.powerSys_notm}} Instance  |  | A {{site.data.keyword.powerSys_notm}} instance of chosen T-shirt size or a custom t-shirt size. Refer to the [table](/docs/powervs-vpc?topic=powervs-vpc-automation-solution-overview#resize_core_memory-1) below. |
 {: class="quickstart-variant-table"}
 {: tab-group="quickstart-variant"}
@@ -107,11 +107,11 @@ This deployable architecture variation deploys these resources:
 |  VPC |  |  Edge VPC: ACL, SGs, SSH Key and 4 Subnets |
 |  Intel VSI |  | Jump box running RHEL 9.4 with floating IP attached |
 |  Intel VSI |  | Network Services running RHEL 9.4 configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [IBM Power Linux for SAP](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/)). Also configured as central ansible execution node |
-| Intel VSI,\nIBM Cloud Monitoring Instance | Yes | Monitoring Host Running SLES 15SP5 to collect metrics and forward it to IBM Monitoring Instance\n [IBM Cloud monitoring Instance](https://cloud.ibm.com/docs/monitoring) displays the platform metrics and OS metrics |
-| File storage share,\n Application load balancer | Yes | [NFS as a Service]((https://cloud.ibm.com/docs/vpc?topic=vpc-file-storage-create&interface=ui))\n [Application Load Balancer](https://cloud.ibm.com/docs/vpc?topic=vpc-load-balancers&interface=ui) is deployed along with File storage share to access the share IP from Power Virtual Server |
-| Virtual Private Endpoint Gateway|  | A [Virtual Private Endpoint Gateway](https://cloud.ibm.com/docs/vpc?topic=vpc-about-vpe) to reach the Cloud Object Storage bucket |
-| Flow Logs for VPC|  | [Flow Logs for VPC](https://cloud.ibm.com/docs/vpc?topic=vpc-flow-logs) enables the collection, storage, and presentation of information about the Internet Protocol (IP) traffic going to and from network interfaces within your VPC|
-| Client to Site VPN Server,\nSecrets Manager | Yes | [Client to Site VPN Server](https://cloud.ibm.com/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](https://cloud.ibm.com/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
+| Intel VSI,\nIBM Cloud Monitoring Instance | Yes | Monitoring Host Running SLES 15SP5 to collect metrics and forward it to IBM Monitoring Instance\n [IBM Cloud monitoring Instance](/docs/monitoring) displays the platform metrics and OS metrics |
+| File storage share,\n Application load balancer | Yes | [NFS as a Service]((/docs/vpc?topic=vpc-file-storage-create&interface=ui))\n [Application Load Balancer](/docs/vpc?topic=vpc-load-balancers&interface=ui) is deployed along with File storage share to access the share IP from Power Virtual Server |
+| Virtual Private Endpoint Gateway|  | A [Virtual Private Endpoint Gateway](/docs/vpc?topic=vpc-about-vpe) to reach the Cloud Object Storage bucket |
+| Flow Logs for VPC|  | [Flow Logs for VPC](/docs/vpc?topic=vpc-flow-logs) enables the collection, storage, and presentation of information about the Internet Protocol (IP) traffic going to and from network interfaces within your VPC|
+| Client to Site VPN Server,\nSecrets Manager | Yes | [Client to Site VPN Server](/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
 {: class="quickstart-variant-table"}
 {: tab-group="quickstart-variant"}
 {: #quickstart-variant-2}
@@ -120,9 +120,9 @@ This deployable architecture variation deploys these resources:
 
 | Resource Type | Optional | Description |
 |---|---|---|
-| Key Protect |  | [Key Protect](https://cloud.ibm.com/docs/key-protect/index.html) provides key management by integrating the IBM Key Protect for IBM Cloud service. These key management services help you create, manage, and use encryption keys to protect your sensitive data |
-| Transit Gateway |  | Global or local [Transit Gateway](https://cloud.ibm.com/docs/transit-gateway) to interconnect VPC and {{site.data.keyword.powerSys_notm}} workspace |
-| Cloud Object Storage | |  [Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage) instance, buckets and credentials are created |
+| Key Protect |  | [Key Protect](/docs/key-protect/index.html) provides key management by integrating the IBM Key Protect for IBM Cloud service. These key management services help you create, manage, and use encryption keys to protect your sensitive data |
+| Transit Gateway |  | Global or local [Transit Gateway](/docs/transit-gateway) to interconnect VPC and {{site.data.keyword.powerSys_notm}} workspace |
+| Cloud Object Storage | |  [Cloud Object Storage](/docs/cloud-object-storage) instance, buckets and credentials are created |
 {: class="quickstart-variant-table"}
 {: tab-group="quickstart-variant"}
 {: #quickstart-variant-3}
