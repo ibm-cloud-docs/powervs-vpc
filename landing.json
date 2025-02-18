@@ -52,7 +52,7 @@
         },
         {
             "title": "Import",
-            "href": "/docs/powervs-vpc?topic=powervs-vpc-power-virtual-server-with-vpc-landing-zone-as-import-deployment",
+            "href": "/docs/powervs-vpc?topic=powervs-vpc-deploy-arch-ibm-pvs-inf-import",
             "deployable": true
         }
     ],
