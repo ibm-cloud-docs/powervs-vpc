@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-02-05"
+lastupdated: "2025-02-18"
 keywords: powervs, landing zone, sap, automation, deployable architecture
 subcollection: powervs-vpc
 
@@ -13,11 +13,11 @@ subcollection: powervs-vpc
 # Overview of {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architectures
 {: #automation-solution-overview}
 
-Provisioning {{site.data.keyword.powerSys_notm}} with VPC landing zone by using deployable architectures provides an automated deployment method to create an isolated {{site.data.keyword.powerSys_notm}} workspace and connect it with IBM Cloud services and public internet. Network management components like DNS, NTP, proxy servers and NFS as a Service might be installed. Comparing the provisioning through the projects UI, user interaction is minimized and ready-to-go deployment time of a {{site.data.keyword.powerSys_notm}} workspace is reduced from days to less than 1 hour. 
+Provisioning {{site.data.keyword.powerSys_notm}} with VPC landing zone by using deployable architectures provides an automated deployment method to create an isolated {{site.data.keyword.powerSys_notm}} workspace and connect it with IBM Cloud services and public internet. Network management components like DNS, NTP, proxy servers and NFS as a Service might be installed. Comparing the provisioning through the projects UI, user interaction is minimized and ready-to-go deployment time of a {{site.data.keyword.powerSys_notm}} workspace is reduced from days to less than 1 hour.
 
 Automated {{site.data.keyword.powerSys_notm}} with VPC landing zone provisioning that is described in this guide is based on {{site.data.keyword.cloud_notm}} catalog deployable architectures. In this documentation, we describe only specifics that are related to {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture.
 
-In the following sections, the deployable architecture variants are described. 
+In the following sections, the deployable architecture variants are described.
 
 ![Solution Overview](images/overview-solutions.png){: caption="Solution Overview" caption-side="center"}
 
@@ -168,9 +168,9 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 ## 4. Import variation
 {: #overview-powervs-workspace-import-variant}
 
-Create an IBM Cloud schematics workspace for your pre-existing VPC and {{site.data.keyword.powerSys_notm}} infrastructure resources using the new {{site.data.keyword.powerSys_notm}} (PowerVS) with VPC landing zone variation - 'Import {{site.data.keyword.powerSys_notm}} Workspace'. 
+Create an IBM Cloud schematics workspace for your pre-existing VPC and {{site.data.keyword.powerSys_notm}} infrastructure resources using the new {{site.data.keyword.powerSys_notm}} (PowerVS) with VPC landing zone variation - 'Import {{site.data.keyword.powerSys_notm}} Workspace'.
 
-This variation helps to install the deployable architecture ['Power Virtual Server for SAP HANA'](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) on top of a pre-existing {{site.data.keyword.powerSys_notm}}(PowerVS) landscape. 'Power Virtual Server for SAP HANA' automation requires a schematics workspace id for installation. The 'Import' solution creates a schematics workspace by taking pre-existing VPC and {{site.data.keyword.powerSys_notm}} infrastructure resource details as inputs. The ID of this schematics workspace will be the pre-requisite workspace id required by 'Power Virtual Server for SAP HANA' to create and configure the {{site.data.keyword.powerSys_notm}} instances for SAP on top of the existing infrastructure. 
+This variation helps to install the deployable architecture ['Power Virtual Server for SAP HANA'](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-sap-9aa6135e-75d5-467e-9f4a-ac2a21c069b8-global) on top of a pre-existing {{site.data.keyword.powerSys_notm}}(PowerVS) landscape. 'Power Virtual Server for SAP HANA' automation requires a schematics workspace id for installation. The 'Import' solution creates a schematics workspace by taking pre-existing VPC and {{site.data.keyword.powerSys_notm}} infrastructure resource details as inputs. The ID of this schematics workspace will be the pre-requisite workspace id required by 'Power Virtual Server for SAP HANA' to create and configure the {{site.data.keyword.powerSys_notm}} instances for SAP on top of the existing infrastructure.
 
 Check the pre-requisites for this variation [here](https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/tree/main/solutions/import#pre-requisites).
 
@@ -178,7 +178,7 @@ Check the pre-requisites for this variation [here](https://github.com/terraform-
 ## Other {{site.data.keyword.powerSys_notm}} related deployable architectures
 {: #overview-automation-solution-components}
 
-In addition to the {{site.data.keyword.powerSys_notm}} with VPC landing zone other deployable architectures and terraform based solutions might be deployed. 
+In addition to the {{site.data.keyword.powerSys_notm}} with VPC landing zone other deployable architectures and terraform based solutions might be deployed.
 
 - [{{site.data.keyword.powerSys_notm}} for SAP HANA deployable architecture](/docs/sap-powervs)
 - [FalconStor StorSafe VTL for {{site.data.keyword.powerSys_notm}} Cloud](https://falconstor-download.s3.us-east.cloud-object-storage.appdomain.cloud/FalconStor%20VTL%20for%20IBM%20Deployment%20Guide.pdf){: external}

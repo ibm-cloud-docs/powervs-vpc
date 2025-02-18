@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-18"
 
 keywords: powervs, vpc, squid, ansible, dns, nfs, proxy
 subcollection: powervs-vpc
@@ -43,7 +43,7 @@ export no_proxy=161.0.0.0/0,10.0.0.0/8
 ```
 
 To test the connection execute curl command and you must obtain the output as below:
-    
+
 ```sh
 curl google.com
 
@@ -90,6 +90,6 @@ mount -o vers=4 <nfs_host_or_ip_path> /nfs
 
 The DNS server is running as a service on network-services intel vsi. Configure the {{site.data.keyword.powerSys_notm}} instance to use this DNS service.
 
-1.  Run the following commands in a terminal on the **{{site.data.keyword.powerSys_notm}} Aix/Linux instance**. Fetch the value `dns_host_or_ip_path` from the outputs of the deployment in the project configuration screen. 
+1.  Run the following commands in a terminal on the **{{site.data.keyword.powerSys_notm}} Aix/Linux instance**. Fetch the value `dns_host_or_ip_path` from the outputs of the deployment in the project configuration screen.
 
 Add the `dns_host_or_ip_path` value at the **top** in the `/etc/resolv.conf` file.

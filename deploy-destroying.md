@@ -2,12 +2,12 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-18"
 subcollection: powervs-vpc
 content-type: tutorial
 account-plan: paid
 completion-time: 30m
-keywords: 
+keywords:
 
 ---
 
@@ -18,8 +18,8 @@ keywords:
 {: toc-content-type="tutorial"}
 {: toc-completion-time="30m"}
 
-In this tutorial, you'll learn how to destroy the resources deployed by the [Power Systems Virtual Server with VPC landing zone](/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global) Deployable Architecture when you don't need them anymore.  
-[Warning]{: tag-red} This will delete all the resources that were created by this deployment and result in total data loss of all data stored on these resources. 
+In this tutorial, you'll learn how to destroy the resources deployed by the [Power Systems Virtual Server with VPC landing zone](/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global) Deployable Architecture when you don't need them anymore.
+[Warning]{: tag-red} This will delete all the resources that were created by this deployment and result in total data loss of all data stored on these resources.
 {: shortdesc}
 
 ## Prerequisites
@@ -49,7 +49,7 @@ In this tutorial, you'll learn how to destroy the resources deployed by the [Pow
             - The status of your configuration will change to `Undeploying...`.
             - If you ran into any issues during undeployment, please refer to the troubleshooting section in this tutorial
         1.  If you encounter any issues during this process, refer to the [troubleshooting](#destroy-troubleshooting) section
-        
+
 
     You can access the logs by clicking on the status `Undeploying...` and clicking on the second line that says `Undeploying resources...`.
     {: tip}

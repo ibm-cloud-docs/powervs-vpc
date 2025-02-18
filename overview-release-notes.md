@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-18"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -29,21 +29,21 @@ Version 8.1.2 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Users can now specify their desired boot image for VPC's Intel Virtual Server Instances
     - Updated the default AiX image for product variation 'standard-plus-vsi'
     - Upgraded IBM provider version to 1.74.0
-    
+
 ### 07 January 2025
 {: #powervs-vpc-jan07}
 {: release-note}
 
 Version 8.1.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 8.1.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
-    
+
     **Features:**
     - Upgraded version of `powervs-workspace` module to 2.4.0
-        - Support tags for networks and images 
+        - Support tags for networks and images
         - Upgrade minimum IBM provider version to >=1.71.0
     - Upgraded version of `powervs-instance` module to 2.3.0
         - Support tags for instance and storage
-    - Upgraded Default IBMi and RHEL images for Quickstart 
+    - Upgraded Default IBMi and RHEL images for Quickstart
 
 
 ## December 2024
@@ -55,7 +55,7 @@ Version 8.1.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 
 Version 8.1.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 8.1.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
-    
+
     - **Breaking Change**:
         - New landing zone version `6.4.0` creates VSis using `VNIs` and legacy interfaces are not used any more.
         - Landing zone preset reworked to create security groups separately and then assign to VSIs. This will recreate the VSIs.
@@ -79,7 +79,7 @@ Version 8.1.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 
 Version 7.1.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 7.1.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
-    
+
     - Upgraded minimum required terraform version to >=1.9.0
     - Upgraded IBM terraform provider version to v1.71.1
     - Upgraded Default IBMi and AIX images for Quickstart
@@ -92,7 +92,7 @@ Version 7.1.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 
 Version 7.0.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 7.0.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
-    
+
     - **BREAKING CHANGE:**
         - Version 7.0.0 includes backward-incompatible changes.
         - When you upgrade to version 7.0.0, you might see some of your infrastructure marked for deletion and re-creation. Fully supported migration steps will be available shortly to prevent this from occurring, so if re-creating infrastructure is going to impact day-to-day operations, don't update to this version until there is a fully supported migration path.
@@ -116,7 +116,7 @@ Version 6.0.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
         - create ibm_is_share in correct resource group and update ansible role version
         - Backup your data. All data on the NFS share will be lost.
         - If you upgrade from an older version, this will destroy and recreate the NFS share in correct resource group. It is important to backup your data. You can copy the the data to COS or copy it locally using commands. The automation does not help in doing this. Once it is recreated and mounted, you can copy the files to the NFS mount.
-      
+
 
 ### 03 July 2024
 {: #powervs-vpc-jul03}

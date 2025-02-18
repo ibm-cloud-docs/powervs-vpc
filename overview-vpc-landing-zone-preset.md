@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-02-05"
+lastupdated: "2025-02-18"
 
 keywords:
 
@@ -87,7 +87,7 @@ The security groups are created and attached to correct subnets/VPE/VPN. For the
 ## Private networks
 {: #landing-zone-private-networks}
 
-The following table lists the private networks that are created in Edge VPC that are created by the deployment automation with corresponding default values. 
+The following table lists the private networks that are created in Edge VPC that are created by the deployment automation with corresponding default values.
 
 | Subnet Name | Private network | IP address ranges |
 | ---| --- | --- |
