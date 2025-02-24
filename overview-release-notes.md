@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-24"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -17,6 +17,19 @@ content-type: release-note
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries are grouped by date.
 {: shortdesc}
 
+## February 2025
+{: #powervs-vpc-2025-02}
+
+### 24 February 2025
+{: #powervs-vpc-feb24}
+{: release-note}
+
+Version 8.1.4 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 8.1.4 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+    - Ensured the use of a strong Ansible Vault password with 15-100 characters, including at least one uppercase letter, one lowercase letter, one number, and one special character from the allowed set: !#$%&()*+-.:;<=>?@[]_{|}~.
+    - Upgrade IBM TF provider to `1.75.2`
+    - Upgrade VSI intel image
+
 ## January 2025
 {: #powervs-vpc-2025-01}
 
@@ -27,7 +40,7 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 Version 8.1.2 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 8.1.2 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
     - Users can now specify their desired boot image for VPC's Intel Virtual Server Instances
-    - Updated the default AiX image for product variation 'standard-plus-vsi'
+    - Updated the default AiX image for product variation `standard-plus-vsi`
     - Upgraded IBM provider version to 1.74.0
 
 ### 07 January 2025
