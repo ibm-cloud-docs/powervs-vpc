@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-03-15"
+lastupdated: "2025-03-18"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -17,8 +17,23 @@ content-type: release-note
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries are grouped by date.
 {: shortdesc}
 
+
+enable scc workload protection (#1010) (f5765db), closes #1019
+when enabled, deploys an IBM Cloud SCC Workload Protection instance and sets up Sysdig agent on all VSIs for VPC in the deployment
+
+
+
 ## March 2025
 {: #powervs-vpc-2025-03}
+
+### 18 March 2025
+{: #powervs-vpc-mar18}
+{: release-note}
+
+Version 8.2.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 8.2.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+    - The Standard and Quickstart Variation now supports optional deployment of [IBM Cloud® Security and Compliance Center Workload Protection](/docs/workload-protection) instance and Sysdig agent installation and configuration on all intel VSIs. IBM Cloud® Security and Compliance Center Workload Protection helps to find and prioritize software vulnerabilities, detect and respond to threats, and manage configurations, permissions, and compliance from source to run.
+
 
 ### 15 March 2025
 {: #powervs-vpc-mar15}
