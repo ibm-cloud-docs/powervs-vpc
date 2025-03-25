@@ -42,6 +42,14 @@ export HTTPS_PROXY=http://<proxy_host_or_ip_port>:3128
 export no_proxy=161.0.0.0/0,10.0.0.0/8
 ```
 
+Additional step for AIX instance:
+
+If curl package is not available in the image, install the package using the command:
+
+```sh
+echo 'y' | /opt/freeware/bin/dnf install curl-7.52*
+```
+
 To test the connection execute curl command and you must obtain the output as below:
 
 ```sh

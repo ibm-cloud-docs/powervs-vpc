@@ -46,7 +46,7 @@ This deployable architecture variation deploys these resources:
 | File storage share,\n Application load balancer | Yes | [NFS as a Service](/docs/vpc?topic=vpc-file-storage-create&interface=ui)\n [Application Load Balancer](/docs/vpc?topic=vpc-load-balancers&interface=ui) is deployed along with File storage share to access the share IP from Power Virtual Server |
 | Virtual Private Endpoint Gateway|  | A [Virtual Private Endpoint Gateway](/docs/vpc?topic=vpc-about-vpe) to reach the Cloud Object Storage bucket |
 | Flow Logs for VPC|  | [Flow Logs for VPC](/docs/vpc?topic=vpc-flow-logs) enables the collection, storage, and presentation of information about the Internet Protocol (IP) traffic going to and from network interfaces within your VPC|
-| Client to Site VPN Server,\nSecrets Manager | Yes | [Client to Site VPN Server](/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
+| Client to site VPN Server,\nSecrets Manager | Yes | [Client to site VPN Server](/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
 {: class="standard-variant-table"}
 {: tab-group="standard-variant"}
 {: #standard-variant-2}
@@ -113,7 +113,7 @@ This deployable architecture variation deploys these resources:
 | File storage share,\n Application load balancer | Yes | [NFS as a Service](/docs/vpc?topic=vpc-file-storage-create&interface=ui)\n [Application Load Balancer](/docs/vpc?topic=vpc-load-balancers&interface=ui) is deployed along with File storage share to access the share IP from Power Virtual Server |
 | Virtual Private Endpoint Gateway|  | A [Virtual Private Endpoint Gateway](/docs/vpc?topic=vpc-about-vpe) to reach the Cloud Object Storage bucket |
 | Flow Logs for VPC|  | [Flow Logs for VPC](/docs/vpc?topic=vpc-flow-logs) enables the collection, storage, and presentation of information about the Internet Protocol (IP) traffic going to and from network interfaces within your VPC|
-| Client to Site VPN Server,\nSecrets Manager | Yes | [Client to Site VPN Server](/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
+| Client to site VPN Server,\nSecrets Manager | Yes | [Client to site VPN Server](/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
 {: class="quickstart-variant-table"}
 {: tab-group="quickstart-variant"}
 {: #quickstart-variant-2}

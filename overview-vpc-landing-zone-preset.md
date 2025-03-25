@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-03-21"
+lastupdated: "2025-03-25"
 
 keywords:
 
@@ -26,11 +26,9 @@ As part of the automation an [override json preset](https://github.com/terraform
 |  VPC |  |  Edge VPC: ACL, SGs, SSH Key and 4 Subnets |
 |  Intel VSI |  | Jump box with 2 cores, 4GB memory running RHEL 9.4 with floating IP attached |
 |  Intel VSI |  | Network Services running RHEL 9.4 configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [IBM Power Linux for SAP](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/)). Also configured as central ansible execution node. Default size is 2 cores and 4 GB memory. Can be customized. |
-| Intel VSI,\nIBM Cloud Monitoring Instance | Yes | Monitoring Host running SLES 15SP5 to collect metrics and forward it to IBM Monitoring Instance\n [IBM Cloud monitoring Instance](/docs/monitoring) displays the platform metrics and OS metrics |
-| File storage share,\n Application load balancer | Yes | [NFS as a Service](/docs/vpc?topic=vpc-file-storage-create&interface=ui)\n [Application Load Balancer](/docs/vpc?topic=vpc-load-balancers&interface=ui) is deployed along with File storage share to access the share IP from Power Virtual Server |
+| Intel VSI | Yes | Monitoring Host running SLES 15SP5 to collect metrics and forward it to IBM Monitoring Instance |
 | Virtual Private Endpoint Gateway|  | A [Virtual Private Endpoint Gateway](/docs/vpc?topic=vpc-about-vpe) to reach the Cloud Object Storage bucket |
 | Flow Logs for VPC|  | [Flow Logs for VPC](/docs/vpc?topic=vpc-flow-logs) enables the collection, storage, and presentation of information about the Internet Protocol (IP) traffic going to and from network interfaces within your VPC|
-| Client to Site VPN Server,\nSecrets Manager | Yes | [Client to Site VPN Server](/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
 {: class="landing-zone-table"}
 {: tab-group="landing-zone"}
 {: #landing-zone-1}
@@ -106,4 +104,6 @@ The following table provides an overview over cloud services which are created i
 |---|---|---|
 | {{site.data.keyword.monitoringfull_notm}} | Yes | [{{site.data.keyword.monitoringshort}}](/docs/monitoring?topic=monitoring-about-monitor) collects metrics to provide a web UI to monitor the performance and overall system health of the deployment. Interconnects with {{site.data.keyword.sysdigsecure_full_notm}} if used. |
 | {{site.data.keyword.sysdigsecure_full_notm}} | Yes | [{{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-key-features) can be used to find and prioritize software vulnerabilities, detect and respond to threats, manage configurations, permissions, and compliance from source to run. Interconnects with {{site.data.keyword.monitoringshort}} if used. |
+| Client to site VPN Server,\nSecrets Manager | Yes | [Client to site VPN Server](/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
+| File storage share,\n Application load balancer | Yes | [NFS as a Service](/docs/vpc?topic=vpc-file-storage-create&interface=ui)\n [Application Load Balancer](/docs/vpc?topic=vpc-load-balancers&interface=ui) is deployed along with File storage share to access the share IP from Power Virtual Server |
 {: caption="Additional Cloud Services" caption-side="bottom"}

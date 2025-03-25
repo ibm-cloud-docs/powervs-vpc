@@ -215,7 +215,7 @@ Version 5.1.2 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
     - Completely New architecture. Does not support the upgrade process from previous version  4.x.x to 5.x.x
     - Use this version for new deployments only.
     - Option to create `new secrets manager instance` or reuse existing one.
-    - Optional `client to site VPN` deployment.
+    - Optional `Client to site VPN` deployment.
     - Switched from Block storage NFS volumes to File storage shares. Uses Application Load Balancer to mount the File Storage shares on {{site.data.keyword.powerSys_notm}} instances.
     - Removed Cloud connection support.
     - Private SSH keys need not be entered in here doc string format. Can be passed in directly.

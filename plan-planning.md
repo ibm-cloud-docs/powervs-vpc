@@ -141,7 +141,7 @@ The key's randomart image is:
 {: #powervs-automation-vpn-prereqs}
 {: step}
 
-The Deployable architecture supports creation of Client to Site VPN server optionally. If enabled, the prerequisite for creating a Client to Site VPN server is a Server Certificate which can be only read from a {{site.data.keyword.secrets-manager_short}} instance.
+The Deployable architecture supports creation of Client to site VPN server optionally. If enabled, the prerequisite for creating a Client to site VPN server is a Server Certificate which can be only read from a {{site.data.keyword.secrets-manager_short}} instance.
 
 The automation provides flexibility in:
 - Automatically generating a new VPN server Certificate, creating a new {{site.data.keyword.secrets-manager_short}} instance and storing the certificate.
@@ -166,16 +166,16 @@ The automation provides flexibility in:
 
 
 ## Reusing existing {{site.data.keyword.monitoringfull_notm}} Instance (Optional)
-{: #powervs-automation-vpn-prereqs}
+{: #powervs-automation-monitoring-prereqs}
 {: step}
 
-Optionally, the Deployable architecture supports {{site.data.keyword.monitoringfull_notm}}. When enabled, it creates an {{site.data.keyword.monitoringfull_notm}} instance and a {{site.data.keyword.vsi_is_short}} with SLES Linux to collect and send metrics to the {{site.data.keyword.monitoringshort}} instance. Additionally, if you also enable {{site.data.keyword.sysdigsecure_full_notm}}, the deployable architecture will automatically connect the {{site.data.keyword.monitoringshort}} and {{site.data.keyword.sysdigsecure_short}} instances.
+Optionally, the deployable architecture supports {{site.data.keyword.monitoringfull_notm}}. When enabled, it creates an {{site.data.keyword.monitoringfull_notm}} instance and an Intel virtual server with SLES Linux to collect and send metrics to the {{site.data.keyword.monitoringshort}} instance. Additionally, if you also enable {{site.data.keyword.sysdigsecure_full_notm}}, the deployable architecture will automatically connect the {{site.data.keyword.monitoringshort}} and {{site.data.keyword.sysdigsecure_short}} instances.
 
 If you already have an existing {{site.data.keyword.monitoringfull_notm}} instance, you can reuse it by following these steps:
 
 1. Collect the CRN of your monitoring instance by going to the Resource list > Logging and Monitoring > click on the resource
     ![Example of resource list for monitoring](images/monitoring-resource-list.png){: caption="Example view of the resource list with monitoring instance in {{site.data.keyword.cloud_notm}} console" caption-side="bottom"}
-1. During your deployment of the architecture, make sure to set enable_monitoring to true in the required section and input the CRN obtained in the previous step in existing_monitoring_instance_crn in the optional section.
+1. During your deployment of the architecture, make sure to set `enable_monitoring = true` in the required section and set the value for `existing_monitoring_instance_crn` in the optional section with the `CRN` obtained in the previous step.
 
 
 ## Additional background information
