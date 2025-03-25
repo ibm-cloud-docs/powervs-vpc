@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-02-24"
+lastupdated: "2025-03-21"
 
 keywords:
 
@@ -96,3 +96,14 @@ The following table lists the private networks that are created in Edge VPC that
 | prefix-edge-vpe-zone-1| Private network for Cloud Object storage VPE | 10.30.30.0/24 |
 | prefix-edge-vsi-edge-zone-1| Private network for Network services VSI. This subnet has public gateway enabled. | 10.30.40.0/24 |
 {: caption="Private networks IP address ranges" caption-side="bottom"}
+
+## Additional Resources
+{: #landing-zone-additional-resources}
+
+The following table provides an overview over cloud services which are created in addition to those handled by the VPC landing zone module.
+
+| Resource Type | Optional | Description |
+|---|---|---|
+| {{site.data.keyword.monitoringfull_notm}} | Yes | [{{site.data.keyword.monitoringshort}}](/docs/monitoring?topic=monitoring-about-monitor) collects metrics to provide a web UI to monitor the performance and overall system health of the deployment. Interconnects with {{site.data.keyword.sysdigsecure_full_notm}} if used. |
+| {{site.data.keyword.sysdigsecure_full_notm}} | Yes | [{{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-key-features) can be used to find and prioritize software vulnerabilities, detect and respond to threats, manage configurations, permissions, and compliance from source to run. Interconnects with {{site.data.keyword.monitoringshort}} if used. |
+{: caption="Additional Cloud Services" caption-side="bottom"}

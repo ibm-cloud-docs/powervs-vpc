@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-02-18"
+lastupdated: "2025-03-25"
 keywords: iam, permissions
 subcollection: powervs-vpc
 content-type: tutorial
@@ -19,7 +19,7 @@ completion-time: 1h
 {: toc-services="iam, apikey, vpn, sshkeys"}
 {: toc-completion-time="1h"}
 
-This tutorial walks through necessary steps required to be preformed which enables a user to successfully deploy the architecture.
+This tutorial walks through necessary steps required to be performed which enables a user to successfully deploy the architecture.
 
 ## IAM Permissions
 {: #iam-permissions}
@@ -143,7 +143,7 @@ The key's randomart image is:
 
 The Deployable architecture supports creation of Client to Site VPN server optionally. If enabled, the prerequisite for creating a Client to Site VPN server is a Server Certificate which can be only read from a {{site.data.keyword.secrets-manager_short}} instance.
 
-The automation provides flexibility in :
+The automation provides flexibility in:
 - Automatically generating a new VPN server Certificate, creating a new {{site.data.keyword.secrets-manager_short}} instance and storing the certificate.
 - Allowing the user to pass the details of existing {{site.data.keyword.secrets-manager_short}} instance and the certificate details in the optional parameters field which would override the default configuration of creating a new {{site.data.keyword.secrets-manager_short}} instance.
 
@@ -158,11 +158,25 @@ The automation provides flexibility in :
         1.  Click the row to display the details in the sidebar for the {{site.data.keyword.secrets-manager_short}} instance that you want to use.
         1.  Copy the GUID.
 
-            ![Example of resource list](images/secrets-manager-resource-list.png){: caption="Example view of the resource list in {{site.data.keyword.cloud_notm}} console" caption-side="bottom"}
+            ![Example of resource list for Secrets Manager](images/secrets-manager-resource-list.png){: caption="Example view of the resource list with Secrets Manager in {{site.data.keyword.cloud_notm}} console" caption-side="bottom"}
     - If you used a certificate template to create a private certificate that is applied to your {{site.data.keyword.secrets-manager_short}} instance, copy the name of the certificate template.
         1.  In the resource list, click the name of the {{site.data.keyword.secrets-manager_short}} instance that you selected earlier.
         1.  Click **Secrets engines** > **Private certificates**.
         1.  In the Certificate authority table, expand the certificate authority and copy the name of the template.
+
+
+## Reusing existing {{site.data.keyword.monitoringfull_notm}} Instance (Optional)
+{: #powervs-automation-vpn-prereqs}
+{: step}
+
+Optionally, the Deployable architecture supports {{site.data.keyword.monitoringfull_notm}}. When enabled, it creates an {{site.data.keyword.monitoringfull_notm}} instance and a {{site.data.keyword.vsi_is_short}} with SLES Linux to collect and send metrics to the {{site.data.keyword.monitoringshort}} instance. Additionally, if you also enable {{site.data.keyword.sysdigsecure_full_notm}}, the deployable architecture will automatically connect the {{site.data.keyword.monitoringshort}} and {{site.data.keyword.sysdigsecure_short}} instances.
+
+If you already have an existing {{site.data.keyword.monitoringfull_notm}} instance, you can reuse it by following these steps:
+
+1. Collect the CRN of your monitoring instance by going to the Resource list > Logging and Monitoring > click on the resource
+    ![Example of resource list for monitoring](images/monitoring-resource-list.png){: caption="Example view of the resource list with monitoring instance in {{site.data.keyword.cloud_notm}} console" caption-side="bottom"}
+1. During your deployment of the architecture, make sure to set enable_monitoring to true in the required section and input the CRN obtained in the previous step in existing_monitoring_instance_crn in the optional section.
+
 
 ## Additional background information
 {: #power-automation-prereqs-additional}
@@ -179,3 +193,6 @@ The automation provides flexibility in :
    - [Terraform IBM Module - Private Secret Engine](https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager-private-cert-engine){: external}
    - [Terraform IBM Module - Secrets Manager Private Certificate](https://github.com/terraform-ibm-modules/terraform-ibm-secrets-manager-private-cert){: external}
    - [IBM Power Linux SAP ansible galaxy role](https://galaxy.ansible.com/ibm/power_linux_sap){: external}
+- Optional features:
+   - [{{site.data.keyword.monitoringfull_notm}}](/docs/monitoring?topic=monitoring-about-monitor)
+   - [{{site.data.keyword.sysdigsecure_full_notm}}](/docs/workload-protection?topic=workload-protection-key-features)

@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-03-25"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -25,6 +25,19 @@ when enabled, deploys an IBM Cloud SCC Workload Protection instance and sets up 
 
 ## March 2025
 {: #powervs-vpc-2025-03}
+
+### 25 March 2025
+{: #powervs-vpc-mar25}
+{: release-note}
+
+Version 8.2.2 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 8.2.2 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+    - Increase the maximum length of prefix that's used for the resources deployed by this architecture from 10 to 16
+    - Upgrade client-to-site-vpn module to 2.1.6
+    - Upgrade landing-zone module to 7.3.2
+    - Upgrade scc-workload-protection module to 1.5.3
+    - Upgrade IBM terraform provider to 1.76.2
+    - Upgrade powers-instance module to 2.5.2
 
 ### 18 March 2025
 {: #powervs-vpc-mar18}
