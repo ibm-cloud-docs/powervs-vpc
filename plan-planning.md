@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-03-27"
 keywords: iam, permissions
 subcollection: powervs-vpc
 content-type: tutorial
@@ -195,4 +195,4 @@ If you already have an existing {{site.data.keyword.monitoringfull_notm}} instan
    - [IBM Power Linux SAP ansible galaxy role](https://galaxy.ansible.com/ibm/power_linux_sap){: external}
 - Optional features:
    - [{{site.data.keyword.monitoringfull_notm}}](/docs/monitoring?topic=monitoring-about-monitor)
-   - [{{site.data.keyword.sysdigsecure_full_notm}}](/docs/workload-protection?topic=workload-protection-key-features)
+   - [{{site.data.keyword.sysdigsecure_full_notm}}](/docs/workload-protection?topic=workload-protection-key-features#feature_1)

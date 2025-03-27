@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-03-27"
 
 keywords:
 
@@ -103,7 +103,7 @@ The following table provides an overview over cloud services which are created i
 | Resource Type | Optional | Description |
 |---|---|---|
 | {{site.data.keyword.monitoringfull_notm}} | Yes | [{{site.data.keyword.monitoringshort}}](/docs/monitoring?topic=monitoring-about-monitor) collects metrics to provide a web UI to monitor the performance and overall system health of the deployment. Interconnects with {{site.data.keyword.sysdigsecure_full_notm}} if used. |
-| {{site.data.keyword.sysdigsecure_full_notm}} | Yes | [{{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-key-features) can be used to find and prioritize software vulnerabilities, detect and respond to threats, manage configurations, permissions, and compliance from source to run. Interconnects with {{site.data.keyword.monitoringshort}} if used. |
+| {{site.data.keyword.sysdigsecure_full_notm}} | Yes | [{{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-key-features#feature_1) can be used to find and prioritize software vulnerabilities, detect and respond to threats, manage configurations, permissions, and compliance from source to run. Interconnects with {{site.data.keyword.monitoringshort}} if used. |
 | Client to site VPN Server,\nSecrets Manager | Yes | [Client to site VPN Server](/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
 | File storage share,\n Application load balancer | Yes | [NFS as a Service](/docs/vpc?topic=vpc-file-storage-create&interface=ui)\n [Application Load Balancer](/docs/vpc?topic=vpc-load-balancers&interface=ui) is deployed along with File storage share to access the share IP from Power Virtual Server |
 {: caption="Additional Cloud Services" caption-side="bottom"}
