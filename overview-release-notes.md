@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-04-11"
+lastupdated: "2025-04-15"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -21,7 +21,18 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 ## April 2025
 {: #powervs-vpc-2025-04}
 
-### 25 March 2025
+### 15 April 2025
+{: #powervs-vpc-apr15}
+{: release-note}
+
+Version 8.2.4 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 8.2.4 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+    - Included outputs for VPC and Application Load Balancer
+    - Upgrade IBM terraform provider to 1.77.0
+    - Upgrade landing-zone module to 7.4.4
+    - Upgrade client-to-site-vpn module to 2.2.5
+
+### 11 April 2025
 {: #powervs-vpc-apr11}
 {: release-note}
 
