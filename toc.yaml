@@ -26,14 +26,12 @@ toc:
     - navgroup:
         id: architecture
         topics:
-          - navtitle: Standard
+          - navtitle: Standard Landscape
             include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard/deploy-arch-ibm-pvs-inf-standard.md
-          - navtitle: Standard Extend
+          - navtitle: Extend Standard Landscape
             include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard-extend/deploy-arch-ibm-pvs-inf-standard-extend.md
           - navtitle: Quickstart
             include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard-plus-vsi/deploy-arch-ibm-pvs-inf-standard-plus-vsi.md
-          - navtitle: Import
-            include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/import/deploy-arch-ibm-pvs-inf-import.md
     - navgroup:
         id: plan
         topics:

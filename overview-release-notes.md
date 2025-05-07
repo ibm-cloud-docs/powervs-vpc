@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-05-02"
+lastupdated: "2025-05-07"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -19,6 +19,21 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 
 ## May 2025
 {: #powervs-vpc-2025-05}
+
+### 07 May 2025
+{: #powervs-vpc-may07}
+{: release-note}
+
+Version 8.4.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 8.4.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+    - **Standard** Variation has been renamed to **Standard Landscape** and **Standard Extend** variation has been renamed to **Extend Standard Landscape**.
+    - Import varaition has been removed.
+    - **Quickstart** now deploys Client-to-site VPN, SCC-WP by default. These can be disabled by adjusting the optional parameter settings.
+    - Stock catalog image import into the PowerVS workspace is no longer needed. PowerVS instances can now be created from catalog images without previously importing the images.
+    - Fixed Quickstart deployments for SAP profile t-shirt:
+       - In P10 datacenters, the `sh2-4x256` profile is used.
+       - In non-P10 datacenters, the `ush1-4x256` profile is used.
+
 
 ### 02 May 2025
 {: #powervs-vpc-may02}

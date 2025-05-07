@@ -36,23 +36,18 @@
     ],
     "section_architectures": [
         {
-            "title": "Standard",
+            "title": "Standard Landscape",
             "href": "/docs/powervs-vpc?topic=powervs-vpc-deploy-arch-ibm-pvs-inf-standard",
             "deployable": true
         },
         {
-            "title": "Standard Extend",
+            "title": "Extend Standard Landscape",
             "href": "/docs/powervs-vpc?topic=powervs-vpc-deploy-arch-ibm-pvs-inf-extension",
             "deployable": true
         },
         {
             "title": "Quickstart",
             "href": "/docs/powervs-vpc?topic=powervs-vpc-deploy-arch-ibm-pvs-inf-standard-plus-vsi",
-            "deployable": true
-        },
-        {
-            "title": "Import",
-            "href": "/docs/powervs-vpc?topic=powervs-vpc-deploy-arch-ibm-pvs-inf-import",
             "deployable": true
         }
     ],
