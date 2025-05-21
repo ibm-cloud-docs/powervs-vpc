@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-03-27"
+lastupdated: "2025-05-21"
 keywords: iam, permissions
 subcollection: powervs-vpc
 content-type: tutorial
@@ -145,7 +145,7 @@ The Deployable architecture supports creation of Client to site VPN server optio
 
 The automation provides flexibility in:
 - Automatically generating a new VPN server Certificate, creating a new {{site.data.keyword.secrets-manager_short}} instance and storing the certificate.
-- Allowing the user to pass the details of existing {{site.data.keyword.secrets-manager_short}} instance and the certificate details in the optional parameters field which would override the default configuration of creating a new {{site.data.keyword.secrets-manager_short}} instance.
+- Allowing the user to pass the details of existing {{site.data.keyword.secrets-manager_short}} instance in the optional parameters field which would override the default configuration of creating a new {{site.data.keyword.secrets-manager_short}} instance.
 
 - To **reuse** the {{site.data.keyword.secrets-manager_short}} instance if you have one, you need the following information:
 
@@ -159,10 +159,6 @@ The automation provides flexibility in:
         1.  Copy the GUID.
 
             ![Example of resource list for Secrets Manager](images/secrets-manager-resource-list.png){: caption="Example view of the resource list with Secrets Manager in {{site.data.keyword.cloud_notm}} console" caption-side="bottom"}
-    - If you used a certificate template to create a private certificate that is applied to your {{site.data.keyword.secrets-manager_short}} instance, copy the name of the certificate template.
-        1.  In the resource list, click the name of the {{site.data.keyword.secrets-manager_short}} instance that you selected earlier.
-        1.  Click **Secrets engines** > **Private certificates**.
-        1.  In the Certificate authority table, expand the certificate authority and copy the name of the template.
 
 
 ## Reusing existing {{site.data.keyword.monitoringfull_notm}} Instance (Optional)

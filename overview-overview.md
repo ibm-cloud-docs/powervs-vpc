@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-05-07"
+lastupdated: "2025-05-14"
 keywords: powervs, landing zone, sap, automation, deployable architecture
 subcollection: powervs-vpc
 
@@ -159,7 +159,7 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 |  | US1 \n Test/Dev |
 |---------------------- | ------------------------- |
 | Cores | 4 |
-| Memory | 128 |
+| Memory | 256 |
 | Storage Tier-3 (GB) | 750 |
 {: class="simple-tab-table"}
 {: tab-group="t-shirt size"}
