@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-05-23"
+lastupdated: "2025-05-27"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -453,7 +453,7 @@ Version 4.4.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone de
 
 Version 4.3.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 :   Version 4.3.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}.
-    - Introducing the new import-workspace variant of {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture. For more information see the [{{site.data.keyword.powerSys_notm}} with VPC landing zone import-workspace variation](/docs/powervs-vpc?topic=powervs-vpc-automation-solution-overview#overview-powervs-workspace-import-variant).
+    - Introducing the new import-workspace variant of {{site.data.keyword.powerSys_notm}} with VPC landing zone deployable architecture. For more information see the {{site.data.keyword.powerSys_notm}} with VPC landing zone import-workspace variation.
 
 ### 11 January 2024
 {: #powervs-vpc-jan11}
