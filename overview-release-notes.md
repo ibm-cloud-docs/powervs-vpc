@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-05-27"
+lastupdated: "2025-05-28"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -19,6 +19,15 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 
 ## May 2025
 {: #powervs-vpc-2025-05}
+
+### 28 May 2025
+{: #powervs-vpc-may28}
+{: release-note}
+
+Version 8.4.5 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 8.4.5 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+    - Upgrade IBM terraform provider version to `1.78.3`
+    - Enabled [Cloud Security Posture Management (CSPM)](/docs/workload-protection) for SCC workload Protection
 
 ### 23 May 2025
 {: #powervs-vpc-may23}
