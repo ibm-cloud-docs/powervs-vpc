@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-06-10"
+lastupdated: "2025-06-15"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -19,6 +19,14 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 
 ## June 2025
 {: #powervs-vpc-2025-06}
+
+### 15 June 2025
+{: #powervs-vpc-june15}
+{: release-note}
+
+Version 8.5.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 8.5.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+    - Upgraded IBM terraform provider version to `1.79.2` which fixes resource group, trusted profile and resource key creation in parallel.
 
 ### 10 June 2025
 {: #powervs-vpc-june10}

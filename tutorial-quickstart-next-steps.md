@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-06-15"
 
 keywords: powervs, vpc, squid, ansible, dns, nfs, proxy
 subcollection: powervs-vpc
@@ -35,10 +35,10 @@ This tutorial explores the fastest way to configure a {{site.data.keyword.powerS
 ![Projects Output](images/projects-outputs.png){: caption="Output from Projects" caption-side="bottom"}
 
 ```sh
-export http_proxy=http://<proxy_host_or_ip_port>:3128
-export https_proxy=http://<proxy_host_or_ip_port>:3128
-export HTTP_PROXY=http://<proxy_host_or_ip_port>:3128
-export HTTPS_PROXY=http://<proxy_host_or_ip_port>:3128
+export http_proxy=http://<proxy_host_or_ip>:3128
+export https_proxy=http://<proxy_host_or_ip>:3128
+export HTTP_PROXY=http://<proxy_host_or_ip>:3128
+export HTTPS_PROXY=http://<proxy_host_or_ip>:3128
 export no_proxy=161.0.0.0/0,10.0.0.0/8
 ```
 
