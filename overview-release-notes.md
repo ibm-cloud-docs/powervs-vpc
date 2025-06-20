@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-06-17"
+lastupdated: "2025-06-20"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -19,6 +19,14 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 
 ## June 2025
 {: #powervs-vpc-2025-06}
+
+### 20 June 2025
+{: #powervs-vpc-june20}
+{: release-note}
+
+Version 8.5.4 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 8.5.4 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+    - Optimized AIX OS initialization
 
 ### 17 June 2025
 {: #powervs-vpc-june17}
