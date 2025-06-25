@@ -51,8 +51,6 @@ toc:
             topic: tutorial-connect-client-vpn.md
           - navtitle: Connect using Floating IP
             topic: tutorial-connect-jump-ssh.md
-          - navtitle: Quickstart Variation next steps
-            topic: tutorial-quickstart-next-steps.md
     - navgroup:
         id: reference
         topics:

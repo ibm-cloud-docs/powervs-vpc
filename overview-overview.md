@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-05-14"
+lastupdated: "2025-06-25"
 keywords: powervs, landing zone, sap, automation, deployable architecture
 subcollection: powervs-vpc
 
@@ -138,7 +138,8 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 |---------------------- | ------------------------- | ------------------------- | -------------------------  | ------------------------- |
 | Cores | 1 | 4 | 8 | 15 |
 | Memory | 32 | 128 | 256 | 512 |
-| Storage Tier-3 (GB) | 100 | 500 | 1000 | 2000 |
+| Boot Storage Tier-3 (GB) | 30 | 30 | 30 | 30 |
+| Data Storage Tier-3 (GB) | 100 | 500 | 1000 | 2000 |
 {: class="simple-tab-table"}
 {: tab-group="t-shirt size"}
 {: caption="T-shirt size and configuration mapping" caption-side="top"}
@@ -149,7 +150,7 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 |---------------------- | ------------------------- | ------------------------- | -------------------------  | ------------------------- |
 | Cores | 0.25 | 1 | 2 | 4 |
 | Memory | 8 | 32 | 64 | 132 |
-| Storage Tier-3 (GB) | 100 | 500 | 1000 | 2000 |
+| Data Storage Tier-3 (GB) | 100 | 500 | 1000 | 2000 |
 {: class="simple-tab-table"}
 {: tab-group="t-shirt size"}
 {: caption="T-shirt size and configuration mapping" caption-side="top"}
@@ -160,7 +161,7 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 |---------------------- | ------------------------- |
 | Cores | 4 |
 | Memory | 256 |
-| Storage Tier-3 (GB) | 750 |
+| Data Storage Tier-3 (GB) | 750 |
 {: class="simple-tab-table"}
 {: tab-group="t-shirt size"}
 {: caption="T-shirt size and configuration mapping" caption-side="top"}
