@@ -21,7 +21,7 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 {: #powervs-vpc-2025-06}
 
 ### 26 June 2025
-{: #powervs-vpc-june20}
+{: #powervs-vpc-june26}
 {: release-note}
 
 Version 8.5.5 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
