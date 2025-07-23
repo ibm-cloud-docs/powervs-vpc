@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-06-26"
+lastupdated: "2025-07-23"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -17,11 +17,24 @@ content-type: release-note
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries are grouped by date.
 {: shortdesc}
 
+## July 2025
+{: #powervs-vpc-2025-07}
+
+### 23 July 2025
+{: #powervs-vpc-jul23}
+{: release-note}
+
+Version 8.5.6 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 8.5.6 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+    - Added support for s1022 in `us-south` and removed support for s922 in `us-south`.
+    - Quickstart now deploys an instance on Power 10 (`s1022`) in the following regions: `dal10, dal12, dal14, eu-de-1, eu-de-2, mad02, mad04, osa21, sao01, sao04, tok04, wdc06, wdc07, us-south`
+    - In the following regions, `s922` is used: `che01, lon04, lon06, mon01, syd04, syd05, tor01, us-east`
+
 ## June 2025
 {: #powervs-vpc-2025-06}
 
 ### 26 June 2025
-{: #powervs-vpc-june26}
+{: #powervs-vpc-june20}
 {: release-note}
 
 Version 8.5.5 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
