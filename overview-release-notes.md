@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-07-23"
+lastupdated: "2025-08-08"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -16,6 +16,20 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries are grouped by date.
 {: shortdesc}
+
+## August 2025
+{: #powervs-vpc-2025-08}
+
+### 07 August 2025
+{: #powervs-vpc-aug07}
+{: release-note}
+
+Version 9.0.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 9.0.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+
+    - **Breaking Change**:
+        - New landing zone version `9.0.0` replaces Application Load Balancer with Network Load Balancer
+        - Uses Network Load Balancer to mount the File Storage shares on {{site.data.keyword.powerSys_notm}} instances.
 
 ## July 2025
 {: #powervs-vpc-2025-07}
