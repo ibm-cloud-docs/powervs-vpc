@@ -1,57 +1,57 @@
 {
-    "version": 2,
-    "title": "Power Virtual Server with VPC Landing Zone",
-    "introduction": "The Power Virtual Server with VPC Landing Zone deployable architectures are a set of IaC assets based on the IBM Cloud for Financial Services reference architecture. You can use the deployable architectures to create a secure and customizable IBM Cloud® Power Virtual Server Infrastructure (PowerVS) offering according to the best practices and requirements from the IBM Cloud.",
-    "deployment_url": "https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global",
-    "section_topics": {
-        "links": [
-            {
-                "title": "Overview of the Power Virtual Server with VPC Landing Zone deployable architectures",
-                "href": "/docs/powervs-vpc?topic=powervs-vpc-automation-solution-overview"
-            },
-            {
-                "title": "Planning for the landing zone deployable architectures",
-                "href": "/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-prereqs"
-            },
-            {
-                "title": "Deploying a landing zone deployable architecture",
-                "href": "/docs/powervs-vpc?topic=powervs-vpc-deploy"
-            }
-        ]
+  "version": 2,
+  "title": "Power Virtual Server with VPC Landing Zone",
+  "introduction": "The Power Virtual Server with VPC Landing Zone deployable architectures are a set of IaC assets based on the IBM Cloud for Financial Services reference architecture. You can use the deployable architectures to create a secure and customizable IBM Cloud\u00ae Power Virtual Server Infrastructure (PowerVS) offering according to the best practices and requirements from the IBM Cloud.",
+  "deployment_url": "https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global",
+  "section_topics": {
+    "links": [
+      {
+        "title": "Overview of the Power Virtual Server with VPC Landing Zone deployable architectures",
+        "href": "/docs/powervs-vpc?topic=powervs-vpc-automation-solution-overview"
+      },
+      {
+        "title": "Planning for the landing zone deployable architectures",
+        "href": "/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-prereqs"
+      },
+      {
+        "title": "Deploying a landing zone deployable architecture",
+        "href": "/docs/powervs-vpc?topic=powervs-vpc-deploy"
+      }
+    ]
+  },
+  "section_highlights": [
+    {
+      "title": "Turn Your Terraform Templates into Deployable Architectures",
+      "description": "Turn a simple Terraform template into a deployable architecture in a private IBM Cloud catalog.",
+      "href": "https://www.ibm.com/think/insights/turn-your-terraform-templates-into-deployable-architectures",
+      "type": "blog"
     },
-    "section_highlights": [
-        {
-            "title": "Turn Your Terraform Templates into Deployable Architectures",
-            "description": "Turn a simple Terraform template into a deployable architecture in a private IBM Cloud catalog.",
-            "href": "https://www.ibm.com/think/insights/turn-your-terraform-templates-into-deployable-architectures",
-            "type": "blog"
-        },
-        {
-            "title": "Introducing the IBM Cloud Terraform modules for developers",
-            "description": "Curated Terraform modules in an IaC solution for IBM Cloud.",
-            "href": "https://developer.ibm.com/blogs/awb-curated-ibm-cloud-terraform-modules-for-developers/",
-            "type": "blog",
-            "recommended": true
-        }
-    ],
-    "section_architectures": [
-        {
-            "title": "Standard Landscape",
-            "href": "/docs/powervs-vpc?topic=powervs-vpc-deploy-arch-ibm-pvs-inf-standard",
-            "deployable": true
-        },
-        {
-            "title": "Extend Standard Landscape",
-            "href": "/docs/powervs-vpc?topic=powervs-vpc-deploy-arch-ibm-pvs-inf-extension",
-            "deployable": true
-        },
-        {
-            "title": "Quickstart",
-            "href": "/docs/powervs-vpc?topic=powervs-vpc-deploy-arch-ibm-pvs-inf-standard-plus-vsi",
-            "deployable": true
-        }
-    ],
-    "section_updates": {
-        "view_more": "/docs/powervs-vpc?topic=powervs-vpc-powervs-vpc-relnotes"
+    {
+      "title": "Introducing the IBM Cloud Terraform modules for developers",
+      "description": "Curated Terraform modules in an IaC solution for IBM Cloud.",
+      "href": "https://developer.ibm.com/blogs/awb-curated-ibm-cloud-terraform-modules-for-developers/",
+      "type": "blog",
+      "recommended": true
     }
+  ],
+  "section_architectures": [
+    {
+      "title": "Standard Landscape",
+      "href": "/docs/powervs-vpc?topic=powervs-vpc-deploy-arch-ibm-pvs-inf-standard",
+      "deployable": true
+    },
+    {
+      "title": "Quickstart",
+      "href": "/docs/powervs-vpc?topic=powervs-vpc-deploy-arch-ibm-pvs-inf-standard-plus-vsi",
+      "deployable": true
+    },
+    {
+      "title": "Quickstart OpenShift",
+      "href": "/docs/powervs-vpc?topic=powervs-vpc-deploy-arch-ibm-pvs-inf-standard-openshift",
+      "deployable": true
+    }
+  ],
+  "section_updates": {
+    "view_more": "/docs/powervs-vpc?topic=powervs-vpc-powervs-vpc-relnotes"
+  }
 }

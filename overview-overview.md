@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-08-08"
+lastupdated: "2025-10-08"
 keywords: powervs, landing zone, sap, automation, deployable architecture
 subcollection: powervs-vpc
 
@@ -39,8 +39,8 @@ This deployable architecture variation deploys these resources:
 | Resource Type | Optional | Description |
 |---|---|---|
 |  VPC |  |  Edge VPC: ACL, SGs, SSH Key and 4 Subnets |
-|  Intel VSI |  | Jump box with 2 cores, 4GB memory running RHEL 9.4 with floating IP attached |
-|  Intel VSI |  | Network Services running RHEL 9.4 configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [IBM Power Linux for SAP](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/)). Also configured as central ansible execution node. Default size is 2 cores and 4 GB memory. Can be customized. |
+|  Intel VSI |  | Jump box with 2 cores, 4GB memory running RHEL 9.6 with floating IP attached |
+|  Intel VSI |  | Network Services running RHEL 9.6 configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [IBM Power Linux for SAP](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/)). Also configured as central ansible execution node. Default size is 2 cores and 4 GB memory. Can be customized. |
 | Intel VSI,\nIBM Cloud Monitoring Instance | Yes | Monitoring Host running SLES 15SP5 to collect metrics and forward it to IBM Monitoring Instance\n [IBM Cloud monitoring Instance](/docs/monitoring) displays the platform metrics and OS metrics |
 | File storage share,\n Network load balancer | Yes | [NFS as a Service](/docs/vpc?topic=vpc-file-storage-create&interface=ui)\n [Network Load Balancer](/docs/vpc?group=network-load-balancer) is deployed along with File storage share to access the share IP from Power Virtual Server |
 | Virtual Private Endpoint Gateway|  | A [Virtual Private Endpoint Gateway](/docs/vpc?topic=vpc-about-vpe) to reach the Cloud Object Storage bucket |
@@ -65,29 +65,7 @@ This deployable architecture variation deploys these resources:
 {: tab-title="Cloud Service"}
 {: caption="Standard Landscape variation Components" caption-side="bottom"}
 
-## 2. Extend Standard Landscape variation
-{: #overview-standard-extend-variant}
-
-This variation has a prerequisite. You must deploy the 'Create a new architecture Standard' variant first.
-{: important}
-
-The 'Extend {{site.data.keyword.powerSys_notm}} with VPC landing zone' variation creates an additional {{site.data.keyword.powerSys_notm}} workspace and connects it to the existing {{site.data.keyword.powerSys_notm}} with VPC landing zone. It builds on existing {{site.data.keyword.powerSys_notm}} with VPC landing zone deployed as a variation 'Create a new architecture'.
-This is typically used for High Availability scenarios in the same regions.
-
-This deployable architecture variation deploys these resources:
-
-| Resource Type | Optional | Description |
-|---|---|---|
-| Workspace for {{site.data.keyword.powerSys_notm}} |  | [Workspace for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) with 2 subnets and an SSH key |
-| Custom Images | Yes | Imports up to three custom images from Cloud Object Storage into Workspace for {{site.data.keyword.powerSys_notm}} |
-{: class="standard-extend-variant-table"}
-{: tab-group="standard-extend-variant"}
-{: #standard-extend-variant-1}
-{: tab-title="{{site.data.keyword.powerSys_notm}}"}
-{: caption="Standard Landscape Extend variation Components" caption-side="bottom"}
-
-
-## 3. Quickstart variation
+## 2. Quickstart variation
 {: #overview-quickstart-variant}
 
 This deployable architecture variation deploys these resources:
@@ -105,8 +83,8 @@ This deployable architecture variation deploys these resources:
 | Resource Type | Optional | Description |
 |---|---|---|
 |  VPC |  |  Edge VPC: ACL, SGs, SSH Key and 4 Subnets |
-|  Intel VSI |  | Jump box running RHEL 9.4 with floating IP attached |
-|  Intel VSI |  | Network Services running RHEL 9.4 configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [IBM Power Linux for SAP](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/)). Also configured as central ansible execution node |
+|  Intel VSI |  | Jump box running RHEL 9.6 with floating IP attached |
+|  Intel VSI |  | Network Services running RHEL 9.6 configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [IBM Power Linux for SAP](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/)). Also configured as central ansible execution node |
 | Intel VSI,\nIBM Cloud Monitoring Instance | Yes | Monitoring Host Running SLES 15SP5 to collect metrics and forward it to IBM Monitoring Instance\n [IBM Cloud monitoring Instance](/docs/monitoring) displays the platform metrics and OS metrics |
 | File storage share,\n Network load balancer | Yes | [NFS as a Service](/docs/vpc?topic=vpc-file-storage-create&interface=ui)\n [Network Load Balancer](/docs/vpc?group=network-load-balancer) is deployed along with File storage share to access the share IP from Power Virtual Server |
 | Virtual Private Endpoint Gateway|  | A [Virtual Private Endpoint Gateway](/docs/vpc?topic=vpc-about-vpe) to reach the Cloud Object Storage bucket |
@@ -167,6 +145,54 @@ You can run AIX, IBM i, and Linux images on your virtual server instances. Selec
 {: caption="T-shirt size and configuration mapping" caption-side="top"}
 {: #resize_core_memory-3}
 {: tab-title="SAP HANA (RHEL/SLES)"}
+
+
+## 3. Quickstart OpenShift variation
+{: #overview-standard-openshift-variant}
+
+The 'OpenShift {{site.data.keyword.powerSys_notm}} with VPC landing zone' variation creates a landing zone similar to that in the Standard Landscape variation and leverages its features to create an OpenShift cluster on {{site.data.keyword.powerSys_notm}}.
+
+This deployable architecture variation deploys these resources:
+
+| Resource Type | Optional | Description |
+|---|---|---|
+| Workspace for {{site.data.keyword.powerSys_notm}} |  | [Workspace for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) with a DHCP subnet and an SSH key |
+| {{site.data.keyword.powerSys_notm}} Instances |  | 1 or 3 {{site.data.keyword.powerSys_notm}} instances as OpenShift master nodes\n 2 or more {{site.data.keyword.powerSys_notm}} instances as OpenShift worker nodes\n Custom profile (cores, memory, machine type, core type) |
+{: class="standard-openshift-variant-table"}
+{: tab-group="standard-openshift-variant"}
+{: #standard-openshift-variant-1}
+{: tab-title="{{site.data.keyword.powerSys_notm}}"}
+{: caption="Quickstart OpenShift variation Components" caption-side="bottom"}
+
+| Resource Type | Optional | Description |
+|---|---|---|
+|  VPC |  |  Edge VPC: ACL, SGs, SSH Key and 4 Subnets |
+|  Intel VSI |  | Jump box with 2 cores, 4GB memory running RHEL 9.6 with floating IP attached |
+|  Intel VSI |  | Network Services running RHEL 9.6 configured as squid proxy (using Ansible Galaxy collection roles [IBM Power Linux for SAP](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/)) and configured as central ansible execution node. Default size is 2 cores and 4 GB memory. Can be customized. |
+| Intel VSI,\nIBM Cloud Monitoring Instance | Yes | Monitoring Host running SLES 15SP5 to collect metrics and forward it to IBM Monitoring Instance\n [IBM Cloud monitoring Instance](/docs/monitoring) displays the platform metrics and OS metrics |
+| Virtual Private Endpoint Gateway|  | A [Virtual Private Endpoint Gateway](/docs/vpc?topic=vpc-about-vpe) to reach the Cloud Object Storage bucket |
+| Flow Logs for VPC|  | [Flow Logs for VPC](/docs/vpc?topic=vpc-flow-logs) enables the collection, storage, and presentation of information about the Internet Protocol (IP) traffic going to and from network interfaces within your VPC|
+| Client to site VPN Server,\nSecrets Manager | Yes | [Client to site VPN Server](/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
+| Three Application Load Balancers | | One for internal OpenShift API, public OpenShift API, and OpenShift applications |
+{: class="standard-openshift-variant-table"}
+{: tab-group="standard-openshift-variant"}
+{: #standard-openshift-variant-2}
+{: tab-title="VPC"}
+{: caption="Quickstart OpenShift variation Components" caption-side="bottom"}
+
+| Resource Type | Optional | Description |
+|---|---|---|
+| Key Protect |  | [Key Protect](/docs/key-protect) provides key management by integrating the IBM Key Protect for IBM Cloud service. These key management services help you create, manage, and use encryption keys to protect your sensitive data |
+| Transit Gateway |  | Global or local [Transit Gateway](/docs/transit-gateway) to interconnect VPC and {{site.data.keyword.powerSys_notm}} workspace |
+| Cloud Object Storage | |  [Cloud Object Storage](/docs/cloud-object-storage) instance, buckets and credentials are created |
+| {{site.data.keyword.monitoringfull_notm}} | Yes | [{{site.data.keyword.monitoringshort}}](/docs/monitoring?topic=monitoring-about-monitor) collects metrics to provide a web UI to monitor the performance and overall system health of the deployment. Interconnects with {{site.data.keyword.sysdigsecure_full_notm}} if used. |
+| {{site.data.keyword.sysdigsecure_full_notm}} | Yes | [{{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-key-features#feature_1) can be used to find and prioritize software vulnerabilities, detect and respond to threats, manage configurations, permissions, and compliance from source to run. Interconnects with {{site.data.keyword.monitoringshort}} if used. |
+| {{site.data.keyword.dns_full_notm}} | | A DNS service instance is created for internal resolution of the cluster domain. |
+{: class="standard-openshift-variant-table"}
+{: tab-group="standard-openshift-variant"}
+{: #standard-openshift-variant-3}
+{: tab-title="Cloud Service"}
+{: caption="Quickstart OpenShift variation Components" caption-side="bottom"}
 
 
 ## Other {{site.data.keyword.powerSys_notm}} related deployable architectures

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-05-21"
+lastupdated: "2025-10-09"
 keywords: iam, permissions
 subcollection: powervs-vpc
 content-type: tutorial
@@ -173,6 +173,35 @@ If you already have an existing {{site.data.keyword.monitoringfull_notm}} instan
     ![Example of resource list for monitoring](images/monitoring-resource-list.png){: caption="Example view of the resource list with monitoring instance in {{site.data.keyword.cloud_notm}} console" caption-side="bottom"}
 1. During your deployment of the architecture, make sure to set `enable_monitoring = true` in the required section and set the value for `existing_monitoring_instance_crn` in the optional section with the `CRN` obtained in the previous step.
 
+## Quickstart OpenShift cost estimation (only required for Quickstart OpenShift Variation)
+{: #powervs-automation-openshift-cost-estimation}
+{: step}
+
+Due to technical limitations, the cost estimate Projects gives does not include the PowerVS resources deployed. The cost estimate given on the catalog page is accurate for a deployment using default values. This only applies to the Quickstart OpenShift variation.
+{: important}
+
+## OpenShift Cluster Base Domain considerations (only required for Quickstart OpenShift Variation)
+{: #powervs-automation-domain-considerations}
+{: step}
+
+The cluster domain is only resolved internally by the included {{site.data.keyword.dns_full_notm}}. Public deployments with customer provided domains are currently not supported. Therefore, the supported domains are restricted to `.test`, `.example`, and `.invalid`. Make sure the value used for `cluster_base_domain` ends with one of those values.
+
+## Obtain an OpenShift Pull Secret (only required for Quickstart OpenShift Variation)
+{: #powervs-automation-obtain-pull-secret}
+{: step}
+
+To deploy the Quickstart OpenShift variation of {{site.data.keyword.powerSys_notm}} with VPC landing zone you need a RedHat account so you can obtain an installation Pull Secret from RedHat. Once you have a RedHat account, go to [OpenShift Cluster Manager](https://console.redhat.com/openshift/install/pull-secret){: external} to download your pull secret.
+
+## Access the OpenShift Installation Logs (only required for Quickstart OpenShift Variation)
+{: #powervs-automation-openshift-logs}
+{: step}
+
+The OpenShift Installation logs are written during the execution of the IPI installer. You may access them to follow along during your deployment or to share them with the support when you encounter an issue.
+
+The logs are located on the network services instance and can only be accessed once the landing zone part of the deployment is complete and the OpenShift deployment part has started. Additionally, ssh access to the network services instance is required. Follow [Client to Site VPN](/docs/powervs-vpc?topic=powervs-vpc-solution-connect-client-vpn) or [Floating IP on the Jump Host](/docs/powervs-vpc?topic=powervs-vpc-solution-ssh) to learn how to access the network services instance.
+
+The logs are located on the network services instance at `/root/ocp-powervs-deploy/.openshift_install.log`.
+
 
 ## Additional background information
 {: #power-automation-prereqs-additional}
@@ -192,3 +221,6 @@ If you already have an existing {{site.data.keyword.monitoringfull_notm}} instan
 - Optional features:
    - [{{site.data.keyword.monitoringfull_notm}}](/docs/monitoring?topic=monitoring-about-monitor)
    - [{{site.data.keyword.sysdigsecure_full_notm}}](/docs/workload-protection?topic=workload-protection-key-features#feature_1)
+- RedHat OpenShift IPI installer:
+   - [Installing on IBM Power Virtual Server](https://docs.redhat.com/en/documentation/openshift_container_platform/4.19/html-single/installing_on_ibm_power_virtual_server/index#installation-config-parameters-ibm-power-vs){: external}
+   - [OpenShift Installer](https://github.com/openshift/installer/){: external}

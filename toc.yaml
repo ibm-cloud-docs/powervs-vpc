@@ -1,4 +1,3 @@
----
 toc:
   properties:
     subcollection: powervs-vpc
@@ -12,73 +11,77 @@ toc:
     industry: ITServiceManagement
     deployable: true
     description: Deploy Power Virtual Server workspace and connects it with VPC services with a deployable architecture.
-    label: Power Systems Virtual Server with VPC landing zone
+    label: Power Virtual Server with VPC landing zone
   entries:
-    - navgroup:
-        id: overview
-        topics:
-          - navtitle: Overview
-            topic: overview-overview.md
-          - navtitle: Release notes
-            topic: overview-release-notes.md
-          - navtitle: VPC landing zone architecture for Power Virtual Server
-            topic: overview-vpc-landing-zone-preset.md
-    - navgroup:
-        id: architecture
-        topics:
-          - navtitle: Standard Landscape
-            include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard/deploy-arch-ibm-pvs-inf-standard.md
-          - navtitle: Extend Standard Landscape
-            include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard-extend/deploy-arch-ibm-pvs-inf-standard-extend.md
-          - navtitle: Quickstart
-            include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard-plus-vsi/deploy-arch-ibm-pvs-inf-standard-plus-vsi.md
-    - navgroup:
-        id: plan
-        topics:
-          - navtitle: Before you begin deploying
-            topic: plan-planning.md
-    - navgroup:
-        id: deploy
-        topics:
-          - navtitle: Deploy using Projects
-            topic: deploy-deploying.md
-          - navtitle: Destroy using Projects
-            topic: deploy-destroying.md
-    - navgroup:
-        id: tutorial
-        topics:
-          - navtitle: Connect using a client-to-site VPN
-            topic: tutorial-connect-client-vpn.md
-          - navtitle: Connect using Floating IP
-            topic: tutorial-connect-jump-ssh.md
-    - navgroup:
-        id: reference
-        topics:
-          - navtitle: Responsibilities
-            topic: reference-shared-responsibilities.md
-    - navgroup:
-        id: help
-        topics:
-          - navtitle: Getting help and support
-            topic: help-support.md
-          - navtitle: FAQs
-            topic: help-faqs.md
+  - navgroup:
+      id: overview
+      topics:
+      - navtitle: Overview
+        topic: overview-overview.md
+      - navtitle: Release notes
+        topic: overview-release-notes.md
+      - navtitle: VPC landing zone architecture for Power Virtual Server
+        topic: overview-vpc-landing-zone-preset.md
+  - navgroup:
+      id: architecture
+      topics:
+      - navtitle: Standard Landscape
+        include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard/deploy-arch-ibm-pvs-inf-standard.md
+      - navtitle: Quickstart
+        include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard-plus-vsi/deploy-arch-ibm-pvs-inf-standard-plus-vsi.md
+      - navtitle: Quickstart OpenShift
+        include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard-openshift/deploy-arch-ibm-pvs-inf-standard-openshift.md
+  - navgroup:
+      id: plan
+      topics:
+      - navtitle: Before you begin deploying
+        topic: plan-planning.md
+  - navgroup:
+      id: deploy
+      topics:
+      - navtitle: Deploy using Projects
+        topic: deploy-deploying.md
+      - navtitle: Destroy using Projects
+        topic: deploy-destroying.md
+      - navtitle: Destroy Quickstart OpenShift using Projects
+        topic: deploy-destroy-openshift.md
+  - navgroup:
+      id: tutorial
+      topics:
+      - navtitle: Connect using a client-to-site VPN
+        topic: tutorial-connect-client-vpn.md
+      - navtitle: Connect using Floating IP
+        topic: tutorial-connect-jump-ssh.md
+      - navtitle: Connect to Quickstart OpenShift
+        topic: tutorial-connect-openshift.md
+  - navgroup:
+      id: reference
+      topics:
+      - navtitle: Responsibilities
+        topic: reference-shared-responsibilities.md
+  - navgroup:
+      id: help
+      topics:
+      - navtitle: Getting help and support
+        topic: help-support.md
+      - navtitle: FAQs
+        topic: help-faqs.md
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - navtitle: My deployment failed how do I proceed?
+            topic: help-troubleshoot-ts-deploy.md
           - topicgroup:
-              label: Troubleshooting
+              label: Troubleshooting projects
               topics:
-                - navtitle: My deployment failed how do I proceed?
-                  topic: help-troubleshoot-ts-deploy.md
-                - topicgroup:
-                    label: Troubleshooting projects
-                    topics:
-                      - navtitle: How do I address a failed validation?
-                        include: ../secure-enterprise/ts-needs-attention.md
-                      - navtitle: How do I address a failed deployment?
-                        include: ../secure-enterprise/ts-deploy.md
-                - topicgroup:
-                    label: Troubleshooting Schematics
-                    topics:
-                      - navtitle: Why am I getting 5xx errors in Schematics?
-                        include: ../schematics/troubleshooting/apply_500_errors.md
-                      - navtitle: How can I find the root cause of Schematics apply failures?
-                        include: ../schematics/troubleshooting/apply_nullresource.md
+              - navtitle: How do I address a failed validation?
+                include: ../secure-enterprise/ts-needs-attention.md
+              - navtitle: How do I address a failed deployment?
+                include: ../secure-enterprise/ts-deploy.md
+          - topicgroup:
+              label: Troubleshooting Schematics
+              topics:
+              - navtitle: Why am I getting 5xx errors in Schematics?
+                include: ../schematics/troubleshooting/apply_500_errors.md
+              - navtitle: How can I find the root cause of Schematics apply failures?
+                include: ../schematics/troubleshooting/apply_nullresource.md
