@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-10-09"
+lastupdated: "2025-10-21"
 keywords: iam, permissions
 subcollection: powervs-vpc
 content-type: tutorial
@@ -159,19 +159,6 @@ The automation provides flexibility in:
         1.  Copy the GUID.
 
             ![Example of resource list for Secrets Manager](images/secrets-manager-resource-list.png){: caption="Example view of the resource list with Secrets Manager in {{site.data.keyword.cloud_notm}} console" caption-side="bottom"}
-
-
-## Reusing existing {{site.data.keyword.monitoringfull_notm}} Instance (Optional)
-{: #powervs-automation-monitoring-prereqs}
-{: step}
-
-Optionally, the deployable architecture supports {{site.data.keyword.monitoringfull_notm}}. When enabled, it creates an {{site.data.keyword.monitoringfull_notm}} instance and an Intel virtual server with SLES Linux to collect and send metrics to the {{site.data.keyword.monitoringshort}} instance. Additionally, if you also enable {{site.data.keyword.sysdigsecure_full_notm}}, the deployable architecture will automatically connect the {{site.data.keyword.monitoringshort}} and {{site.data.keyword.sysdigsecure_short}} instances.
-
-If you already have an existing {{site.data.keyword.monitoringfull_notm}} instance, you can reuse it by following these steps:
-
-1. Collect the CRN of your monitoring instance by going to the Resource list > Logging and Monitoring > click on the resource
-    ![Example of resource list for monitoring](images/monitoring-resource-list.png){: caption="Example view of the resource list with monitoring instance in {{site.data.keyword.cloud_notm}} console" caption-side="bottom"}
-1. During your deployment of the architecture, make sure to set `enable_monitoring = true` in the required section and set the value for `existing_monitoring_instance_crn` in the optional section with the `CRN` obtained in the previous step.
 
 ## Quickstart OpenShift cost estimation (only required for Quickstart OpenShift Variation)
 {: #powervs-automation-openshift-cost-estimation}

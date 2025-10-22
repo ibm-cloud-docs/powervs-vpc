@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2025
-lastupdated: "2025-10-14"
+lastupdated: "2025-10-21"
 
 keywords:
 
@@ -26,7 +26,6 @@ As part of the automation an [override json preset](https://github.com/terraform
 |  VPC |  |  Edge VPC: ACL, SGs, SSH Key and 4 Subnets |
 |  Intel VSI |  | Jump box with 2 cores, 4GB memory running RHEL 9.6 with floating IP attached |
 |  Intel VSI |  | Network Services running RHEL 9.6 configured as squid proxy, NTP and DNS servers(using Ansible Galaxy collection roles [IBM Power Linux for SAP](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/)). Also configured as central ansible execution node. Default size is 2 cores and 4 GB memory. Can be customized. |
-| Intel VSI | Yes | Monitoring Host running SLES 15SP5 to collect metrics and forward it to IBM Monitoring Instance |
 | Virtual Private Endpoint Gateway|  | A [Virtual Private Endpoint Gateway](/docs/vpc?topic=vpc-about-vpe) to reach the Cloud Object Storage bucket |
 | Flow Logs for VPC|  | [Flow Logs for VPC](/docs/vpc?topic=vpc-flow-logs) enables the collection, storage, and presentation of information about the Internet Protocol (IP) traffic going to and from network interfaces within your VPC|
 {: class="landing-zone-table"}
