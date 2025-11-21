@@ -133,10 +133,10 @@ Since the Deployable Architecture leverages the RedHat IPI installer to create t
     ccoctl ibmcloud delete-service-id --credentials-requests-dir ./credreqs --name <cluster_name>
     ```
 
+1. Follow the same steps used when destroying using automation to [Destroy the Landing Zone resources](#destroy-openshift-landing-zone).
+
 If something goes wrong during this step, **do not** proceed to destroying the project. It will fail and manual cleanup will be required. Instead, proceed to [troubleshooting](#destroy-openshift-troubleshooting) and open a support case if required.
 {: tip}
-
-1. Follow the same steps used when destroying using automation to [Destroy the Landing Zone resources](#destroy-openshift-landing-zone).
 
 ## Troubleshooting
 {: #destroy-openshift-troubleshooting}
