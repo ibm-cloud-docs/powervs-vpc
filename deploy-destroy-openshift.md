@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-11-21"
+lastupdated: "2025-11-24"
 subcollection: powervs-vpc
 content-type: tutorial
 account-plan: paid
@@ -27,10 +27,10 @@ In this tutorial, you'll learn how to destroy the resources deployed by the Quic
 [Warning]{: tag-red} The **Quickstart OpenShift Variation** requires special clean up steps. If you deployed the **Standard Landscape** or **Quickstart** Variation, follow the steps in [Destroy using projects](/docs/powervs-vpc?topic=powervs-vpc-destroy) instead.
 {: tip}
 
-Since the Deployable Architecture leverages the RedHat IPI installer to create the cluster resources, the cluster resources aren't managed by Schematics directly and need to be cleaned up before Schematics can be used to clean up the landing zone components. Fortunately, the Deployable Architecture provides an automation to clean up the cluster resources. This tutorial describes how to use the automation and also outlines the manual steps that can alternatively be taken.
+Since the Deployable Architecture leverages the RedHat IPI installer to create the cluster resources, the cluster resources aren't managed by Projects directly and need to be cleaned up before Projects can be used to clean up the landing zone components. Fortunately, the Deployable Architecture provides an automation to clean up the cluster resources. This tutorial describes how to use the automation and also outlines the manual steps that can alternatively be taken.
 
-## Destroy using Schematics
-{: #destroy-using-schematics}
+## Destroy using Projects
+{: #destroy-using-projects}
 
 ### Prerequisites
 {: #destroy-openshift-resources-automation-prerequisites}
@@ -80,7 +80,7 @@ Since the Deployable Architecture leverages the RedHat IPI installer to create t
         You can access the logs by clicking on the status `Undeploying...` and clicking on the second line that says `Undeploying resources...`.
         {: tip}
 
-        Alternatively, you can also follow the process in the related **Schematics workspace**, which you can easily access by clicking on the link under **Workspace** inside your configuration.
+        Alternatively, you can also follow the process in the related **Projects workspace**, which you can easily access by clicking on the link under **Workspace** inside your configuration.
         {: tip}
 
     1.  Cleanup
