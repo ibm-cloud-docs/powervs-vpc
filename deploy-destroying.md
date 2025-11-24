@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2025
-lastupdated: "2025-10-09"
+lastupdated: "2025-11-21"
 subcollection: powervs-vpc
 content-type: tutorial
 account-plan: paid
@@ -19,11 +19,13 @@ keywords:
 {: toc-completion-time="30m"}
 
 In this tutorial, you'll learn how to destroy the resources deployed by the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global) Deployable Architecture when you don't need them anymore.
+{: shortdesc}
 
 [Warning]{: tag-red} This will delete all the resources that were created by this deployment and result in total data loss of all data stored on these resources.
+{: tip}
 
-[Warning]{: tag-red} The **Quickstart OpenShift Variation** requires special clean up steps to ensure the deletion of all resources. If you used it, follow the steps in [Destroy OpenShift Variation](/docs/secure-enterprise?topic=destroy-openshift) instead.
-{: shortdesc}
+[Warning]{: tag-red} The **Quickstart OpenShift Variation** requires special clean up steps to ensure the deletion of all resources. If you used it, follow the steps in [Destroy OpenShift Variation](/docs/powervs-vpc?topic=powervs-vpc-destroy-openshift) instead.
+{: tip}
 
 ## Prerequisites
 {: #destroy-resources-prerequisites}
