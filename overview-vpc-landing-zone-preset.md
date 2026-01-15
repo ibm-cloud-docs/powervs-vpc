@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2023, 2025
-lastupdated: "2025-10-21"
+   years: 2023, 2026
+lastupdated: "2026-01-15"
 
 keywords:
 
@@ -76,9 +76,9 @@ The security groups are created and attached to correct subnets/VPE/VPN. For the
 
 | Name | Source |  Protocol: Value | Attached resources
 |----------|------------|----------|--------|
-| management-sg | * [Schematics IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses&interface=ui#ipaddresses) \n * IBM Inbound `161.26.0.0/16` \n * prefix-edge-vpn-zone-1, prefix-edge-vsi-management-zone-1, prefix-edge-vpe-zone-1, prefix-edge-vsi-edge-zone-1, powervs-mgmt-network, powervs-bckp-network, vpn-client-ip-pool \n * Optional user provided IP address/CIDR   | * TCP: 22 \n * ALL: - \n * TCP: 22 \n * TCP: 22   | prefix-jump-box-001 VSI  |
-| network-services-sg | * IBM Inbound `161.26.0.0/16` \n * prefix-edge-vpn-zone-1, prefix-edge-vsi-management-zone-1, prefix-edge-vpe-zone-1, prefix-edge-vsi-edge-zone-1, powervs-mgmt-network, powervs-bckp-network, vpn-client-ip-pool  | * ALL: - \n * ALL: -   | prefix-network-services-001 VSI, load balancer, mount share targets  |
-| vpe-sg | * IBM Inbound 161.26.0.0/16 \n * prefix-edge-vpn-zone-1, prefix-edge-vsi-management-zone-1, prefix-edge-vpe-zone-1, prefix-edge-vsi-edge-zone-1, powervs-mgmt-network, powervs-bckp-network, vpn-client-ip-pool   | * ALL: - \n * ALL: -   | Cloud Object storage  |
+| management-sg | * [Schematics IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses&interface=ui#ipaddresses) \n * IBM Inbound `161.26.0.0/16` \n * prefix-edge-vpn-zone-n, prefix-edge-vsi-management-zone-n, prefix-edge-vpe-zone-n, prefix-edge-vsi-edge-zone-n, powervs-mgmt-network, powervs-bckp-network, vpn-client-ip-pool \n * Optional user provided IP address/CIDR   | * TCP: 22 \n * ALL: - \n * TCP: 22 \n * TCP: 22   | prefix-jump-box-001 VSI  |
+| network-services-sg | * IBM Inbound `161.26.0.0/16` \n * prefix-edge-vpn-zone-n, prefix-edge-vsi-management-zone-n, prefix-edge-vpe-zone-n, prefix-edge-vsi-edge-zone-n, powervs-mgmt-network, powervs-bckp-network, vpn-client-ip-pool  | * ALL: - \n * ALL: -   | prefix-network-services-001 VSI, load balancer, mount share targets  |
+| vpe-sg | * IBM Inbound 161.26.0.0/16 \n * prefix-edge-vpn-zone-n, prefix-edge-vsi-management-zone-n, prefix-edge-vpe-zone-n, prefix-edge-vsi-edge-zone-n, powervs-mgmt-network, powervs-bckp-network, vpn-client-ip-pool   | * ALL: - \n * ALL: -   | Cloud Object storage  |
 {: caption="SG rules" caption-side="bottom"}
 
 ## Private networks
@@ -88,10 +88,10 @@ The following table lists the private networks that are created in Edge VPC that
 
 | Subnet Name | Private network | IP address ranges |
 | ---| --- | --- |
-| prefix-edge-vpn-zone-1 | Private network for VPN server | 10.30.10.0/24 |
-| prefix-edge-vsi-management-zone-1| Management network for Bastion virtual server instance | 10.30.20.0/24 |
-| prefix-edge-vpe-zone-1| Private network for Cloud Object storage VPE | 10.30.30.0/24 |
-| prefix-edge-vsi-edge-zone-1| Private network for Network services VSI. This subnet has public gateway enabled. | 10.30.40.0/24 |
+| prefix-edge-vpn-zone-n | Private network for VPN server | 10.30.10.0/24 |
+| prefix-edge-vsi-management-zone-n| Management network for Bastion virtual server instance | 10.30.20.0/24 |
+| prefix-edge-vpe-zone-n| Private network for Cloud Object storage VPE | 10.30.30.0/24 |
+| prefix-edge-vsi-edge-zone-n| Private network for Network services VSI. This subnet has public gateway enabled. | 10.30.40.0/24 |
 {: caption="Private networks IP address ranges" caption-side="bottom"}
 
 ## Additional Resources
