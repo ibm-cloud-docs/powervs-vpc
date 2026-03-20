@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2026
-lastupdated: "2026-01-15"
+lastupdated: "2026-03-20"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -17,10 +17,26 @@ content-type: release-note
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries are grouped by date.
 {: shortdesc}
 
+## March 2026
+{: #powervs-vpc-2026-03}
+
+### 20 March 2026
+{: #powervs-vpc-mar20-2026}
+{: release-note}
+
+Version 11.1.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 11.1.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+   - Support new datacenters `che02` and `che03` for standard and quickstart variations
+
+Version 11.1.1 of RedHat Openshift on {{site.data.keyword.powerSysFull}} deployable architecture is available
+: Version 11.1.1 of the [RedHat Openshift on {{site.data.keyword.powerSysFull}}](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-pvs-openshift-80239886-a883-454f-9b41-6c08e67517b9-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+   - Moved to new catalog
+
+
 ## January 2026
 {: #powervs-vpc-2026-01}
 
-### 15 November 2026
+### 15 January 2026
 {: #powervs-vpc-jan15-2026}
 {: release-note}
 
@@ -30,7 +46,7 @@ Version 11.0.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone d
         - The VPC zone is now selected so it's in the same availability zone as the selected PowerVS zone. For more information about availability zone mapping refer to [IBM Cloud regions](/docs/power-iaas?topic=power-iaas-ibm-cloud-reg).
         - Upgrading existing deployments from a previous version is not recommended because VPC components that weren't created in the same availability zone as the selected PowerVS zone will be destroyed and re-deployed.
 
-    - support new DC sao05
+    - support new datacenter `sao05`
 
 ## November 2025
 {: #powervs-vpc-2025-11}
