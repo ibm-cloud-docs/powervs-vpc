@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2026
-lastupdated: "2026-03-20"
+lastupdated: "2026-03-21"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -17,6 +17,7 @@ content-type: release-note
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries are grouped by date.
 {: shortdesc}
 
+
 ## March 2026
 {: #powervs-vpc-2026-03}
 
@@ -27,6 +28,7 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 Version 11.1.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 11.1.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
    - Support new datacenters `che02` and `che03` for standard and quickstart variations
+   - Fixes ssh login issue for remote-exec in ansible module
 
 Version 11.1.1 of RedHat Openshift on {{site.data.keyword.powerSysFull}} deployable architecture is available
 : Version 11.1.1 of the [RedHat Openshift on {{site.data.keyword.powerSysFull}}](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-pvs-openshift-80239886-a883-454f-9b41-6c08e67517b9-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
@@ -47,6 +49,7 @@ Version 11.0.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone d
         - Upgrading existing deployments from a previous version is not recommended because VPC components that weren't created in the same availability zone as the selected PowerVS zone will be destroyed and re-deployed.
 
     - support new datacenter `sao05`
+
 
 ## November 2025
 {: #powervs-vpc-2025-11}
