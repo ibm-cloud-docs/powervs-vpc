@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2026
-lastupdated: "2026-03-21"
+lastupdated: "2026-03-24"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -20,6 +20,18 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 
 ## March 2026
 {: #powervs-vpc-2026-03}
+
+### 24 March 2026
+{: #powervs-vpc-mar24-2026}
+{: release-note}
+
+Version 11.1.2 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 11.1.2 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+   - Upgrade the app configuration module to add support for the `Chennai` region
+
+Version 11.1.2 of RedHat Openshift on {{site.data.keyword.powerSysFull}} deployable architecture is available
+: Version 11.1.2 of the [RedHat Openshift on {{site.data.keyword.powerSysFull}}](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-pvs-openshift-80239886-a883-454f-9b41-6c08e67517b9-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+   - Upgrade the app configuration module to add support for the `Chennai` region
 
 ### 20 March 2026
 {: #powervs-vpc-mar20-2026}
