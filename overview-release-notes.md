@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2026
-lastupdated: "2026-03-24"
+lastupdated: "2026-05-27"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -17,6 +17,22 @@ content-type: release-note
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries are grouped by date.
 {: shortdesc}
 
+## May 2026
+{: #powervs-vpc-2026-05}
+
+### 27 May 2026
+{: #powervs-vpc-may27-2026}
+{: release-note}
+
+Version 11.1.5 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 11.1.5 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+   - **More control over monitoring**: VPC Flow Logs and Activity Tracker are now optional. Choose only the monitoring tools you need to reduce costs and simplify your setup.
+   - Switched to `nxf-1x2` profile for bastion/Jump server to reduce cost.
+
+Version 11.1.5 of RedHat Openshift on {{site.data.keyword.powerSysFull}} deployable architecture is available
+: Version 11.1.5 of the [RedHat Openshift on {{site.data.keyword.powerSysFull}}](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-pvs-openshift-80239886-a883-454f-9b41-6c08e67517b9-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+   - **More control over monitoring**: VPC Flow Logs and Activity Tracker are now optional. Choose only the monitoring tools you need to reduce costs and simplify your setup.
+   - Switched to `nxf-1x2` profile for bastion/Jump server to reduce cost.
 
 ## March 2026
 {: #powervs-vpc-2026-03}
