@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-06-26"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -17,6 +17,23 @@ content-type: release-note
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries are grouped by date.
 {: shortdesc}
 
+## June 2026
+{: #powervs-vpc-2026-06}
+
+### 26 June 2026
+{: #powervs-vpc-jun26-2026}
+{: release-note}
+
+Version 11.2.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 11.2.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+   - **Upgraded curl package**: Upgraded curl package version for AIX instances on Quickstart.
+   - **Mumbai DC support**: Added support for the Mumbai data center.
+   - **Fixed cloud-init on RHEL**: Fixed cloud-init on RHEL instances.
+
+Version 11.2.1 of RedHat Openshift on {{site.data.keyword.powerSysFull}} deployable architecture is available
+: Version 11.2.1 of the [RedHat Openshift on {{site.data.keyword.powerSysFull}}](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-pvs-openshift-80239886-a883-454f-9b41-6c08e67517b9-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+   - Upgraded TF provider version.
+
 ## May 2026
 {: #powervs-vpc-2026-05}
 
@@ -27,12 +44,12 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 Version 11.1.5 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 11.1.5 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
    - **More control over monitoring**: VPC Flow Logs and Activity Tracker are now optional. Choose only the monitoring tools you need to reduce costs and simplify your setup.
-   - Switched to `nxf-1x2` profile for bastion/Jump server to reduce cost.
+   - **Better jump box performance**: Upgraded to a 1x2 profile for faster access and improved resource efficiency.
 
 Version 11.1.5 of RedHat Openshift on {{site.data.keyword.powerSysFull}} deployable architecture is available
 : Version 11.1.5 of the [RedHat Openshift on {{site.data.keyword.powerSysFull}}](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-pvs-openshift-80239886-a883-454f-9b41-6c08e67517b9-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
    - **More control over monitoring**: VPC Flow Logs and Activity Tracker are now optional. Choose only the monitoring tools you need to reduce costs and simplify your setup.
-   - Switched to `nxf-1x2` profile for bastion/Jump server to reduce cost.
+   - **Better jump box performance**: Upgraded to a 1x2 profile for faster access and improved resource efficiency.
 
 ## March 2026
 {: #powervs-vpc-2026-03}
