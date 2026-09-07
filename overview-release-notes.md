@@ -2,7 +2,7 @@
 
 copyright:
    years: 2023, 2026
-lastupdated: "2026-08-14"
+lastupdated: "2026-09-07"
 keywords:
 subcollection: powervs-vpc
 content-type: release-note
@@ -17,6 +17,18 @@ content-type: release-note
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries are grouped by date.
 {: shortdesc}
 
+## September 2026
+{: #powervs-vpc-2026-09}
+
+### 04 September 2026
+{: #powervs-vpc-sep04-2026}
+{: release-note}
+
+Version 11.4.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 11.4.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+
+   - **Updated Terraform dependencies**: Updated the Terraform modules with required dependencies.
+
 ## August 2026
 {: #powervs-vpc-2026-08}
 
@@ -26,11 +38,13 @@ Use these release notes to learn about the latest updates to the {{site.data.key
 
 Version 11.3.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 11.3.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
-   - **MON01 datacenter support**: Added support for the Montreal (`mon01`) data center with Power10 hardware.
+
+     MON01 datacenter support : Added support for the Montreal (`mon01`) data center with Power10 hardware.
 
 Version 11.3.0 of RedHat Openshift on {{site.data.keyword.powerSysFull}} deployable architecture is available
 : Version 11.3.0 of the [RedHat Openshift on {{site.data.keyword.powerSysFull}}](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-pvs-openshift-80239886-a883-454f-9b41-6c08e67517b9-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
-   - **MON01 datacenter support**: Added support for the Montreal (`mon01`) data center with Power10 hardware.
+
+     MON01 datacenter support : Added support for the Montreal (`mon01`) data center with Power10 hardware.
 
 ## June 2026
 {: #powervs-vpc-2026-06}
@@ -41,13 +55,14 @@ Version 11.3.0 of RedHat Openshift on {{site.data.keyword.powerSysFull}} deploya
 
 Version 11.2.1 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
 : Version 11.2.1 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
-   - **Upgraded curl package**: Upgraded curl package version for AIX instances on Quickstart.
-   - **Mumbai DC support**: Added support for the Mumbai data center.
-   - **Fixed cloud-init on RHEL**: Fixed cloud-init on RHEL instances.
+
+    Upgraded curl package**: Upgraded curl package version for AIX instances on Quickstart.
+    Mumbai DC support**: Added support for the Mumbai data center.
+    Fixed cloud-init on RHEL : Fixed cloud-init on RHEL instances.
 
 Version 11.2.1 of RedHat Openshift on {{site.data.keyword.powerSysFull}} deployable architecture is available
 : Version 11.2.1 of the [RedHat Openshift on {{site.data.keyword.powerSysFull}}](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/deploy-arch-ibm-pvs-openshift-80239886-a883-454f-9b41-6c08e67517b9-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
-   - Upgraded TF provider version.
+       Upgraded TF provider version.
 
 ## May 2026
 {: #powervs-vpc-2026-05}
