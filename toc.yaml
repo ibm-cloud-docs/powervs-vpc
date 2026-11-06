@@ -31,6 +31,8 @@ toc:
         include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard-plus-vsi/deploy-arch-ibm-pvs-inf-standard-plus-vsi.md
       - navtitle: Quickstart OpenShift
         include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard-openshift/deploy-arch-ibm-pvs-inf-standard-openshift.md
+      - navtitle: Quickstart MariaDB
+        include: ../deployable-reference-architectures/terraform-ibm-powervs-infrastructure/standard-mariadb/deploy-arch-ibm-pvs-inf-standard-mariadb.md
   - navgroup:
       id: plan
       topics:

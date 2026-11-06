@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2026
-lastupdated: "2026-05-27"
+lastupdated: "2026-11-04"
 keywords: powervs, landing zone, sap, automation, deployable architecture
 subcollection: powervs-vpc
 
@@ -189,6 +189,69 @@ This deployable architecture variation deploys these resources:
 {: #standard-openshift-variant-3}
 {: tab-title="Cloud Service"}
 {: caption="Quickstart OpenShift variation Components" caption-side="bottom"}
+
+## 4. Quickstart MariaDB variation
+{: #overview-quickstart-mariadb-variant}
+
+The Quickstart MariaDB variation creates a landing zone similar to that in the Quickstart variation. It also deploys a RHEL {{site.data.keyword.powerSys_notm}} instance with MariaDB installed and configured by Ansible. The InnoDB buffer pool is auto-tuned to the memory of the instance, and the data is stored on a dedicated XFS volume that is mounted on `/var/lib/mysql`.
+
+This deployable architecture variation deploys these resources:
+
+| Resource Type | Optional | Description |
+|---|---|---|
+| Workspace for {{site.data.keyword.powerSys_notm}} |  | [Workspace for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) with a management network, a backup network, and an SSH key |
+| {{site.data.keyword.powerSys_notm}} Instance |  | A RHEL {{site.data.keyword.powerSys_notm}} instance of chosen T-shirt size (`mariadb_xs`, `mariadb_s`, `mariadb_m`, `mariadb_l`) or a custom profile. MariaDB (default version 12.3) is installed and configured automatically. One data volume is mounted on `/var/lib/mysql` (XFS). Refer to the [table](/docs/powervs-vpc?topic=powervs-vpc-automation-solution-overview#mariadb-tshirt-sizes) below. |
+| MariaDB replicas | Yes | If `mariadb_replica_count` is greater than 0, that many replica {{site.data.keyword.powerSys_notm}} instances are deployed with the same sizing as the primary. They replicate from the primary instance. |
+| MariaDB sample data | Yes | Loads the `sakila`, `world`, or `vector` sample dataset after installation. |
+{: class="quickstart-mariadb-variant-table"}
+{: tab-group="quickstart-mariadb-variant"}
+{: #quickstart-mariadb-variant-1}
+{: tab-title="{{site.data.keyword.powerSys_notm}}"}
+{: caption="Quickstart MariaDB variation Components" caption-side="bottom"}
+
+| Resource Type | Optional | Description |
+|---|---|---|
+|  VPC |  |  Edge VPC: ACL, SGs, SSH Key and 4 Subnets |
+|  Intel VSI |  | Jump box running RHEL 9.6 with floating IP attached |
+|  Intel VSI |  | Network Services running RHEL 9.6 configured as squid proxy, NTP and DNS servers (using Ansible Galaxy collection roles [IBM Power Linux for SAP](https://galaxy.ansible.com/ui/repo/published/ibm/power_linux_sap/)). Also configured as central ansible execution node that installs MariaDB. Default size is 2 cores and 4 GB memory. Can be customized. |
+| File storage share,\n Network load balancer | Yes | Disabled by default because the MariaDB data is stored on a dedicated volume. When enabled, [NFS as a Service](/docs/vpc?topic=vpc-file-storage-create&interface=ui) and [Network Load Balancer](/docs/vpc?group=network-load-balancer) are deployed to access the share IP from Power Virtual Server |
+| Virtual Private Endpoint Gateway|  | A [Virtual Private Endpoint Gateway](/docs/vpc?topic=vpc-about-vpe) to reach the Cloud Object Storage bucket |
+| Flow Logs for VPC| Yes | [Flow Logs for VPC](/docs/vpc?topic=vpc-flow-logs) enables the collection, storage, and presentation of information about the Internet Protocol (IP) traffic going to and from network interfaces within your VPC|
+| Client to site VPN Server,\nSecrets Manager | Yes | [Client to site VPN Server](/docs/vpc?topic=vpc-vpn-client-to-site-overview) provides client-to-site connectivity, which allows remote devices to securely connect to the VPC network using an OpenVPN software client.\n [Secrets Manager](/docs/secrets-manager) Instance is deployed along with VPN to store the VPN Certificate |
+{: class="quickstart-mariadb-variant-table"}
+{: tab-group="quickstart-mariadb-variant"}
+{: #quickstart-mariadb-variant-2}
+{: tab-title="VPC"}
+{: caption="Quickstart MariaDB variation Components" caption-side="bottom"}
+
+| Resource Type | Optional | Description |
+|---|---|---|
+| Key Protect |  | [Key Protect](/docs/key-protect) provides key management by integrating the IBM Key Protect for IBM Cloud service. These key management services help you create, manage, and use encryption keys to protect your sensitive data |
+| Transit Gateway |  | Global or local [Transit Gateway](/docs/transit-gateway) to interconnect VPC and {{site.data.keyword.powerSys_notm}} workspace |
+| Cloud Object Storage | |  [Cloud Object Storage](/docs/cloud-object-storage) instance, buckets and credentials are created |
+| Activity Tracker | Yes | Activity Tracker resources (KMS key, Cloud Object Storage instance, bucket, and configuration) are created to keep an audit trail of the activities in the account. Enabled by default. |
+| {{site.data.keyword.sysdigsecure_full_notm}} | Yes | [{{site.data.keyword.sysdigsecure_short}}](/docs/workload-protection?topic=workload-protection-key-features#feature_1) can be used to find and prioritize software vulnerabilities, detect and respond to threats, manage configurations, permissions, and compliance from source to run. The agent is configured on the Intel VSIs and on the MariaDB instances. |
+{: class="quickstart-mariadb-variant-table"}
+{: tab-group="quickstart-mariadb-variant"}
+{: #quickstart-mariadb-variant-3}
+{: tab-title="Cloud Service"}
+{: caption="Quickstart MariaDB variation Components" caption-side="bottom"}
+
+Select the required T-shirt size and a {{site.data.keyword.powerSys_notm}} instance with the chosen T-shirt size or custom configuration is deployed with MariaDB installed. The T-shirt sizes and the configuration parameters mapping are shown in the following table:
+
+|  | XS | S | M | L |
+|---------------------- | ------------------------- | ------------------------- | -------------------------  | ------------------------- |
+| Preset name | `mariadb_xs` | `mariadb_s` | `mariadb_m` | `mariadb_l` |
+| Cores | 0.25 | 1 | 2 | 4 |
+| Memory | 4 | 8 | 16 | 32 |
+| Data Storage Tier-3 (GB) | 50 | 100 | 250 | 500 |
+{: class="simple-tab-table"}
+{: caption="MariaDB T-shirt size and configuration mapping" caption-side="top"}
+{: #mariadb-tshirt-sizes}
+
+
+
+The default size is `mariadb_s`. To use a custom profile, set `tshirt_size` to `custom` and also set `custom_profile_instance_boot_image`. For all MariaDB-specific inputs, see [Quickstart MariaDB parameters](/docs/powervs-vpc?topic=powervs-vpc-powervs-automation-mariadb-prereqs).
 
 
 ## Other {{site.data.keyword.powerSys_notm}} related deployable architectures

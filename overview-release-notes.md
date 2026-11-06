@@ -17,6 +17,20 @@ content-type: release-note
 Use these release notes to learn about the latest updates to the {{site.data.keyword.powerSys_notm}} with VPC landing zone. The entries are grouped by date.
 {: shortdesc}
 
+## November 2026
+{: #powervs-vpc-2026-11}
+
+### 04 November 2026
+{: #powervs-vpc-nov04-2026}
+{: release-note}
+
+Version 11.5.0 of the {{site.data.keyword.powerSysFull}} with VPC landing zone deployable architecture is available
+: Version 11.5.0 of the [{{site.data.keyword.powerSys_notm}} with VPC landing zone](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-pvs-inf-2dd486c7-b317-4aaa-907b-42671485ad96-global){: external} deployable architecture is available in the {{site.data.keyword.cloud_notm}} [catalog](/catalog#reference_architecture){: external}
+
+   - **Introducing the Quickstart MariaDB variation**: Deploys the VPC landing zone and a RHEL {{site.data.keyword.powerSys_notm}} instance with MariaDB (default version 12.3) installed and configured by Ansible. T-shirt sizes `mariadb_xs`, `mariadb_s`, `mariadb_m`, `mariadb_l` or a custom profile are supported. For more information, see [Overview](/docs/powervs-vpc?topic=powervs-vpc-automation-solution-overview#overview-quickstart-mariadb-variant).
+   - **Optional MariaDB replication**: Set `mariadb_replica_count` to deploy a primary instance with that many replica instances.
+   - **Optional sample datasets**: Set `mariadb_sample_data` to load the `sakila`, `world`, or `vector` dataset after installation.
+
 ## September 2026
 {: #powervs-vpc-2026-09}
 

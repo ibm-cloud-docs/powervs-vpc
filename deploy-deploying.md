@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2023, 2025
-lastupdated: "2025-06-25"
+   years: 2023, 2026
+lastupdated: "2026-11-04"
 
 keywords:
 
@@ -40,6 +40,8 @@ To deploy a Power Virtual Server with VPC landing zone deployable architecture t
     1.  Optional: Specify other values from the Optional tab.
     1.  Save the configuration.
     1.  Click **Validate**. Validation takes a few minutes
+
+    - For the **Quickstart MariaDB** variation, make sure to specify the required `ansible_vault_password` (and `mariadb_replication_password` if `mariadb_replica_count` > 0) in the **Required** tab.
 
         {{site.data.keyword.cloud_notm}} projects runs a Code Risk Analyzer scan that includes a [supported set of {{site.data.keyword.compliance_short}} rules](/docs/ContinuousDelivery?topic=ContinuousDelivery-cra-cli-plugin#terraform-scc-rules). Controls that are part of the deployable architecture and that are also supported by {{site.data.keyword.cloud_notm}} projects are checked. Any extra controls that are not included in the list of supported {{site.data.keyword.compliance_short}} rules are not checked when you validate the configuration.
 

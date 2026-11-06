@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2025
-lastupdated: "2025-10-21"
+  years: 2023, 2026
+lastupdated: "2026-11-04"
 keywords: iam, permissions
 subcollection: powervs-vpc
 content-type: tutorial
@@ -188,6 +188,23 @@ The OpenShift Installation logs are written during the execution of the IPI inst
 The logs are located on the network services instance and can only be accessed once the landing zone part of the deployment is complete and the OpenShift deployment part has started. Additionally, ssh access to the network services instance is required. Follow [Client to Site VPN](/docs/powervs-vpc?topic=powervs-vpc-solution-connect-client-vpn) or [Floating IP on the Jump Host](/docs/powervs-vpc?topic=powervs-vpc-solution-ssh) to learn how to access the network services instance.
 
 The logs are located on the network services instance at `/root/ocp-powervs-deploy/.openshift_install.log`.
+
+## Quickstart MariaDB parameters (only required for Quickstart MariaDB variation)
+{: #powervs-automation-mariadb-prereqs}
+{: step}
+
+When deploying the **Quickstart MariaDB** variation, configure the following MariaDB-specific parameters according to your deployment requirements:
+
+| Input | Default | Notes |
+|---|---|---|
+| `tshirt_size` | `mariadb_s` | Presets: `mariadb_xs`, `mariadb_s`, `mariadb_m`, `mariadb_l`, or `custom` |
+| `custom_profile_instance_boot_image` | `none` | Required when `tshirt_size` is `custom`, for example `RHEL9-SP6` |
+| `mariadb_version` | `12.3` | Installed from the official MariaDB repo |
+| `mariadb_replica_count` | `0` | `0` means standalone |
+| `mariadb_replication_password` | `null` | Required if the replica count is above 0, minimum 15 characters |
+| `mariadb_sample_data` | `none` | `none`, `sakila`, `world`, or `vector` |
+| `ansible_vault_password` | `none (required)` | 15–100 characters, mixed case, number and special character |
+{: class="simple-tab-table"}
 
 
 ## Additional background information
